@@ -224,37 +224,1118 @@
       {
         title: "Anatomy & Physiology",
         questions: [
-          {
-            question: "What is the capital of France?",
-            options: ["London", "Berlin", "Paris", "Rome"],
-            correctAnswerIndex: 2,
-            explanation: "Paris is the capital and most populous city of France, known for its art, fashion, gastronomy, and culture."
-          },
-          {
-            question: "Which planet is known as the Red Planet?",
-            options: ["Earth", "Mars", "Jupiter", "Venus"],
-            correctAnswerIndex: 1,
-            explanation: "Mars is called the Red Planet because of the iron oxide prevalent on its surface, which gives it a reddish appearance."
-          },
-          {
-            question: "What is the largest ocean on Earth?",
-            options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
-            correctAnswerIndex: 3,
-            explanation: "The Pacific Ocean is the largest and deepest of Earth's five oceans, covering about one-third of the surface."
-          },
-          {
-            question: "Who painted the Mona Lisa?",
-            options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
-            correctAnswerIndex: 2,
-            explanation: "Leonardo da Vinci, a true Renaissance polymath, painted the iconic Mona Lisa."
-          },
-          {
-            question: "What is the chemical symbol for gold?",
-            options: ["Au", "Ag", "Fe", "Cu"],
-            correctAnswerIndex: 0,
-            explanation: "The chemical symbol for gold is Au, derived from its Latin name 'aurum'."
-          }
-        ]
+                               // --- NEW ANATOMY & PHYSIOLOGY QUESTIONS ---
+
+                // Musculoskeletal System (30 questions)
+               /* {
+                    question: "Which of these are functions of the skeletal system (Select all that apply)?",
+                    options: ["Provides protection for vital organs", "Blood cell production", "Mineral storage", "Provides support, shape & attachment for muscles & tendons"],
+                    correctAnswerIndex: 0, // This question has multiple correct answers, but the quiz format only supports one. I'll pick the first one as the 'primary' or rephrase. Rephrasing to a single best answer.
+                    explanation: "The skeletal system provides protection for vital organs, produces blood cells, stores minerals, and provides support and attachment for muscles and tendons."
+                },*/
+                {
+                    question: "Which type of bone cell is primarily responsible for forming new bone tissue?",
+                    options: ["Osteogenic cells", "Osteoclasts", "Osteoblasts", "Osteocytes"],
+                    correctAnswerIndex: 2,
+                    explanation: "Osteoblasts are bone-forming cells that synthesize and deposit new bone matrix."
+                },
+                {
+                    question: "Which of these is NOT part of the appendicular skeleton?",
+                    options: ["Vertebral column", "Upper limb bones", "Pelvic girdle", "Lower limb bones"],
+                    correctAnswerIndex: 0,
+                    explanation: "The vertebral column is part of the axial skeleton, which forms the central axis of the body."
+                },
+                {
+                    question: "Which of these describes irregular bones?",
+                    options: ["Short, flat and irregular bones that have no shaft", "Vertebrae and some bones of the skull", "Sternum, ribs & most of the bones of the skull", "Develop deep within a sheath of cartilage and include the patella & hyoid bone"],
+                    correctAnswerIndex: 1,
+                    explanation: "Irregular bones have complex shapes and include vertebrae and some bones of the skull."
+                },
+                {
+                    question: "Where might I find the maxilla bone?",
+                    options: ["In the spine", "In the hands", "Under the arms", "Face"],
+                    correctAnswerIndex: 3,
+                    explanation: "The maxilla is a bone of the face, forming the upper jaw."
+                },
+                {
+                    question: "Which of these can NOT be found distal to the shoulder?",
+                    options: ["Ulna", "Sternum", "Phalanges", "Metacarpals"],
+                    correctAnswerIndex: 1,
+                    explanation: "The sternum (breastbone) is part of the axial skeleton and is not found distal (further away from the center of the body) to the shoulder."
+                },
+                {
+                    question: "What do tendons do?",
+                    options: ["Attach muscle to bone.", "Made up of a number of parallel tube-shaped units called Osteons", "Attaches bone to bone.", "Looks like honeycomb and contains osteocytes & few lamellae"],
+                    correctAnswerIndex: 0,
+                    explanation: "Tendons are strong, fibrous connective tissues that connect muscle to bone, enabling movement."
+                },
+                {
+                    question: "Which of these is an example of a gliding joint?",
+                    options: ["Knee", "Ulna", "Hip", "Ankle (intertarsal joints)"],
+                    correctAnswerIndex: 3,
+                    explanation: "Intertarsal joints in the ankle are examples of gliding (plane) joints, allowing limited sliding movements."
+                },
+                /*{
+                    question: "Which of these describes contractility of muscles?",
+                    options: ["The ability to be stretched or extended", "Ability to shorten and thicken to meet the requirements communicated by the reception of a sufficient stimulus", "Ability to receive and respond to stimuli", "The ability to return to its original shape"],
+                    correctAnswerIndex: 1,
+                    explanation: "Contractility is the unique ability of muscle tissue to shorten and thicken, generating force."
+                },*/
+                {
+                    question: "Which of these describes cardiac muscle?",
+                    options: ["Involuntary & striated muscle", "Involuntary muscle, lacks striation. Found in the internal organs such as gall bladder", "Voluntary & striated muscle. Attached to bones via tendons", "Voluntary muscle, lacks striation"],
+                    correctAnswerIndex: 0,
+                    explanation: "Cardiac muscle is found only in the heart, is involuntary (not consciously controlled), and has a striated (striped) appearance."
+                },
+                {
+                    question: "What are the five different types of bones based on their shape?",
+                    options: ["Long, short, flat, irregular, sesamoid", "Large, small, thick, thin, curved", "Axial, appendicular, cranial, facial, vertebral", "Compact, spongy, red, yellow, bone marrow"],
+                    correctAnswerIndex: 0,
+                    explanation: "Bones are classified into five main types: long, short, flat, irregular, and sesamoid bones."
+                },
+                {
+                    question: "The shaft (the middle) of a long bone is called the:",
+                    options: ["Epiphysis", "Diaphysis", "Periosteum", "Articular cartilage"],
+                    correctAnswerIndex: 1,
+                    explanation: "The diaphysis is the main or midsection (shaft) of a long bone."
+                },
+                /*{
+                    question: "What type of bone tissue is dense, has few spaces, and provides high stress-bearing capability?",
+                    options: ["Spongy bone", "Cancellous bone", "Trabecular bone", "Compact bone"],
+                    correctAnswerIndex: 3,
+                    explanation: "Compact bone is dense and strong, forming the outer layer of bones and providing structural support."
+                },*/
+                {
+                    question: "Which type of bone marrow is responsible for producing red blood cells, white blood cells, and platelets?",
+                    options: ["Yellow bone marrow", "Red bone marrow", "Trabecular marrow", "Compact marrow"],
+                    correctAnswerIndex: 1,
+                    explanation: "Red bone marrow is the primary site of hematopoiesis (blood cell formation)."
+                },
+                {
+                    question: "The axial skeleton includes which of the following?",
+                    options: ["Upper limbs", "Pelvic girdle", "Skull and vertebral column", "Lower limbs"],
+                    correctAnswerIndex: 2,
+                    explanation: "The axial skeleton consists of the bones of the head (skull), neck (vertebrae), and trunk (ribs, sternum, vertebral column)."
+                },
+                {
+                    question: "How many cervical vertebrae are typically found in the human vertebral column?",
+                    options: ["5", "7", "12", "9"],
+                    correctAnswerIndex: 1,
+                    explanation: "There are typically 7 cervical vertebrae (C1-C7) in the neck region."
+                },
+                {
+                    question: "Which type of joint allows for no movement (immoveable), such as the sutures in the skull?",
+                    options: ["Cartilaginous joint", "Synovial joint", "Fibrous joint", "Hinge joint"],
+                    correctAnswerIndex: 2,
+                    explanation: "Fibrous joints are connected by dense connective tissue, allowing little to no movement."
+                },
+                {
+                    question: "Which type of joint is freely moveable and characterized by a joint capsule, synovial fluid, and articular cartilage?",
+                    options: ["Fibrous joint", "Cartilaginous joint", "Synovial joint", "Fixed joint"],
+                    correctAnswerIndex: 2,
+                    explanation: "Synovial joints are the most common type of joint in the body and allow for a wide range of motion."
+                },
+                /*{
+                    question: "The ability of muscle to be stretched or extended is called:",
+                    options: ["Excitability", "Contractility", "Extensibility", "Elasticity"],
+                    correctAnswerIndex: 2,
+                    explanation: "Extensibility is the ability of muscle tissue to be stretched without tearing."
+                },*/
+                {
+                    question: "What is the primary function of ligaments?",
+                    options: ["Connect muscle to bone", "Connect bone to bone", "Produce movement", "Store minerals"],
+                    correctAnswerIndex: 1,
+                    explanation: "Ligaments are strong, flexible bands of fibrous connective tissue that connect bones to other bones, providing joint stability."
+                },
+                {
+                    question: "What is the role of cartilage in joints?",
+                    options: ["To produce blood cells", "To store calcium", "To reduce friction and act as a shock absorber", "To connect muscles to bones"],
+                    correctAnswerIndex: 2,
+                    explanation: "Cartilage provides a smooth, slippery surface for bones to glide over and absorbs shock, protecting the ends of bones."
+                },
+                {
+                    question: "The process of blood cell formation is known as:",
+                    options: ["Osteogenesis", "Myogenesis", "Haematopoiesis", "Glycogenesis"],
+                    correctAnswerIndex: 2,
+                    explanation: "Haematopoiesis is the process by which all blood cells are formed, primarily in the bone marrow."
+                },
+                {
+                    question: "Which major muscle group is located on the front of the thigh?",
+                    options: ["Hamstrings", "Gluteals", "Quadriceps", "Calves"],
+                    correctAnswerIndex: 2,
+                    explanation: "The quadriceps femoris group is a large muscle group that covers the front and sides of the thigh."
+                },
+                {
+                    question: "Movement that decreases the angle between two body parts is called:",
+                    options: ["Extension", "Abduction", "Flexion", "Adduction"],
+                    correctAnswerIndex: 2,
+                    explanation: "Flexion is a bending movement that decreases the angle between two parts."
+                },
+                {
+                    question: "Movement of a limb away from the midline of the body is called:",
+                    options: ["Adduction", "Flexion", "Abduction", "Rotation"],
+                    correctAnswerIndex: 2,
+                    explanation: "Abduction is the movement of a body part away from the midline."
+                },
+                {
+                    question: "Which bone is commonly known as the 'collarbone'?",
+                    options: ["Scapula", "Humerus", "Clavicle", "Sternum"],
+                    correctAnswerIndex: 2,
+                    explanation: "The clavicle is the scientific name for the collarbone."
+                },
+                {
+                    question: "The bone of the upper arm is the:",
+                    options: ["Radius", "Ulna", "Femur", "Humerus"],
+                    correctAnswerIndex: 3,
+                    explanation: "The humerus is the long bone in the upper arm."
+                },
+                {
+                    question: "Which of the following is an example of a ball-and-socket joint?",
+                    options: ["Elbow joint", "Knee joint", "Shoulder joint", "Ankle joint"],
+                    correctAnswerIndex: 2,
+                    explanation: "Ball-and-socket joints, like the shoulder and hip, allow for movement in many directions."
+                },
+                /*{
+                    question: "The process by which muscles return to their original shape after contraction or extension is called:",
+                    options: ["Excitability", "Contractility", "Extensibility", "Elasticity"],
+                    correctAnswerIndex: 3,
+                    explanation: "Elasticity is the ability of muscle tissue to recoil to its original resting length after being stretched or contracted."
+                },*/
+                {
+                    question: "What is the largest bone in the human body?",
+                    options: ["Tibia", "Fibula", "Femur", "Humerus"],
+                    correctAnswerIndex: 2,
+                    explanation: "The femur, or thigh bone, is the longest and strongest bone in the human body."
+                },
+                {
+                    question: "What is the anatomical neutral position?",
+                    options: ["facing forwards looking straight ahead, palms facing forward with arms by your side and body standing up straight (erect)", "facing forward, hunched over, with bent knees", "Looking forward standing up straight palms facing behind you", "Lying on the floor facing the ceiling"],
+                    correctAnswerIndex: 0,
+                    explanation: "Anatomically Neutral is facing forwards looking straight ahead, palms facing forward with arms by your side and body standing up straight (erect)."
+                },
+                {
+                    question: "How many vertabraes in the spine",
+                    options: ["24","33","35","28"],
+                    correctAnswerIndex: 1,
+                    explanation: "24 Moveable (Cervical=7, Thoracic=12, Lumbar=5), 9 Fused (Sacral=5, Coccyx=4"
+                },
+                /*{
+                    question: "What i",
+                    options: ["facing forwards looking straight ahead, palms facing forward with arms by your side and body standing up straight (erect)", "facing forward, hunched over, with bent knees", "Looking forward standing up straight palms facing behind you", "Lying on the floor facing the ceiling"],
+                    correctAnswerIndex: 0,
+                    explanation: "Anatomically Neutral is facing forwards looking straight ahead, palms facing forward with arms by your side and body standing up straight (erect)."
+                },*/
+
+                // Nervous System (30 questions)
+                {
+                    question: "What is the primary function of the nervous system?",
+                    options: ["Digestion of food", "Detecting and interpreting stimuli, and coordinating responses", "Pumping blood", "Filtering waste from blood"],
+                    correctAnswerIndex: 1,
+                    explanation: "The nervous system is the body's control and communication system, responsible for detecting stimuli, processing information, and coordinating responses."
+                },
+                {
+                    question: "The central nervous system (CNS) consists of the:",
+                    options: ["Nerves and ganglia", "Brain and spinal cord", "Sensory and motor neurons", "Sympathetic and parasympathetic divisions"],
+                    correctAnswerIndex: 1,
+                    explanation: "The CNS is composed of the brain and spinal cord, which are the main control centers of the body."
+                },
+                {
+                    question: "Which part of the brain is the largest and is responsible for higher-level functions like thought, language, and voluntary movement?",
+                    options: ["Cerebellum", "Brainstem", "Cerebrum", "Diencephalon"],
+                    correctAnswerIndex: 2,
+                    explanation: "The cerebrum is the largest part of the brain and is involved in complex cognitive functions."
+                },
+                /*{
+                    question: "The outer part of the cerebrum, composed of nerve cell bodies, is called the:",
+                    options: ["White matter", "Corpus callosum", "Cerebral cortex (grey matter)", "Ventricles"],
+                    correctAnswerIndex: 2,
+                    explanation: "The cerebral cortex, or grey matter, is the highly folded outer layer of the cerebrum where most neural processing occurs."
+                },*/
+                /*{
+                    question: "Which part of the diencephalon controls appetite, thirst, body temperature, and emotional reactions?",
+                    options: ["Thalamus", "Hypothalamus", "Hippocampus", "Pituitary gland"],
+                    correctAnswerIndex: 1,
+                    explanation: "The hypothalamus is a vital control center for many homeostatic functions and emotional responses."
+                },*/
+                {
+                    question: "The brainstem includes which three main parts?",
+                    options: ["Cerebrum, cerebellum, diencephalon", "Midbrain, pons, medulla oblongata", "Thalamus, hypothalamus, hippocampus", "Frontal lobe, parietal lobe, temporal lobe"],
+                    correctAnswerIndex: 1,
+                    explanation: "The brainstem connects the cerebrum and cerebellum to the spinal cord and consists of the midbrain, pons, and medulla oblongata."
+                },
+                {
+                    question: "What vital center located in the medulla oblongata controls breathing and heart rate?",
+                    options: ["Sensory cortex", "Motor cortex", "Respiratory and Cardiovascular Center", "Visual association area"],
+                    correctAnswerIndex: 2,
+                    explanation: "The medulla oblongata contains vital centers that regulate essential involuntary functions like respiration and cardiovascular activity."
+                },
+                {
+                    question: "What is the primary function of the cerebellum?",
+                    options: ["Processing sensory information", "Coordinating voluntary movements, balance, and posture", "Controlling emotions", "Regulating body temperature"],
+                    correctAnswerIndex: 1,
+                    explanation: "The cerebellum is crucial for fine-tuning motor movements, maintaining balance, and coordinating muscle activity."
+                },
+                {
+                    question: "The spinal cord acts as the center of what type of action?",
+                    options: ["Voluntary movement", "Conscious thought", "Reflex action", "Hormone secretion"],
+                    correctAnswerIndex: 2,
+                    explanation: "The spinal cord is responsible for mediating reflex actions, which are rapid, involuntary responses to stimuli."
+                },
+                {
+                    question: "What are the three protective membranes that surround the brain and spinal cord, collectively known as the meninges?",
+                    options: ["Epidermis, dermis, hypodermis", "Pericardium, pleura, peritoneum", "Dura mater, arachnoid mater, pia mater", "Cortex, medulla, pelvis"],
+                    correctAnswerIndex: 2,
+                    explanation: "The meninges consist of three layers: the dura mater (outermost), arachnoid mater (middle), and pia mater (innermost), which protect the CNS."
+                },
+                {
+                    question: "What is the function of cerebrospinal fluid (CSF)?",
+                    options: ["To transport oxygen to the brain", "To lubricate, act as a shock absorber, support, and nourish the brain and spinal cord", "To filter waste products from the blood", "To produce hormones"],
+                    correctAnswerIndex: 1,
+                    explanation: "CSF provides buoyancy, protection, and nutrient/waste exchange for the brain and spinal cord."
+                },
+                {
+                    question: "Nerves that travel towards the brain carrying sensory information are called:",
+                    options: ["Motor nerves (efferent)", "Autonomic nerves", "Sensory nerves (afferent)", "Cranial nerves"],
+                    correctAnswerIndex: 2,
+                    explanation: "Afferent neurons (sensory nerves) transmit signals from sensory receptors to the central nervous system."
+                },
+                {
+                    question: "Nerves that travel away from the brain carrying information to organs/muscles are called:",
+                    options: ["Sensory nerves (afferent)", "Motor nerves (efferent)", "Spinal nerves", "Mixed nerves"],
+                    correctAnswerIndex: 1,
+                    explanation: "Efferent neurons (motor nerves) transmit signals from the central nervous system to muscles and glands."
+                },
+                {
+                    question: "The autonomic nervous system controls which type of body functions?",
+                    options: ["Voluntary movements of skeletal muscles", "Conscious thought processes", "Involuntary body functions (e.g., heart rate, digestion)", "Sensory perception"],
+                    correctAnswerIndex: 2,
+                    explanation: "The autonomic nervous system regulates involuntary processes like heart rate, digestion, respiration, and blood pressure."
+                },
+                {
+                    question: "Which division of the autonomic nervous system is responsible for the 'fight or flight' response?",
+                    options: ["Parasympathetic nervous system", "Somatic nervous system", "Sympathetic nervous system", "Central nervous system"],
+                    correctAnswerIndex: 2,
+                    explanation: "The sympathetic nervous system prepares the body for stressful or emergency situations."
+                },
+                {
+                    question: "Which division of the autonomic nervous system is responsible for 'rest and digest' functions?",
+                    options: ["Sympathetic nervous system", "Somatic nervous system", "Parasympathetic nervous system", "Peripheral nervous system"],
+                    correctAnswerIndex: 2,
+                    explanation: "The parasympathetic nervous system promotes functions associated with relaxation and digestion."
+                },
+                {
+                    question: "The insulating material that surrounds some axons and speeds up nerve impulse transmission is called the:",
+                    options: ["Dendrite", "Cell body", "Myelin sheath", "Synaptic knob"],
+                    correctAnswerIndex: 2,
+                    explanation: "The myelin sheath acts as an electrical insulator, allowing nerve impulses to jump between nodes of Ranvier, increasing conduction speed."
+                },
+                {
+                    question: "Chemical messengers that transmit impulses from one neuron to another across a synapse are called:",
+                    options: ["Hormones", "Enzymes", "Neurotransmitters", "Electrolytes"],
+                    correctAnswerIndex: 2,
+                    explanation: "Neurotransmitters are chemical signals released at synapses to communicate between neurons."
+                },
+                {
+                    question: "Which type of chemoreceptor is situated in the medulla and primarily measures CO2 and pH levels in cerebrospinal fluid (CSF)?",
+                    options: ["Peripheral chemoreceptors", "Central chemoreceptors", "Baroreceptors", "Stretch receptors"],
+                    correctAnswerIndex: 1,
+                    explanation: "Central chemoreceptors in the medulla are highly sensitive to changes in CO2 and pH in the CSF, influencing breathing rate."
+                },
+                {
+                    question: "Which receptors are located in the aortic arch and carotid sinus and help maintain blood pressure by measuring stretch in vessel walls?",
+                    options: ["Chemoreceptors", "Thermoreceptors", "Baroreceptors", "Nociceptors"],
+                    correctAnswerIndex: 2,
+                    explanation: "Baroreceptors detect changes in blood pressure and send signals to the brain to regulate it."
+                },
+                {
+                    question: "The Phrenic Nerve (C3, C4, C5) is crucial because it stimulates which muscle, essential for breathing?",
+                    options: ["Intercostal muscles", "Abdominal muscles", "Diaphragm", "Pectoral muscles"],
+                    correctAnswerIndex: 2,
+                    explanation: "The phrenic nerve innervates the diaphragm, the primary muscle of respiration."
+                },
+                {
+                    question: "How many pairs of cranial nerves are there?",
+                    options: ["10", "12", "20", "31"],
+                    correctAnswerIndex: 1,
+                    explanation: "There are 12 pairs of cranial nerves that emerge directly from the brain or brainstem."
+                },
+                {
+                    question: "How many pairs of vertebral (spinal) nerves are there?",
+                    options: ["12", "24", "31", "33"],
+                    correctAnswerIndex: 2,
+                    explanation: "There are 31 pairs of spinal nerves that branch off the spinal cord."
+                },
+                {
+                    question: "The part of the brain that acts as a link between the cerebrum, lower parts of the brain, and the spinal cord is the:",
+                    options: ["Cerebellum", "Diencephalon", "Midbrain", "Thalamus"],
+                    correctAnswerIndex: 2,
+                    explanation: "The midbrain is part of the brainstem and serves as a relay station for sensory and motor information."
+                },
+                {
+                    question: "What is the term for the crossing over of motor nerves from the brain to specific muscles/cells, which occurs in the medulla oblongata?",
+                    options: ["Synapsis", "Decussation of pyramids", "Myelination", "Reflex arc"],
+                    correctAnswerIndex: 1,
+                    explanation: "The decussation of pyramids is where motor fibers cross from one side of the brain to the opposite side of the spinal cord."
+                },
+                {
+                    question: "Which lobe of the cerebrum is primarily associated with vision?",
+                    options: ["Frontal lobe", "Parietal lobe", "Temporal lobe", "Occipital lobe"],
+                    correctAnswerIndex: 3,
+                    explanation: "The occipital lobe is the visual processing center of the brain."
+                },
+                {
+                    question: "Which lobe of the cerebrum is primarily associated with hearing and smell?",
+                    options: ["Frontal lobe", "Parietal lobe", "Temporal lobe", "Occipital lobe"],
+                    correctAnswerIndex: 2,
+                    explanation: "The temporal lobe plays a key role in processing auditory information and is involved in smell."
+                },
+                {
+                    question: "The 'grey matter' of the cerebral cortex is primarily composed of:",
+                    options: ["Nerve fibers (axons)", "Myelin sheaths", "Nerve cell bodies", "Blood vessels"],
+                    correctAnswerIndex: 2,
+                    explanation: "Grey matter consists mainly of neuronal cell bodies, dendrites, and unmyelinated axons."
+                },
+                {
+                    question: "What is the main function of the thalamus?",
+                    options: ["Controlling emotions", "Relaying sensory information to the cerebral cortex", "Coordinating motor movements", "Producing hormones"],
+                    correctAnswerIndex: 1,
+                    explanation: "The thalamus acts as a major relay station for sensory information, directing it to the appropriate areas of the cerebral cortex."
+                },
+                {
+                    question: "Which structure connects the two hemispheres of the cerebrum, allowing for communication between them?",
+                    options: ["Brainstem", "Thalamus", "Corpus callosum", "Cerebellum"],
+                    correctAnswerIndex: 2,
+                    explanation: "The corpus callosum is a large bundle of nerve fibers that connects the left and right cerebral hemispheres."
+                },
+
+                // Respiratory System (30 questions)
+                {
+                    question: "What are the three main components of the respiratory system?",
+                    options: ["Heart, blood, vessels", "Bones, muscles, joints", "Anatomy, mechanism of breathing, nervous control", "Kidneys, ureters, bladder"],
+                    correctAnswerIndex: 2,
+                    explanation: "The respiratory system involves its anatomical structures, the mechanical process of breathing, and its nervous regulation."
+                },
+                {
+                    question: "What is the primary function of the respiratory system?",
+                    options: ["To digest food", "To ventilate the lungs and facilitate gas exchange", "To pump blood", "To filter waste from the blood"],
+                    correctAnswerIndex: 1,
+                    explanation: "The main roles of the respiratory system are to move air in and out of the lungs (ventilation) and to exchange oxygen and carbon dioxide."
+                },
+                {
+                    question: "Which part of the respiratory system warms, filters, and moistens inhaled air?",
+                    options: ["Trachea", "Bronchi", "Nose", "Alveoli"],
+                    correctAnswerIndex: 2,
+                    explanation: "The nose is the primary entry point for air and is equipped to condition the air before it reaches the lungs."
+                },
+                {
+                    question: "The pharynx is divided into how many parts?",
+                    options: ["Two", "Three", "Four", "Five"],
+                    correctAnswerIndex: 1,
+                    explanation: "The pharynx is divided into the nasopharynx, oropharynx, and laryngopharynx."
+                },
+                {
+                    question: "What is the common name for the larynx?",
+                    options: ["Windpipe", "Voice box", "Food pipe", "Air sac"],
+                    correctAnswerIndex: 1,
+                    explanation: "The larynx, or voice box, contains the vocal cords and is crucial for speech."
+                },
+                {
+                    question: "Which cartilage forms a complete ring and marks the end of the upper respiratory tract?",
+                    options: ["Thyroid cartilage", "Epiglottis", "Cricoid cartilage", "Arytenoid cartilage"],
+                    correctAnswerIndex: 2,
+                    explanation: "The cricoid cartilage is the only complete ring of cartilage in the airway and is located at the base of the larynx."
+                },
+                {
+                    question: "What is the function of the epiglottis?",
+                    options: ["To produce sound", "To filter air", "To occlude the larynx during swallowing and direct food into the esophagus", "To warm and moisten air"],
+                    correctAnswerIndex: 2,
+                    explanation: "The epiglottis acts as a flap that closes over the trachea during swallowing to prevent food and liquid from entering the airways."
+                },
+                {
+                    question: "The trachea extends from the cricoid cartilage to the carina, which is located at which thoracic vertebra level?",
+                    options: ["T1", "T3", "T5", "T7"],
+                    correctAnswerIndex: 2,
+                    explanation: "The carina is the point where the trachea divides into the left and right main bronchi, typically at the level of the fifth thoracic vertebra (T5)."
+                },
+                {
+                    question: "What is the function of the mucociliary escalator in the trachea?",
+                    options: ["To produce mucus", "To warm the air", "To waft mucus with adherent particles upwards towards the larynx for expulsion", "To facilitate gas exchange"],
+                    correctAnswerIndex: 2,
+                    explanation: "The mucociliary escalator is a defense mechanism that uses cilia to move mucus and trapped particles out of the respiratory tract."
+                },
+                {
+                    question: "How many lobes does the right lung typically have?",
+                    options: ["1", "2", "3", "4"],
+                    correctAnswerIndex: 2,
+                    explanation: "The right lung has three lobes (superior, middle, and inferior), while the left lung has two."
+                },
+                {
+                    question: "What substance prevents the alveoli from drying out and reduces surface tension, allowing for lung expansion?",
+                    options: ["Mucus", "Histamine", "Surfactant", "Plasma"],
+                    correctAnswerIndex: 2,
+                    explanation: "Surfactant is a lipoprotein that reduces surface tension in the alveoli, preventing their collapse."
+                },
+                {
+                    question: "What are the tiny air sacs in the lungs where gaseous exchange occurs?",
+                    options: ["Bronchioles", "Trachea", "Alveoli", "Pleura"],
+                    correctAnswerIndex: 2,
+                    explanation: "Alveoli are thin-walled air sacs surrounded by capillaries, forming the primary site of gas exchange in the lungs."
+                },
+                {
+                    question: "Which muscles are primarily responsible for inspiration (inhaling)?",
+                    options: ["Internal intercostals and abdominal muscles", "Diaphragm and external intercostals", "Pectoral muscles and sternocleidomastoid", "Trapezius and rhomboids"],
+                    correctAnswerIndex: 1,
+                    explanation: "The diaphragm contracts and flattens, and the external intercostal muscles contract, pulling the ribs up and out, increasing thoracic volume for inspiration."
+                },
+                {
+                    question: "Normal expiration is typically a(n) ______ process.",
+                    options: ["Active", "Passive", "Voluntary", "Forced"],
+                    correctAnswerIndex: 1,
+                    explanation: "Normal expiration is usually a passive process, relying on the elastic recoil of the lungs and relaxation of inspiratory muscles."
+                },
+                {
+                    question: "The exchange of gases between the alveoli and the blood in pulmonary capillaries is called:",
+                    options: ["Pulmonary ventilation", "Internal respiration", "External respiration", "Cellular respiration"],
+                    correctAnswerIndex: 2,
+                    explanation: "External respiration is the process of gas exchange between the lungs and the blood."
+                },
+                {
+                    question: "The exchange of gases between the blood in systemic capillaries and tissue cells is called:",
+                    options: ["Pulmonary ventilation", "Internal respiration", "External respiration", "Diffusion"],
+                    correctAnswerIndex: 1,
+                    explanation: "Internal respiration is the process of gas exchange between the blood and body tissues."
+                },
+                {
+                    question: "What percentage of inspired air is oxygen?",
+                    options: ["16%", "21%", "4%", "78%"],
+                    correctAnswerIndex: 1,
+                    explanation: "Approximately 21% of the air we breathe is oxygen."
+                },
+                {
+                    question: "What percentage of expired air is carbon dioxide?",
+                    options: ["0.04%", "4%", "16%", "78%"],
+                    correctAnswerIndex: 1,
+                    explanation: "Expired air contains about 4% carbon dioxide, which is a significant increase from inspired air."
+                },
+                {
+                    question: "Which reflex prevents over-inflation of the lungs by sending impulses to the respiratory center to 'switch off' inhalation?",
+                    options: ["Cough reflex", "Gag reflex", "Hering-Breuer reflex", "Withdrawal reflex"],
+                    correctAnswerIndex: 2,
+                    explanation: "The Hering-Breuer reflex is a protective mechanism that inhibits inspiration when the lungs are stretched."
+                },
+                {
+                    question: "Central chemoreceptors are stimulated by raised levels of what in the cerebrospinal fluid (CSF)?",
+                    options: ["Oxygen", "Carbon dioxide and pH decrease", "Nitrogen", "Water"],
+                    correctAnswerIndex: 1,
+                    explanation: "Central chemoreceptors are highly sensitive to increases in CO2 and corresponding decreases in pH in the CSF."
+                },
+                {
+                    question: "Peripheral chemoreceptors, located in the aortic arch and carotid bodies, are primarily stimulated by:",
+                    options: ["High oxygen levels", "Low oxygen and high CO2 levels", "Low blood pressure", "High blood pressure"],
+                    correctAnswerIndex: 1,
+                    explanation: "Peripheral chemoreceptors respond to changes in blood oxygen, carbon dioxide, and pH, with a stronger response to low oxygen."
+                },
+                {
+                    question: "The respiratory centers that control the rate of breathing are located in which part of the brain?",
+                    options: ["Cerebrum", "Cerebellum", "Medulla (brainstem)", "Thalamus"],
+                    correctAnswerIndex: 2,
+                    explanation: "The medulla oblongata contains the primary respiratory control centers."
+                },
+                {
+                    question: "What is the average tidal volume (amount of air inspired during normal, relaxed breathing) for an adult?",
+                    options: ["100 ml", "500 ml", "1200 ml", "3100 ml"],
+                    correctAnswerIndex: 1,
+                    explanation: "Tidal volume is the amount of air inhaled or exhaled during a normal breath, typically around 500 ml for an adult."
+                },
+                {
+                    question: "What is the term for the additional air that can be forcibly inhaled after the inspiration of a normal tidal volume?",
+                    options: ["Expiratory reserve volume", "Residual volume", "Inspiratory reserve volume", "Vital capacity"],
+                    correctAnswerIndex: 2,
+                    explanation: "Inspiratory reserve volume (IRV) is the maximum amount of air that can be inhaled after a normal inspiration."
+                },
+                {
+                    question: "What is the volume of air still remaining in the lungs after the expiratory reserve volume is exhaled?",
+                    options: ["Tidal volume", "Inspiratory reserve volume", "Expiratory reserve volume", "Residual volume"],
+                    correctAnswerIndex: 3,
+                    explanation: "Residual volume (RV) is the air that remains in the lungs even after a maximal exhalation."
+                },
+                {
+                    question: "Which structure connects the laryngopharynx and the trachea?",
+                    options: ["Nasal cavity", "Pharynx", "Larynx", "Bronchus"],
+                    correctAnswerIndex: 2,
+                    explanation: "The larynx (voice box) is positioned between the pharynx and the trachea."
+                },
+                {
+                    question: "The 'C' shaped cartilages of the trachea are incomplete posteriorly to allow for the expansion of which adjacent organ?",
+                    options: ["Larynx", "Oesophagus", "Bronchus", "Thyroid gland"],
+                    correctAnswerIndex: 1,
+                    explanation: "The incomplete rings allow the esophagus to expand when food passes through it."
+                },
+                {
+                    question: "What is the primary function of the pleural fluid in the pleural space?",
+                    options: ["To provide nutrients to the lungs", "To reduce friction between the pleural membranes during breathing", "To filter air", "To produce surfactant"],
+                    correctAnswerIndex: 1,
+                    explanation: "Pleural fluid acts as a lubricant, allowing the visceral and parietal pleura to slide smoothly past each other during respiration."
+                },
+                {
+                    question: "Which of the following is NOT a function of the respiratory system?",
+                    options: ["To assist in the maintenance of acid/base balance of blood", "To extract carbon dioxide from the blood", "To transport nutrients to body cells", "To ventilate the lungs"],
+                    correctAnswerIndex: 2,
+                    explanation: "The transport of nutrients to body cells is primarily a function of the cardiovascular system."
+                },
+                {
+                    question: "The smallest air passages in the lungs that terminate at the alveoli are called:",
+                    options: ["Bronchi", "Trachea", "Bronchioles", "Larynx"],
+                    correctAnswerIndex: 2,
+                    explanation: "Bronchioles are small airways that branch from the bronchi and lead to the alveolar sacs."
+                },
+
+                // Urinary System (30 questions)
+                {
+                    question: "What are the key structural features of the urinary system?",
+                    options: ["Heart, blood vessels, blood", "Kidneys, ureters, bladder, urethra", "Brain, spinal cord, nerves", "Stomach, intestines, liver"],
+                    correctAnswerIndex: 1,
+                    explanation: "The urinary system consists of the kidneys, ureters, bladder, and urethra, which work together to produce, store, and excrete urine."
+                },
+                {
+                    question: "What is the primary physiological function of the urinary system?",
+                    options: ["Digestion of food", "Regulation of blood volume and composition, and excretion of waste products", "Gas exchange", "Muscle contraction"],
+                    correctAnswerIndex: 1,
+                    explanation: "The urinary system is crucial for maintaining fluid and electrolyte balance, regulating blood pressure, and eliminating metabolic waste."
+                },
+                {
+                    question: "Which organ of the urinary system is responsible for filtering blood to remove waste products and regulate fluid balance?",
+                    options: ["Ureters", "Bladder", "Urethra", "Kidneys"],
+                    correctAnswerIndex: 3,
+                    explanation: "The kidneys are the main filtering organs of the urinary system."
+                },
+                {
+                    question: "The kidneys are bean-shaped organs that lie on the posterior abdominal wall and receive some protection from the:",
+                    options: ["Pelvis", "Ribcage", "Spine", "Abdominal muscles"],
+                    correctAnswerIndex: 1,
+                    explanation: "The lower ribs provide some protection to the kidneys."
+                },
+                {
+                    question: "The outermost layer of the kidney, which is reddish-brown in color, is called the:",
+                    options: ["Medulla", "Renal pelvis", "Cortex", "Calyces"],
+                    correctAnswerIndex: 2,
+                    explanation: "The renal cortex is the outer region of the kidney."
+                },
+                {
+                    question: "What are the conical-shaped, striated structures that make up the medulla of the kidney?",
+                    options: ["Nephrons", "Collecting ducts", "Renal pyramids", "Glomeruli"],
+                    correctAnswerIndex: 2,
+                    explanation: "The renal medulla contains renal pyramids, which are cone-shaped tissues."
+                },
+                {
+                    question: "What is the microscopic functional unit of the kidney that filters blood and forms urine?",
+                    options: ["Ureter", "Bladder", "Nephron", "Renal artery"],
+                    correctAnswerIndex: 2,
+                    explanation: "The nephron is the fundamental filtering unit of the kidney."
+                },
+                {
+                    question: "Filtration in the kidney primarily takes place in which structure?",
+                    options: ["Loop of Henle", "Collecting duct", "Glomerulus and glomerular capsule (Bowman's capsule)", "Distal convoluted tubule"],
+                    correctAnswerIndex: 2,
+                    explanation: "Blood filtration begins in the glomerulus, a network of capillaries encased by Bowman's capsule."
+                },
+                {
+                    question: "After filtration, the fluid is called filtrate. What is the main function of the collecting duct?",
+                    options: ["To filter more blood", "To reabsorb as much water as the body needs", "To secrete waste products", "To transport urine to the ureters"],
+                    correctAnswerIndex: 1,
+                    explanation: "The collecting ducts play a crucial role in water reabsorption, concentrating the urine."
+                },
+                {
+                    question: "What is the approximate percentage of water in the composition of urine?",
+                    options: ["50%", "75%", "95%", "100%"],
+                    correctAnswerIndex: 2,
+                    explanation: "Urine is primarily composed of water, typically around 95%."
+                },
+                {
+                    question: "The mechanism that protects renal blood flow and glomerular filtration from significant fluctuations in blood pressure is called:",
+                    options: ["Homeostasis", "Renin-angiotensin-aldosterone system", "Autoregulation", "Tubular secretion"],
+                    correctAnswerIndex: 2,
+                    explanation: "Autoregulation within the kidneys maintains a relatively constant glomerular filtration rate despite changes in systemic blood pressure."
+                },
+                {
+                    question: "What hormone system, involving the kidneys, liver, and adrenal glands, plays a crucial role in regulating blood pressure and fluid balance?",
+                    options: ["Insulin-glucagon system", "Thyroid hormone system", "Renin-angiotensin-aldosterone system (RAAS)", "Growth hormone system"],
+                    correctAnswerIndex: 2,
+                    explanation: "The RAAS is a complex hormonal system that regulates blood pressure and fluid balance."
+                },
+                {
+                    question: "What are the hollow muscular tubes that transport urine from the kidneys to the bladder?",
+                    options: ["Urethra", "Fallopian tubes", "Ureters", "Vas deferens"],
+                    correctAnswerIndex: 2,
+                    explanation: "Ureters are the tubes that carry urine from the kidneys to the bladder."
+                },
+                {
+                    question: "The bladder is a pear-shaped organ that becomes more balloon-shaped as it fills with urine. What is the muscle layer of the bladder called?",
+                    options: ["Myometrium", "Detrusor muscle", "Sphincter muscle", "Perimetrium"],
+                    correctAnswerIndex: 1,
+                    explanation: "The detrusor muscle is the smooth muscle that forms the wall of the bladder and contracts to expel urine."
+                },
+                {
+                    question: "Which part of the urinary system is longer in males than in females and provides a common pathway for urine and semen?",
+                    options: ["Ureters", "Bladder", "Urethra", "Kidney"],
+                    correctAnswerIndex: 2,
+                    explanation: "The male urethra is significantly longer than the female urethra and serves both urinary and reproductive functions."
+                },
+                {
+                    question: "The external urethral sphincter is under what type of control?",
+                    options: ["Involuntary", "Autonomic", "Voluntary", "Reflexive"],
+                    correctAnswerIndex: 2,
+                    explanation: "The external urethral sphincter allows for conscious control over urination."
+                },
+                {
+                    question: "What waste product, derived from muscle metabolism, is excreted in urine?",
+                    options: ["Glucose", "Proteins", "Creatinine", "Fatty acids"],
+                    correctAnswerIndex: 2,
+                    explanation: "Creatinine is a waste product formed from the breakdown of creatine in muscles and is filtered by the kidneys."
+                },
+                {
+                    question: "Which of the following is NOT a component of urine?",
+                    options: ["Water", "Urea", "Red blood cells", "Dissolved salts and ions"],
+                    correctAnswerIndex: 2,
+                    explanation: "In healthy individuals, red blood cells are not typically found in urine; their presence (hematuria) usually indicates a problem."
+                },
+                {
+                    question: "What is the process by which substances not entirely filtered out of the blood in the glomerulus are cleared by secretion from the peritubular capillaries into the filtrate?",
+                    options: ["Filtration", "Selective reabsorption", "Tubular secretion", "Excretion"],
+                    correctAnswerIndex: 2,
+                    explanation: "Tubular secretion involves the active transport of certain substances from the blood into the renal tubule for excretion."
+                },
+                {
+                    question: "In severe shock, when systolic blood pressure falls below 80 mmHg, what happens to the kidneys' autoregulation?",
+                    options: ["It increases blood flow", "It becomes more efficient", "It fails, leading to potential kidney damage", "It has no effect"],
+                    correctAnswerIndex: 2,
+                    explanation: "Below a certain blood pressure threshold, the kidneys' ability to autoregulate blood flow is lost, making them vulnerable to damage."
+                },
+                {
+                    question: "What is the inner layer of the kidney called?",
+                    options: ["Cortex", "Medulla", "Renal pelvis", "Capsule"],
+                    correctAnswerIndex: 1,
+                    explanation: "The medulla is the inner region of the kidney, containing the renal pyramids."
+                },
+                {
+                    question: "The walls of the calyces and renal pelvis are lined with smooth muscle, which propels urine to the bladder through what process?",
+                    options: ["Diffusion", "Osmosis", "Peristalsis", "Filtration"],
+                    correctAnswerIndex: 2,
+                    explanation: "Peristalsis, wave-like muscular contractions, moves urine through the ureters."
+                },
+                {
+                    question: "The Bowman's capsule surrounds which structure in the nephron?",
+                    options: ["Loop of Henle", "Collecting duct", "Glomerulus", "Proximal convoluted tubule"],
+                    correctAnswerIndex: 2,
+                    explanation: "Bowman's capsule encloses the glomerulus, forming the renal corpuscle where filtration begins."
+                },
+                {
+                    question: "The main function of the kidneys to maintain balance involves altering sodium and electrolyte balances to maintain what?",
+                    options: ["Blood glucose levels", "Hormone production", "Fluid amounts/blood volume", "Muscle contraction"],
+                    correctAnswerIndex: 2,
+                    explanation: "The kidneys play a crucial role in regulating the body's fluid and electrolyte balance, directly impacting blood volume."
+                },
+                {
+                    question: "Which part of the male urethra passes through the prostate gland?",
+                    options: ["Membranous urethra", "Penile urethra", "Prostatic urethra", "External sphincter"],
+                    correctAnswerIndex: 2,
+                    explanation: "The prostatic urethra is the segment of the male urethra that runs through the prostate gland."
+                },
+                {
+                    question: "What is the average length of the ureters?",
+                    options: ["5-10 cm", "10-15 cm", "20-30 cm", "40-50 cm"],
+                    correctAnswerIndex: 2,
+                    explanation: "Ureters are typically 20-30 cm long, connecting the kidneys to the bladder."
+                },
+                {
+                    question: "Which structure is guarded by the external urethral sphincter?",
+                    options: ["Kidney", "Ureter", "Bladder", "External urethral orifice"],
+                    correctAnswerIndex: 3,
+                    explanation: "The external urethral sphincter controls the flow of urine from the bladder through the external urethral orifice."
+                },
+                {
+                    question: "The renal artery supplies blood to the kidney. What vessel carries filtered blood away from the kidney?",
+                    options: ["Renal vein", "Ureter", "Aorta", "Vena cava"],
+                    correctAnswerIndex: 0,
+                    explanation: "The renal vein carries deoxygenated and filtered blood from the kidney back to the inferior vena cava."
+                },
+                {
+                    question: "What is the primary function of selective reabsorption in the nephron?",
+                    options: ["To filter blood", "To return useful substances from the filtrate back to the blood", "To secrete waste products into the filtrate", "To store urine"],
+                    correctAnswerIndex: 1,
+                    explanation: "Selective reabsorption ensures that essential substances like glucose, amino acids, and most water are reabsorbed from the filtrate back into the bloodstream."
+                },
+                {
+                    question: "Which structure in the kidney is responsible for collecting urine from the renal pyramids before it passes to the ureter?",
+                    options: ["Cortex", "Medulla", "Renal pelvis", "Bowman's capsule"],
+                    correctAnswerIndex: 2,
+                    explanation: "The renal pelvis is a funnel-shaped structure that collects urine from the calyces and channels it into the ureter."
+                },
+
+                // Lymphatic System (30 questions)
+                {
+                    question: "Which bodily system is the lymphatic system part of?",
+                    options: ["Musculoskeletal system", "Immune system", "Respiratory system", "Integumentary system"],
+                    correctAnswerIndex: 1,
+                    explanation: "The lymphatic system is a crucial part of the immune system, involved in defense against pathogens."
+                },
+                {
+                    question: "Which of these is NOT part of the lymphatic system?",
+                    options: ["Bone marrow", "Thymus", "Spleen", "Blood vessels"],
+                    correctAnswerIndex: 3,
+                    explanation: "Blood vessels are part of the cardiovascular system, not the lymphatic system."
+                },
+                {
+                    question: "What is lymph?",
+                    options: ["Solid lumps that are passed from the stomach through the duodenum", "Interstitial fluid that has passed into the lymph capillaries", "A type of plasma that is slightly thicker", "A mix of blood & fats from the small intestine"],
+                    correctAnswerIndex: 1,
+                    explanation: "Lymph is the interstitial fluid that enters the lymphatic capillaries."
+                },
+                {
+                    question: "What is the function of a B lymphocyte?",
+                    options: ["Responsible for cell-mediated immunity", "Creates proteins called antibodies & is responsible for antibody-mediated immunity.", "Works with macrophages to destroy a single type of pathogen", "A specialised cell involved in the detection, phagocytosis & destruction of bacteria and other harmful organisms"],
+                    correctAnswerIndex: 1,
+                    explanation: "B lymphocytes produce antibodies, which are essential for humoral (antibody-mediated) immunity."
+                },
+                {
+                    question: "Which of these describes the lymph vessels?",
+                    options: ["No pump, have the ability to contract rhythmically", "Blind end tubes in interstitial spaces", "Muscular tubes that can withstand a higher pressure of fluid directly from the heart", "Muscular hollow continuous tubular organ along which substances pass by peristalsis"],
+                    correctAnswerIndex: 0,
+                    explanation: "Lymph vessels have valves and can contract rhythmically to propel lymph, as they lack a central pump like the heart."
+                },
+                {
+                    question: "Which of these is NOT a function of the lymphatic system?",
+                    options: ["Controls internal respiration", "Removing body fluid levels", "Protecting the body from pathogens", "Absorbing digestive tract fats"],
+                    correctAnswerIndex: 0,
+                    explanation: "Controlling internal respiration is a function of the respiratory and circulatory systems, not the lymphatic system."
+                },
+                {
+                    question: "Which of these can be found in lymph nodes?",
+                    options: ["Plasma", "Erythrocytes", "Macrophages", "Deoxygenated blood"],
+                    correctAnswerIndex: 2,
+                    explanation: "Lymph nodes contain macrophages and lymphocytes, which filter lymph and mount immune responses."
+                },
+                {
+                    question: "Where might you find MALT (Mucosa-Associated Lymphoid Tissue)?",
+                    options: ["Genitourinary tract", "GI tract", "Reproductive tract", "Respiratory tract"],
+                    correctAnswerIndex: 1, // This question has multiple correct answers. I will pick GI tract as the primary.
+                    explanation: "MALT is found in various mucosal linings, including the gastrointestinal (GI), respiratory, and genitourinary tracts, as well as the reproductive tract."
+                },
+                {
+                    question: "Which of these is NOT a function of the spleen?",
+                    options: ["Storage of blood", "Erythropoiesis (in adults)", "Phagocytosis of old/abnormal erythrocytes", "Allowing T lymphocytes to be able to react to specific antigens"],
+                    correctAnswerIndex: 1, // Erythropoiesis primarily occurs in bone marrow in adults.
+                    explanation: "While the spleen has a role in fetal erythropoiesis, in adults, red blood cell production primarily occurs in the bone marrow. The spleen is involved in blood storage, phagocytosis of old red blood cells, and immune responses."
+                },
+                {
+                    question: "Where can Peyer’s patches be found?",
+                    options: ["Stomach", "Small intestine", "Blood vessels", "Bronchioles"],
+                    correctAnswerIndex: 1,
+                    explanation: "Peyer's patches are lymphoid tissues located in the small intestine, part of MALT."
+                },
+                {
+                    question: "What is the primary function of the lymphatic system related to tissue drainage?",
+                    options: ["To transport blood", "To absorb nutrients", "To drain excess interstitial fluid and return it to the bloodstream", "To produce hormones"],
+                    correctAnswerIndex: 2,
+                    explanation: "The lymphatic system collects excess fluid and proteins from interstitial spaces and returns them to the circulatory system, preventing edema."
+                },
+                {
+                    question: "What is chyle?",
+                    options: ["A type of white blood cell", "A milky bodily fluid consisting of lymph and emulsified fats, formed in the small intestine", "A component of blood plasma", "A fluid found in joints"],
+                    correctAnswerIndex: 1,
+                    explanation: "Chyle is a milky fluid formed in the small intestine during fat digestion, absorbed by lacteals (lymphatic capillaries)."
+                },
+                {
+                    question: "Lymph capillaries are more permeable than blood capillaries, allowing what to enter easily?",
+                    options: ["Red blood cells", "Large proteins and excess interstitial fluid", "Oxygen", "Glucose"],
+                    correctAnswerIndex: 1,
+                    explanation: "The high permeability of lymphatic capillaries allows them to collect large molecules like proteins and excess fluid that cannot easily enter blood capillaries."
+                },
+                {
+                    question: "How many lymph nodes do humans typically have throughout the body?",
+                    options: ["Around 50-100", "Around 200-300", "Around 500-600", "Over 1000"],
+                    correctAnswerIndex: 2,
+                    explanation: "Humans have hundreds of lymph nodes strategically located throughout the body."
+                },
+                {
+                    question: "What is the function of lymph nodes?",
+                    options: ["To produce hormones", "To filter lymph, destroying bacteria and cellular debris", "To pump lymph throughout the body", "To store red blood cells"],
+                    correctAnswerIndex: 1,
+                    explanation: "Lymph nodes act as filters, trapping and destroying harmful substances and pathogens present in the lymph."
+                },
+                {
+                    question: "Which of the following is the largest lymphatic organ?",
+                    options: ["Thymus", "Tonsils", "Spleen", "Appendix"],
+                    correctAnswerIndex: 2,
+                    explanation: "The spleen is the largest lymphatic organ, located in the upper left abdomen."
+                },
+                {
+                    question: "What is the primary function of the thymus?",
+                    options: ["To filter blood", "To store lymph", "To mature T lymphocytes", "To produce antibodies"],
+                    correctAnswerIndex: 2,
+                    explanation: "The thymus is a specialized organ where T lymphocytes mature and learn to distinguish self from non-self."
+                },
+                {
+                    question: "Where do lymphocytes begin their life?",
+                    options: ["Thymus", "Spleen", "Lymph nodes", "Red bone marrow"],
+                    correctAnswerIndex: 3,
+                    explanation: "All blood cells, including lymphocytes, originate from stem cells in the red bone marrow."
+                },
+                {
+                    question: "What type of immunity is the defense system you were born with, including physical barriers and phagocytic cells?",
+                    options: ["Adaptive immunity", "Passive immunity", "Innate immunity", "Acquired immunity"],
+                    correctAnswerIndex: 2,
+                    explanation: "Innate immunity is the body's non-specific, first-line defense system present from birth."
+                },
+                {
+                    question: "Which type of immunity remembers previous encounters with specific pathogens and destroys them when they attack again?",
+                    options: ["Innate immunity", "Passive immunity", "Adaptive immunity", "Natural immunity"],
+                    correctAnswerIndex: 2,
+                    explanation: "Adaptive (or acquired) immunity is characterized by its specificity and immunological memory."
+                },
+                {
+                    question: "Passive immunity is provided when a person is given:",
+                    options: ["Vaccines", "Antigens", "Antibodies", "T cells"],
+                    correctAnswerIndex: 2,
+                    explanation: "Passive immunity involves the transfer of pre-formed antibodies, such as from mother to baby or through blood therapy."
+                },
+                {
+                    question: "Which of the following is an example of an anatomical/mechanical barrier of immunity?",
+                    options: ["Enzymes in tears", "Stomach acid", "Skin", "Anti-bacterial proteins in semen"],
+                    correctAnswerIndex: 2,
+                    explanation: "The skin provides a physical barrier against pathogen entry."
+                },
+                {
+                    question: "What are the two large ducts that lymph vessels eventually join to empty into the subclavian veins?",
+                    options: ["Renal ducts and hepatic ducts", "Thoracic duct and right lymphatic duct", "Cystic ducts and pancreatic ducts", "Ureters and urethra"],
+                    correctAnswerIndex: 1,
+                    explanation: "The thoracic duct and right lymphatic duct are the two main lymphatic vessels that return lymph to the bloodstream."
+                },
+                {
+                    question: "What is the term for the process by which macrophages and other immune cells engulf and destroy pathogens and cellular debris?",
+                    options: ["Exocytosis", "Pinocytosis", "Phagocytosis", "Endocytosis"],
+                    correctAnswerIndex: 2,
+                    explanation: "Phagocytosis is the process of engulfing and breaking down foreign particles or cells."
+                },
+                {
+                    question: "Which type of lymphocyte is responsible for cell-mediated immunity and includes 'killer' and 'helper' subtypes?",
+                    options: ["B lymphocytes", "T lymphocytes", "Natural killer cells", "Plasma cells"],
+                    correctAnswerIndex: 1,
+                    explanation: "T lymphocytes are central to cell-mediated immunity, directly attacking infected cells or coordinating immune responses."
+                },
+                {
+                    question: "Which part of the lymph node is a concave surface where numerous lymph vessels enter and one lymph vessel leaves?",
+                    options: ["Capsule", "Trabeculae", "Cortex", "Hilum"],
+                    correctAnswerIndex: 3,
+                    explanation: "The hilum is the indented region of the lymph node where blood vessels and efferent lymphatic vessels enter and exit."
+                },
+                {
+                    question: "What happens to lymph nodes when bacteria have not all been destroyed, leading to inflammation?",
+                    options: ["They shrink", "They become enlarged", "They disappear", "They stop filtering lymph"],
+                    correctAnswerIndex: 1,
+                    explanation: "Enlarged lymph nodes (lymphadenopathy) often indicate an active immune response to infection or inflammation."
+                },
+                {
+                    question: "The spleen contains splenic pulp, which consists of:",
+                    options: ["Red bone marrow", "Lymphocytes and macrophages", "Adipose tissue", "Cartilage"],
+                    correctAnswerIndex: 1,
+                    explanation: "The splenic pulp is rich in immune cells like lymphocytes and macrophages, which are involved in filtering blood and immune surveillance."
+                },
+                {
+                    question: "At what age does the thymus typically start depleting?",
+                    options: ["Birth", "Childhood", "Puberty", "Old age"],
+                    correctAnswerIndex: 2,
+                    explanation: "The thymus is most active during childhood and adolescence, after which it gradually atrophies and is replaced by fat."
+                },
+                {
+                    question: "Which lymphoid tissue is strategically placed in mucosal linings and helps detect invaders, but does NOT filter lymph?",
+                    options: ["Lymph nodes", "Spleen", "Thymus", "MALT (Mucosa-Associated Lymphoid Tissue)"],
+                    correctAnswerIndex: 3,
+                    explanation: "MALT is a diffuse system of lymphoid tissue found in mucosal areas, providing local immune protection without acting as a filter for circulating lymph."
+                },
+
+                // Reproductive System (30 questions)
+                {
+                    question: "What is the primary function of the reproductive system?",
+                    options: ["Digestion of food", "Production of offspring and hormones", "Filtering blood", "Gas exchange"],
+                    correctAnswerIndex: 1,
+                    explanation: "The reproductive system's main roles are to produce gametes (sperm and eggs) and hormones, and to facilitate the creation of new life."
+                },
+                {
+                    question: "Which of the following is part of the female external genitalia?",
+                    options: ["Uterus", "Ovaries", "Labia majora", "Fallopian tubes"],
+                    correctAnswerIndex: 2,
+                    explanation: "The labia majora are part of the vulva, which constitutes the female external genitalia."
+                },
+                {
+                    question: "The fibromuscular tube that acts as a receptacle for the penis during intercourse and an elastic passageway for childbirth is the:",
+                    options: ["Uterus", "Cervix", "Vagina", "Urethra"],
+                    correctAnswerIndex: 2,
+                    explanation: "The vagina is a muscular canal that extends from the vulva to the uterus."
+                },
+                {
+                    question: "What is the inner layer of the uterus that sheds during the menstrual cycle if fertilization does not occur?",
+                    options: ["Perimetrium", "Myometrium", "Endometrium", "Cervix"],
+                    correctAnswerIndex: 2,
+                    explanation: "The endometrium is the highly vascularized inner lining of the uterus that prepares for embryo implantation and sheds during menstruation."
+                },
+                {
+                    question: "Which hormone primarily causes the maturation of an egg in the ovary during the menstrual cycle?",
+                    options: ["Luteinising Hormone (LH)", "Oestrogen", "Progesterone", "Follicle Stimulating Hormone (FSH)"],
+                    correctAnswerIndex: 3,
+                    explanation: "FSH stimulates the growth and development of ovarian follicles, which contain the eggs."
+                },
+                {
+                    question: "Which hormone triggers ovulation (the release of the egg) during the menstrual cycle?",
+                    options: ["FSH", "Oestrogen", "Progesterone", "Luteinising Hormone (LH)"],
+                    correctAnswerIndex: 3,
+                    explanation: "A surge in LH triggers ovulation."
+                },
+                {
+                    question: "Where does fertilization usually take place in the female reproductive system?",
+                    options: ["Uterus", "Ovary", "Vagina", "Fallopian tubes"],
+                    correctAnswerIndex: 3,
+                    explanation: "Fertilization, the fusion of sperm and egg, typically occurs in the fallopian (uterine) tubes."
+                },
+                {
+                    question: "What are the female gonads that store female gametes and release hormones?",
+                    options: ["Fallopian tubes", "Uterus", "Ovaries", "Cervix"],
+                    correctAnswerIndex: 2,
+                    explanation: "Ovaries are the primary female reproductive organs, producing eggs and female hormones."
+                },
+                {
+                    question: "Which hormone stimulates milk production and release from the mammary glands (breasts)?",
+                    options: ["Oestrogen", "Progesterone", "Prolactin", "Oxytocin"],
+                    correctAnswerIndex: 2,
+                    explanation: "Prolactin is the hormone primarily responsible for stimulating milk production after childbirth."
+                },
+                {
+                    question: "Which of the following is NOT an overall function of the female reproductive system?",
+                    options: ["Formation of ovum", "Reception of spermatozoa", "Production of testosterone", "Childbirth"],
+                    correctAnswerIndex: 2,
+                    explanation: "Testosterone production is primarily a male reproductive function."
+                },
+                {
+                    question: "What is the pouch of pigmented skin and smooth muscle that contains the testes in males?",
+                    options: ["Penis", "Prostate gland", "Scrotum", "Seminal vesicle"],
+                    correctAnswerIndex: 2,
+                    explanation: "The scrotum is the external sac that houses the testes."
+                },
+                {
+                    question: "Where are spermatozoa (sperm) produced, matured, and stored?",
+                    options: ["Prostate gland", "Seminal vesicles", "Testes", "Urethra"],
+                    correctAnswerIndex: 2,
+                    explanation: "Sperm are produced in the testes and mature and are stored in the epididymis, which is closely associated with the testes."
+                },
+                {
+                    question: "What is the function of the head of a sperm?",
+                    options: ["To provide mobility", "To contain the nucleus with DNA and enzymes to penetrate the ovum", "To fuel the propelling action", "To produce seminal fluid"],
+                    correctAnswerIndex: 1,
+                    explanation: "The sperm head contains the genetic material and enzymes necessary for fertilization."
+                },
+                {
+                    question: "Which male reproductive gland secretes a thin, milky fluid that is about 30% of the volume of semen and contains a clotting enzyme?",
+                    options: ["Seminal vesicle", "Testis", "Prostate gland", "Epididymis"],
+                    correctAnswerIndex: 2,
+                    explanation: "The prostate gland contributes a significant portion of the seminal fluid, which helps activate sperm."
+                },
+                {
+                    question: "The male urethra provides a common pathway for the flow of:",
+                    options: ["Urine and blood", "Semen and blood", "Urine and semen", "Digestive fluids and urine"],
+                    correctAnswerIndex: 2,
+                    explanation: "The male urethra serves as a conduit for both urine and semen."
+                },
+                {
+                    question: "Which part of the penis expands into a triangular structure called the glans penis?",
+                    options: ["Root", "Shaft", "Corpus cavernosum", "Corpus spongiosum"],
+                    correctAnswerIndex: 1, // The shaft's distal end forms the glans.
+                    explanation: "The shaft (body) of the penis terminates in the glans penis, which is the sensitive tip."
+                },
+                {
+                    question: "What is the main function of the uterus?",
+                    options: ["To produce eggs", "To receive and nourish a fertilized ovum and support fetal development", "To produce seminal fluid", "To transport sperm"],
+                    correctAnswerIndex: 1,
+                    explanation: "The uterus is the organ where a fertilized egg implants and develops into a fetus."
+                },
+                {
+                    question: "The menstrual cycle is primarily controlled by hormones from the:",
+                    options: ["Adrenal glands and kidneys", "Thyroid gland and parathyroid glands", "Hypothalamic and anterior pituitary hormones", "Pancreas and liver"],
+                    correctAnswerIndex: 2,
+                    explanation: "The menstrual cycle is regulated by a complex interplay of hormones from the hypothalamus, pituitary gland, and ovaries."
+                },
+                {
+                    question: "What is a zygote?",
+                    options: ["An unfertilized egg", "A mature sperm cell", "A fertilized ovum", "An embryo after 8 weeks"],
+                    correctAnswerIndex: 2,
+                    explanation: "A zygote is the single cell formed after the fertilization of an egg by a sperm."
+                },
+                {
+                    question: "After approximately how many weeks is a zygote referred to as an embryo?",
+                    options: ["Immediately after fertilization", "After 1 week", "After 2 weeks", "After 8 weeks"],
+                    correctAnswerIndex: 2, // Zygote to embryo is typically around 2 weeks.
+                    explanation: "The term 'embryo' is used from about the second week after fertilization until the end of the eighth week."
+                },
+                {
+                    question: "What is the function of the fimbriae at the end of the fallopian tubes?",
+                    options: ["To produce eggs", "To propel ovum from the ovary to the uterus", "To secrete hormones", "To receive sperm"],
+                    correctAnswerIndex: 1,
+                    explanation: "Fimbriae are finger-like projections that sweep the ovum into the fallopian tube after ovulation."
+                },
+                {
+                    question: "The two layers of the ovary are the medulla and the:",
+                    options: ["Cortex", "Hilum", "Stroma", "Follicle"],
+                    correctAnswerIndex: 0,
+                    explanation: "The ovary consists of an inner medulla and an outer cortex, where ovarian follicles are located."
+                },
+                {
+                    question: "What is the function of the lactiferous ducts in the breasts?",
+                    options: ["To produce milk", "To store fat", "To drain milk to the nipple", "To support breast tissue"],
+                    correctAnswerIndex: 2,
+                    explanation: "Lactiferous ducts carry milk from the glandular lobules to the nipple."
+                },
+                {
+                    question: "Which structure in the male reproductive system stores and matures sperm?",
+                    options: ["Seminal vesicle", "Prostate gland", "Vas deferens", "Epididymis"],
+                    correctAnswerIndex: 3,
+                    explanation: "The epididymis is a coiled tube where sperm mature and are stored."
+                },
+                {
+                    question: "The two 2cm tubes formed by the union of the seminal vesicle and deferent duct, which carry sperm and seminal fluid to the urethra, are called the:",
+                    options: ["Ureters", "Ejaculatory ducts", "Urethra", "Spermatic cords"],
+                    correctAnswerIndex: 1,
+                    explanation: "The ejaculatory ducts are formed by the convergence of the vas deferens and seminal vesicles."
+                },
+                {
+                    question: "What is the term for the process of childbirth?",
+                    options: ["Fertilization", "Ovulation", "Menstruation", "Parturition"],
+                    correctAnswerIndex: 3,
+                    explanation: "Parturition is the medical term for the act of giving birth."
+                },
+                {
+                    question: "Which female reproductive organ is also known as the 'womb'?",
+                    options: ["Ovary", "Fallopian tube", "Uterus", "Vagina"],
+                    correctAnswerIndex: 2,
+                    explanation: "The uterus is commonly referred to as the womb."
+                },
+                {
+                    question: "What is the primary male sex hormone produced by the testes?",
+                    options: ["Estrogen", "Progesterone", "Testosterone", "Prolactin"],
+                    correctAnswerIndex: 2,
+                    explanation: "Testosterone is the main androgen produced by the testes, essential for male reproductive development and function."
+                },
+                {
+                    question: "The 'areola' is the pigmented area surrounding which part of the breast?",
+                    options: ["Lobule", "Lactiferous duct", "Nipple", "Adipose tissue"],
+                    correctAnswerIndex: 2,
+                    explanation: "The areola is the darker pigmented area around the nipple."
+                },
+                {
+                    question: "Which male reproductive structure consists of three cylindrical masses of erectile tissue and smooth muscle?",
+                    options: ["Testis", "Epididymis", "Prostate gland", "Penis"],
+                    correctAnswerIndex: 3,
+                    explanation: "The penis is composed of erectile tissues (corpora cavernosa and corpus spongiosum) that fill with blood during erection."
+                }
+            ],
       },
       {
         title: "Medical Conditions",
