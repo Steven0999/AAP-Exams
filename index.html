@@ -259,31 +259,712 @@
       {
         title: "Medical Conditions",
         questions: [
-          {
-            question: "What is the chemical symbol for water?",
-            options: ["O2", "H2O", "CO2", "N2"],
-            correctAnswerIndex: 1,
-            explanation: "H2O is the chemical formula for water, indicating two hydrogen atoms and one oxygen atom."
-          },
-          {
-            question: "What force keeps us on the ground?",
-            options: ["Magnetism", "Friction", "Gravity", "Tension"],
-            correctAnswerIndex: 2,
-            explanation: "Gravity is the fundamental force of attraction between any two objects with mass."
-          },
-          {
-            question: "What is the process by which plants make their own food?",
-            options: ["Respiration", "Transpiration", "Photosynthesis", "Germination"],
-            correctAnswerIndex: 2,
-            explanation: "Photosynthesis is the process used by plants, algae, and cyanobacteria to convert light energy into chemical energy."
-          },
-          {
-            question: "What is the powerhouse of the cell?",
-            options: ["Nucleus", "Ribosome", "Mitochondria", "Endoplasmic Reticulum"],
-            correctAnswerIndex: 2,
-            explanation: "Mitochondria are often called the 'powerhouses' of the cell because they generate most of the cell's supply of ATP (adenosine triphosphate), used as a source of chemical energy."
-          }
-        ]
+                // Anaphylaxis, Sepsis & Poisonings (20 questions)
+                {
+                    question: "What is anaphylaxis, according to the Resuscitation Council UK 2008 definition?",
+                    options: ["A mild allergic reaction", "A severe, life-threatening, generalized or systemic hypersensitivity reaction", "A localized skin rash", "An infection of the bloodstream"],
+                    correctAnswerIndex: 1,
+                    explanation: "Anaphylaxis is defined as a severe, life-threatening, generalized or systemic hypersensitivity reaction."
+                },
+                {
+                    question: "Which of the following is NOT a common allergen known to cause anaphylaxis?",
+                    options: ["Peanuts", "Shellfish", "Hay fever pollen", "Bee/Wasp stings"],
+                    correctAnswerIndex: 2,
+                    explanation: "Common allergens for anaphylaxis include peanuts, tree nuts, shellfish, milk, eggs, bee/wasp stings, and certain medications. Hay fever pollen typically causes localized allergic reactions, not anaphylaxis."
+                },
+                {
+                    question: "What immunological process leads to a mass release of histamine upon second exposure to an antigen during anaphylaxis?",
+                    options: ["Antibody production by B cells", "Degranulation of mast cells", "T cell proliferation", "Phagocytosis by macrophages"],
+                    correctAnswerIndex: 1,
+                    explanation: "Upon second exposure, the antigen binds to IgE antibodies on mast cells, causing them to degranulate and release large amounts of histamine and other mediators."
+                },
+                {
+                    question: "Which cardiovascular symptom is a 'red flag' indicating severe anaphylaxis?",
+                    options: ["High blood pressure", "Slow heart rate", "Normal heart rate", "Low blood pressure"],
+                    correctAnswerIndex: 3,
+                    explanation: "Hypotension (low blood pressure) is a critical 'red flag' symptom in anaphylaxis, indicating a severe systemic circulatory collapse."
+                },
+                {
+                    question: "What is the recommended route of administration for Adrenaline (Epinephrine) in the immediate management of anaphylaxis?",
+                    options: ["Intravenous (IV)", "Subcutaneous (SC)", "Oral", "Intramuscular (IM)"],
+                    correctAnswerIndex: 3,
+                    explanation: "Intramuscular (IM) injection of adrenaline is the recommended first-line treatment for anaphylaxis due to its rapid absorption and systemic effects."
+                },
+                {
+                    question: "If there is no response after the initial IM adrenaline dose for anaphylaxis, when should it be repeated?",
+                    options: ["After 1 minute", "After 2 minutes", "After 5 minutes", "After 10 minutes"],
+                    correctAnswerIndex: 2,
+                    explanation: "Repeat doses of IM adrenaline can be given every 5 minutes if there is no clinical improvement or if symptoms worsen."
+                },
+                {
+                    question: "What effect does adrenaline (epinephrine) have on the smooth muscle in the airways during an anaphylactic reaction?",
+                    options: ["Contraction, worsening breathing", "No significant effect", "Relaxation, improving breathing", "Spasm, leading to airway closure"],
+                    correctAnswerIndex: 2,
+                    explanation: "Adrenaline causes bronchodilation (relaxation of smooth muscle in the airways), which helps to relieve respiratory distress in anaphylaxis."
+                },
+                {
+                    question: "What is the common term for Septicaemia?",
+                    options: ["Anaphylactic shock", "Toxic shock syndrome", "Blood poisoning", "Systemic inflammatory response syndrome"],
+                    correctAnswerIndex: 2,
+                    explanation: "Septicaemia is commonly known as blood poisoning, referring to bacteria in the bloodstream."
+                },
+                {
+                    question: "Which statement best defines sepsis?",
+                    options: ["A localized skin infection", "A viral infection of the respiratory tract", "A life-threatening organ dysfunction caused by a dysregulated host response to infection", "A mild allergic reaction to medication"],
+                    correctAnswerIndex: 2,
+                    explanation: "Sepsis is defined as a life-threatening organ dysfunction caused by a dysregulated host response to infection."
+                },
+                {
+                    question: "In sepsis, how does the body's inflammatory response differ from a typical infection?",
+                    options: ["It is limited to the site of infection", "It is suppressed throughout the body", "It becomes widespread and damages the body's own tissues and organs", "It primarily affects only the immune cells"],
+                    correctAnswerIndex: 2,
+                    explanation: "In sepsis, the body's immune response to an infection becomes dysregulated, leading to a widespread inflammatory response that damages the body's own tissues and organs."
+                },
+                {
+                    question: "A NEWS2 score greater than 5, or greater than 3 in any one category, coupled with a history of infection, should immediately raise suspicion for what condition?",
+                    options: ["Anaphylaxis", "Myocardial Infarction", "Sepsis", "Stroke"],
+                    correctAnswerIndex: 2,
+                    explanation: "A high NEWS2 score in a patient with a suspected infection is a key indicator for urgent sepsis screening and management."
+                },
+                {
+                    question: "Which of the following is an immediate intervention included in the 'Sepsis Six' care bundle?",
+                    options: ["Administering oral corticosteroids", "Taking blood cultures", "Applying a tourniquet", "Performing a lumbar puncture"],
+                    correctAnswerIndex: 1,
+                    explanation: "Taking blood cultures is a crucial part of the 'Sepsis Six' to identify the causative organism and guide antibiotic therapy."
+                },
+                {
+                    question: "For a hypotensive sepsis patient, what is the recommended initial intravenous fluid bolus strategy?",
+                    options: ["50ml boluses (max 500ml)", "250ml boluses (max 2000ml)", "500ml boluses (no max)", "100ml boluses (max 1000ml)"],
+                    correctAnswerIndex: 1,
+                    explanation: "Initial fluid resuscitation in hypotensive sepsis typically involves administering 250ml boluses up to a total of 2000ml, titrated to response."
+                },
+                {
+                    question: "In patients with sepsis, what is the general recommendation regarding the routine administration of paracetamol for fever reduction?",
+                    options: ["It should always be given", "It should be given only if the patient requests it", "It is not routinely recommended unless for pain or discomfort associated with fever", "It should only be given intravenously"],
+                    correctAnswerIndex: 2,
+                    explanation: "Routine use of paracetamol for fever in sepsis is not generally recommended unless the fever is causing significant discomfort or pain, as it does not improve outcomes."
+                },
+                {
+                    question: "What route of poisoning involves a substance being introduced into the body via injection?",
+                    options: ["Ingestion", "Inhalation", "Absorption", "Injection"],
+                    correctAnswerIndex: 3,
+                    explanation: "Injection is a direct route of poisoning where a substance is introduced into the body through a needle or other sharp object."
+                },
+                {
+                    question: "What is the primary effect of opioids on the central nervous system?",
+                    options: ["Stimulation", "No effect", "Depression", "Selective sensory blockade"],
+                    correctAnswerIndex: 2,
+                    explanation: "Opioids are central nervous system depressants, leading to reduced consciousness, respiratory depression, and pain relief."
+                },
+                {
+                    question: "Which of these is a classic sign of an opioid overdose?",
+                    options: ["Dilated pupils", "Rapid, shallow breathing", "Pinpoint pupils", "Warm, dry skin"],
+                    correctAnswerIndex: 2,
+                    explanation: "Pinpoint pupils (miosis) are a classic sign of opioid overdose, along with respiratory depression and altered mental status."
+                },
+                {
+                    question: "What is the immediate antidote used to reverse the effects of opioid overdose?",
+                    options: ["Insulin", "Adrenaline", "Naloxone", "Activated charcoal"],
+                    correctAnswerIndex: 2,
+                    explanation: "Naloxone is an opioid antagonist that rapidly reverses the effects of opioid overdose by blocking opioid receptors."
+                },
+                {
+                    question: "What does the medical term 'Toxidrome' refer to?",
+                    options: ["A specific type of poisonous substance", "A collection of signs and symptoms associated with a particular class of toxins", "A method for detoxifying the body", "A diagnostic test for poisoning"],
+                    correctAnswerIndex: 1,
+                    explanation: "A Toxidrome is a clinical syndrome characterized by a specific constellation of signs and symptoms that suggest exposure to a particular class of toxic substances."
+                },
+                {
+                    question: "In the 'DEAD' acronym for poisoning management, what does 'D' stand for?",
+                    options: ["Diagnosis", "Dehydration", "Decontamination", "Dialysis"],
+                    correctAnswerIndex: 2,
+                    explanation: "The 'DEAD' acronym in poisoning management stands for Decontamination, Enhanced Elimination, Antidotes, and Disposition."
+                },
+
+                // Cardiac Conditions & Assessment (20 questions)
+                {
+                    question: "What is one of the leading causes of death worldwide, often a precursor to many cardiovascular conditions?",
+                    options: ["Hypertension", "Coronary Artery Disease", "Arrhythmia", "Heart Failure"],
+                    correctAnswerIndex: 1,
+                    explanation: "Coronary Artery Disease (CAD) is a major global health burden and a primary underlying cause of many cardiac emergencies like myocardial infarction."
+                },
+                {
+                    question: "Which chamber of the heart pumps oxygenated blood to the rest of the body?",
+                    options: ["Right Atrium", "Right Ventricle", "Left Atrium", "Left Ventricle"],
+                    correctAnswerIndex: 3,
+                    explanation: "The Left Ventricle is the strongest chamber of the heart and is responsible for pumping oxygenated blood into the aorta and to the systemic circulation."
+                },
+                {
+                    question: "True or False: Tachycardia is characterized by an abnormally *fast* heart rate.",
+                    options: ["True", "False"],
+                    correctAnswerIndex: 0,
+                    explanation: "True. Tachycardia is defined as a heart rate that is faster than normal, typically above 100 beats per minute in adults."
+                },
+                {
+                    question: "Which medication is commonly administered sublingually (under the tongue) to alleviate chest pain caused by angina?",
+                    options: ["Aspirin", "Metoprolol", "Nitroglycerin", "Ibuprofen"],
+                    correctAnswerIndex: 2,
+                    explanation: "Nitroglycerin (glyceryl trinitrate) is a potent vasodilator used sublingually to rapidly relieve angina by increasing blood flow to the heart."
+                },
+                {
+                    question: "Sudden, severe, crushing chest pain radiating to the left arm, neck, or jaw, often accompanied by sweating and nausea, is a classic symptom of what acute cardiac event?",
+                    options: ["Heartburn", "Pneumonia", "Angina Pectoris", "Myocardial Infarction"],
+                    correctAnswerIndex: 3,
+                    explanation: "These are classic symptoms of a Myocardial Infarction (heart attack), caused by a blockage of blood flow to the heart muscle."
+                },
+                {
+                    question: "Which electrolyte imbalance is well-known to predispose individuals to cardiac arrhythmias?",
+                    options: ["Hypocalcemia", "Hypernatremia", "Hypokalemia", "Hypermagnesemia"],
+                    correctAnswerIndex: 2,
+                    explanation: "Hypokalemia (low potassium levels) can significantly affect cardiac electrical activity and lead to various arrhythmias."
+                },
+                {
+                    question: "Pain described as 'tearing' or 'ripping' in the chest or back, often acute and severe, should raise immediate suspicion for which life-threatening vascular condition?",
+                    options: ["Pneumothorax", "Pericarditis", "Aortic Dissection", "Esophageal rupture"],
+                    correctAnswerIndex: 2,
+                    explanation: "Aortic dissection, a tear in the inner layer of the aorta, classically presents with sudden, severe, tearing or ripping pain."
+                },
+                {
+                    question: "What condition results from the heart's inability to pump enough blood to meet the body's metabolic demands?",
+                    options: ["Angina", "Arrhythmia", "Heart Failure", "Hypertension"],
+                    correctAnswerIndex: 2,
+                    explanation: "Heart failure is a chronic condition where the heart muscle is weakened and cannot pump sufficient blood to supply the body's needs."
+                },
+                {
+                    question: "Which class of medication is commonly prescribed to reduce high blood pressure?",
+                    options: ["Antibiotics", "Anticoagulants", "Antihypertensives", "Analgesics"],
+                    correctAnswerIndex: 2,
+                    explanation: "Antihypertensives are medications specifically designed to lower blood pressure."
+                },
+                {
+                    question: "What is the medical term for a sudden drop in blood pressure that occurs when a person stands up, often causing dizziness?",
+                    options: ["Hypertension", "Orthostatic Hypotension", "Vasovagal Syncope", "Cardiogenic Shock"],
+                    correctAnswerIndex: 1,
+                    explanation: "Orthostatic hypotension is a common condition where blood pressure drops significantly upon standing, leading to symptoms like lightheadedness or dizziness."
+                },
+                {
+                    question: "What is the primary goal of Cardiopulmonary Resuscitation (CPR)?",
+                    options: ["To directly restart the heart", "To provide artificial circulation and ventilation to maintain organ perfusion", "To clear a foreign body airway obstruction", "To assess the patient's neurological status"],
+                    correctAnswerIndex: 1,
+                    explanation: "CPR aims to maintain blood flow and oxygen delivery to vital organs, especially the brain and heart, until definitive treatment can be provided."
+                },
+                {
+                    question: "What is a major modifiable risk factor for the development of coronary artery disease and other cardiovascular diseases?",
+                    options: ["Regular exercise", "A balanced diet", "Smoking", "Low stress levels"],
+                    correctAnswerIndex: 2,
+                    explanation: "Smoking is a highly significant and modifiable risk factor that greatly increases the risk of coronary artery disease and other cardiovascular conditions."
+                },
+                {
+                    question: "Chest pain that typically occurs during physical exertion or emotional stress and is relieved by rest or nitroglycerin is characteristic of what condition?",
+                    options: ["Myocardial Infarction", "Pericarditis", "Angina Pectoris", "Pleurisy"],
+                    correctAnswerIndex: 2,
+                    explanation: "Angina pectoris is chest pain or discomfort that occurs when the heart muscle doesn't get enough oxygen-rich blood, often triggered by exertion and relieved by rest."
+                },
+                {
+                    question: "Sickle cell anaemia can lead to cardiovascular complications because the abnormally shaped red blood cells can cause what?",
+                    options: ["Increased oxygen carrying capacity", "Reduced blood viscosity", "Blockages in small blood vessels", "Enhanced immune response"],
+                    correctAnswerIndex: 2,
+                    explanation: "The sickle shape of red blood cells in sickle cell anaemia can cause them to clump together and block small blood vessels, leading to various complications, including cardiovascular issues."
+                },
+                {
+                    question: "Which diagnostic tool measures the electrical activity of the heart and can detect arrhythmias or signs of myocardial ischemia?",
+                    options: ["X-ray", "Ultrasound", "Electrocardiogram (ECG)", "Blood glucose monitor"],
+                    correctAnswerIndex: 2,
+                    explanation: "An Electrocardiogram (ECG) records the electrical signals of the heart and is essential for diagnosing a wide range of cardiac conditions."
+                },
+                {
+                    question: "What is the primary function of the coronary arteries?",
+                    options: ["To carry deoxygenated blood to the lungs", "To supply oxygenated blood to the heart muscle", "To transport blood from the heart to the rest of the body", "To filter waste products from the blood"],
+                    correctAnswerIndex: 1,
+                    explanation: "Coronary arteries are crucial for delivering oxygen and nutrients to the heart muscle itself."
+                },
+                {
+                    question: "Which of the following is a common symptom of heart failure?",
+                    options: ["Sudden, sharp chest pain", "Swelling in the legs and ankles (edema)", "Pinpoint pupils", "Excessive thirst"],
+                    correctAnswerIndex: 1,
+                    explanation: "Edema, particularly in the lower extremities, is a common sign of fluid retention due to the heart's reduced pumping efficiency in heart failure."
+                },
+                {
+                    question: "What is the term for an abnormally slow heart rate, typically below 60 beats per minute in adults?",
+                    options: ["Tachycardia", "Bradycardia", "Arrhythmia", "Palpitation"],
+                    correctAnswerIndex: 1,
+                    explanation: "Bradycardia is the medical term for a heart rate that is slower than normal."
+                },
+                {
+                    question: "A patient with uncontrolled hypertension is at increased risk for which cardiac event?",
+                    options: ["Hypoglycemia", "Myocardial Infarction", "Anaphylaxis", "Seizure"],
+                    correctAnswerIndex: 1,
+                    explanation: "Uncontrolled hypertension significantly increases the workload on the heart and damages blood vessels, raising the risk of heart attack and stroke."
+                },
+                {
+                    question: "What is the primary purpose of administering aspirin in a suspected acute coronary syndrome (ACS) event?",
+                    options: ["To relieve pain", "To prevent further clot formation", "To lower blood pressure", "To reduce inflammation"],
+                    correctAnswerIndex: 1,
+                    explanation: "Aspirin is an antiplatelet agent that helps prevent platelets from clumping together, thus reducing the size and growth of blood clots in ACS."
+                },
+
+                // Abdominal Conditions (20 questions)
+                {
+                    question: "What common condition causing abdominal pain is characterized by nausea, vomiting, diarrhea, and abdominal cramps, often referred to as 'stomach flu'?",
+                    options: ["Migraine", "Gastroenteritis", "Pneumonia", "Arthritis"],
+                    correctAnswerIndex: 1,
+                    explanation: "Gastroenteritis is an inflammation of the stomach and intestines, commonly caused by viral or bacterial infections, leading to the listed symptoms."
+                },
+                {
+                    question: "Which type of infection commonly causes symptoms like painful urination, frequent urination, and a burning sensation during urination?",
+                    options: ["Skin infections", "Urinary tract infections (UTIs)", "Respiratory infections", "Eye infections"],
+                    correctAnswerIndex: 1,
+                    explanation: "Urinary tract infections (UTIs) are common bacterial infections that cause symptoms related to urination."
+                },
+                {
+                    question: "A rigid, board-like abdomen with severe pain on palpation is a critical sign of what abdominal emergency?",
+                    options: ["Constipation", "Irritable Bowel Syndrome", "Peritonitis", "Heartburn"],
+                    correctAnswerIndex: 2,
+                    explanation: "A rigid, board-like abdomen is a classic sign of peritonitis, a life-threatening inflammation of the peritoneum, usually due to rupture of an abdominal organ."
+                },
+                {
+                    question: "Right upper quadrant (RUQ) pain that often worsens after eating fatty meals and may radiate to the right shoulder is characteristic of what condition?",
+                    options: ["Appendicitis", "Diverticulitis", "Cholecystitis", "Kidney Stones"],
+                    correctAnswerIndex: 2,
+                    explanation: "Cholecystitis, inflammation of the gallbladder, typically causes RUQ pain, especially post-prandially after fatty food consumption."
+                },
+                {
+                    question: "What is the medical term for inflammation of the appendix?",
+                    options: ["Gastritis", "Diverticulitis", "Appendicitis", "Colitis"],
+                    correctAnswerIndex: 2,
+                    explanation: "Appendicitis is the inflammation of the appendix, a small finger-shaped organ projecting from the colon."
+                },
+                {
+                    question: "Abdominal pain described as 'colicky' or 'cramping', often coming in waves and associated with nausea and vomiting, can suggest what gastrointestinal issue?",
+                    options: ["Pneumonia", "Angina", "Bowel obstruction", "Migraine"],
+                    correctAnswerIndex: 2,
+                    explanation: "Colicky pain is often indicative of an obstruction in a hollow organ, such as a bowel obstruction, as the body tries to push past the blockage."
+                },
+                {
+                    question: "What is the primary function of the large intestine?",
+                    options: ["Digesting proteins", "Absorbing most nutrients", "Absorbing water and forming stool", "Producing digestive enzymes"],
+                    correctAnswerIndex: 2,
+                    explanation: "The main role of the large intestine is to absorb water from the remaining indigestible food matter and to pass the useless waste material from the body."
+                },
+                {
+                    question: "What is the medical term for inflammation of the liver?",
+                    options: ["Nephritis", "Pancreatitis", "Hepatitis", "Gastritis"],
+                    correctAnswerIndex: 2,
+                    explanation: "Hepatitis is the general term for inflammation of the liver, often caused by viral infections, alcohol, or autoimmune diseases."
+                },
+                {
+                    question: "Which abdominal organ produces vital hormones like insulin and glucagon, essential for blood sugar regulation?",
+                    options: ["Liver", "Stomach", "Pancreas", "Spleen"],
+                    correctAnswerIndex: 2,
+                    explanation: "The pancreas has both exocrine functions (producing digestive enzymes) and endocrine functions (producing hormones like insulin and glucagon)."
+                },
+                {
+                    question: "Pain that commonly starts around the umbilicus (navel) and then migrates to the right lower quadrant of the abdomen is a classic symptom of what acute condition?",
+                    options: ["Gallstones", "Diverticulitis", "Appendicitis", "Kidney stones"],
+                    correctAnswerIndex: 2,
+                    explanation: "The characteristic migratory pain from the periumbilical region to the right lower quadrant is a hallmark sign of acute appendicitis."
+                },
+                {
+                    question: "What is the most common bacterial cause of urinary tract infections (UTIs)?",
+                    options: ["Staphylococcus aureus", "Streptococcus pneumoniae", "Escherichia coli (E. coli)", "Pseudomonas aeruginosa"],
+                    correctAnswerIndex: 2,
+                    explanation: "E. coli is responsible for the vast majority of community-acquired UTIs."
+                },
+                {
+                    question: "What is a serious complication of severe gastroenteritis, especially in very young or elderly individuals, due to fluid loss?",
+                    options: ["Hypertension", "Dehydration", "Seizures", "Cardiac arrest"],
+                    correctAnswerIndex: 1,
+                    explanation: "Prolonged vomiting and diarrhea from gastroenteritis can rapidly lead to severe dehydration, which can be life-threatening if not managed."
+                },
+                {
+                    question: "What is the common term for inflammation and infection of small, bulging pouches (diverticula) that can form in the wall of the digestive tract, most commonly the colon?",
+                    options: ["Gastritis", "Colitis", "Diverticulitis", "Appendicitis"],
+                    correctAnswerIndex: 2,
+                    explanation: "Diverticulitis occurs when diverticula become inflamed or infected, leading to symptoms like abdominal pain, fever, and changes in bowel habits."
+                },
+                {
+                    question: "What is the primary role of the kidneys in the human body?",
+                    options: ["Digesting food", "Filtering blood to remove waste products and regulate fluid balance", "Pumping blood to the lungs", "Producing digestive enzymes"],
+                    correctAnswerIndex: 1,
+                    explanation: "The kidneys are vital organs that filter blood to remove waste products, excess water, and toxins, forming urine in the process."
+                },
+                {
+                    question: "Which abdominal condition is characterized by inflammation of the stomach lining?",
+                    options: ["Appendicitis", "Cholecystitis", "Gastritis", "Pancreatitis"],
+                    correctAnswerIndex: 2,
+                    explanation: "Gastritis is the inflammation of the stomach lining, which can cause indigestion, pain, and nausea."
+                },
+                {
+                    question: "What is the medical term for gallstones, which can cause severe abdominal pain?",
+                    options: ["Nephrolithiasis", "Cholelithiasis", "Appendicolith", "Pancreatitis"],
+                    correctAnswerIndex: 1,
+                    explanation: "Cholelithiasis refers to the presence of gallstones, which are hardened deposits of digestive fluid that can form in the gallbladder."
+                },
+                {
+                    question: "Pain in the lower left quadrant of the abdomen, often accompanied by fever and changes in bowel habits, is characteristic of which condition?",
+                    options: ["Appendicitis", "Diverticulitis", "Cholecystitis", "Kidney stones"],
+                    correctAnswerIndex: 1,
+                    explanation: "Diverticulitis commonly presents with pain in the lower left abdomen, as the sigmoid colon is the most common site for diverticula."
+                },
+                {
+                    question: "What is a common symptom of a urinary tract infection (UTI) in elderly patients that might be subtle or atypical?",
+                    options: ["High fever and chills", "Sudden onset of severe abdominal pain", "Altered mental status or confusion", "Visible blood in urine"],
+                    correctAnswerIndex: 2,
+                    explanation: "In elderly patients, UTIs can often present with non-specific symptoms like confusion, delirium, or general malaise, without typical urinary symptoms."
+                },
+                {
+                    question: "What is the primary management for acute appendicitis?",
+                    options: ["Antibiotics only", "Pain management and observation", "Surgical removal of the appendix (appendectomy)", "Dietary changes"],
+                    correctAnswerIndex: 2,
+                    explanation: "Acute appendicitis is typically a surgical emergency requiring appendectomy to prevent rupture and peritonitis."
+                },
+                {
+                    question: "Which abdominal organ is responsible for detoxifying harmful substances and producing clotting factors?",
+                    options: ["Stomach", "Pancreas", "Spleen", "Liver"],
+                    correctAnswerIndex: 3,
+                    explanation: "The liver plays a central role in metabolism, detoxification, and the synthesis of various proteins, including those involved in blood clotting."
+                },
+
+                // Neuro Conditions (20 questions)
+                {
+                    question: "A patient presenting with sudden-onset facial drooping, arm weakness, and slurred speech should immediately be assessed for which medical emergency?",
+                    options: ["Myocardial Infarction", "Anaphylaxis", "Stroke", "Diabetic Ketoacidosis"],
+                    correctAnswerIndex: 2,
+                    explanation: "These are classic signs of a stroke, often remembered by the FAST acronym (Face drooping, Arm weakness, Speech difficulty, Time to call emergency services)."
+                },
+                {
+                    question: "Damage to the myelin sheath, which insulates nerve fibers in the brain and spinal cord, is characteristic of what neurological condition?",
+                    options: ["Parkinson's Disease", "Alzheimer's Disease", "Multiple Sclerosis", "Epilepsy"],
+                    correctAnswerIndex: 2,
+                    explanation: "Multiple Sclerosis (MS) is an autoimmune disease characterized by demyelination, the damage to the myelin sheath, which impairs nerve signal transmission."
+                },
+                {
+                    question: "A sudden, severe headache described as 'the worst headache of my life' is a red flag symptom for which serious condition?",
+                    options: ["Migraine", "Tension Headache", "Cluster Headache", "Subarachnoid Hemorrhage"],
+                    correctAnswerIndex: 3,
+                    explanation: "A 'thunderclap headache' or 'worst headache of my life' is a classic symptom of a subarachnoid hemorrhage, a life-threatening bleeding around the brain."
+                },
+                {
+                    question: "Which part of the brain is primarily responsible for coordinating voluntary movements, balance, and posture?",
+                    options: ["Cerebrum", "Brainstem", "Cerebellum", "Thalamus"],
+                    correctAnswerIndex: 2,
+                    explanation: "The cerebellum plays a critical role in motor control, balance, and coordination."
+                },
+                {
+                    question: "The medical term for the inability to speak or understand language due to brain damage is:",
+                    options: ["Dysphagia", "Ataxia", "Aphasia", "Dyspnea"],
+                    correctAnswerIndex: 2,
+                    explanation: "Aphasia is a disorder that affects a person's ability to communicate, often resulting from stroke or other brain injuries."
+                },
+                {
+                    question: "What is a characteristic symptom of Cauda Equina Syndrome (CES)?",
+                    options: ["Unilateral facial droop", "Sudden severe headache", "Saddle anesthesia", "Pinpoint pupils"],
+                    correctAnswerIndex: 2,
+                    explanation: "Saddle anesthesia (numbness in the perineum, buttocks, and inner thighs) is a key symptom of Cauda Equina Syndrome, a serious compression of spinal nerves."
+                },
+                {
+                    question: "Which type of headache typically presents as a throbbing pain, often on one side of the head, and can be accompanied by nausea and sensitivity to light/sound?",
+                    options: ["Tension headache", "Cluster headache", "Migraine", "Sinus headache"],
+                    correctAnswerIndex: 2,
+                    explanation: "Migraines are characterized by moderate to severe throbbing pain, often unilateral, and frequently associated with aura, nausea, and phonophobia/photophobia."
+                },
+                {
+                    question: "What is the medical term for a sudden, uncontrolled electrical disturbance in the brain that can cause changes in consciousness, movement, or behavior?",
+                    options: ["Syncope", "Vertigo", "Seizure", "Tremor"],
+                    correctAnswerIndex: 2,
+                    explanation: "A seizure is an episode of uncontrolled electrical activity in the brain, leading to a temporary change in movement, behavior, or consciousness."
+                },
+                {
+                    question: "During a convulsion (seizure), what is the most important immediate safety measure?",
+                    options: ["Restrain the person's movements", "Place an object in their mouth to prevent biting their tongue", "Protect their head and clear the surrounding area of hazards", "Pour water over them to cool them down"],
+                    correctAnswerIndex: 2,
+                    explanation: "The primary safety measure during a seizure is to protect the person from injury by cushioning their head and removing any nearby dangerous objects."
+                },
+                {
+                    question: "Meningococcal disease is a serious bacterial infection that can affect the protective membranes surrounding the brain and spinal cord. What are these membranes called?",
+                    options: ["Cerebrum", "Meninges", "Ventricles", "Pia mater"],
+                    correctAnswerIndex: 1,
+                    explanation: "Meningococcal disease causes inflammation of the meninges, the membranes that enclose the brain and spinal cord, leading to meningitis."
+                },
+                {
+                    question: "A key symptom of meningococcal disease, particularly in children, is a non-blanching rash. What does 'non-blanching' mean in this context?",
+                    options: ["The rash turns white when pressed", "The rash disappears when pressed", "The rash remains red/purple when pressed", "The rash is only visible under specific lighting"],
+                    correctAnswerIndex: 2,
+                    explanation: "A non-blanching rash (purpuric or petechial) does not fade or blanch when pressure is applied, indicating bleeding under the skin and is a serious sign of meningococcal septicaemia."
+                },
+                {
+                    question: "Which of these is a common and often rapidly reversible cause of an altered level of consciousness?",
+                    options: ["Severe headache", "Hypoglycemia", "Common cold", "Allergic rhinitis"],
+                    correctAnswerIndex: 1,
+                    explanation: "Hypoglycemia (low blood sugar) is a frequent and treatable cause of altered mental status and can rapidly improve with glucose administration."
+                },
+                {
+                    question: "The Glasgow Coma Scale (GCS) is a widely used clinical tool to assess what aspect of a patient's condition?",
+                    options: ["Pain level", "Blood pressure", "Level of consciousness", "Respiratory rate"],
+                    correctAnswerIndex: 2,
+                    explanation: "The GCS assesses a person's level of consciousness based on eye opening, verbal response, and motor response."
+                },
+                {
+                    question: "What is the term for temporary neurological symptoms caused by a brief interruption of blood flow to the brain, often a warning sign of a future stroke?",
+                    options: ["Migraine with aura", "Transient Ischemic Attack (TIA)", "Bell's Palsy", "Vertigo"],
+                    correctAnswerIndex: 1,
+                    explanation: "A TIA, or 'mini-stroke,' produces stroke-like symptoms but causes no permanent damage. It's a critical warning sign."
+                },
+                {
+                    question: "Which type of stroke is caused by a blockage in a blood vessel supplying the brain?",
+                    options: ["Haemorrhagic stroke", "Ischemic stroke", "Aneurysm", "TIA"],
+                    correctAnswerIndex: 1,
+                    explanation: "Ischemic strokes, accounting for about 87% of all strokes, occur when blood flow to the brain is blocked by a clot."
+                },
+                {
+                    question: "What is the medical term for bleeding into the space between the brain and the surrounding membrane (arachnoid membrane)?",
+                    options: ["Intracerebral hemorrhage", "Epidural hematoma", "Subarachnoid hemorrhage", "Subdural hematoma"],
+                    correctAnswerIndex: 2,
+                    explanation: "Subarachnoid hemorrhage (SAH) is bleeding into the subarachnoid space, often caused by a ruptured aneurysm."
+                },
+                {
+                    question: "Cushing's Triad, a sign of increased intracranial pressure, consists of which three vital sign changes?",
+                    options: ["Low HR, Low BP, Fast Breathing", "High HR, High BP, Slow Breathing", "Low HR, High BP, Slow Breathing", "High HR, Low BP, Fast Breathing"],
+                    correctAnswerIndex: 2,
+                    explanation: "Cushing's Triad includes bradycardia (low heart rate), hypertension (high blood pressure), and irregular/slow respirations."
+                },
+                {
+                    question: "What is a common trigger for seizures in individuals with epilepsy?",
+                    options: ["Regular medication intake", "Adequate sleep", "Missed medication doses", "Balanced diet"],
+                    correctAnswerIndex: 2,
+                    explanation: "Missed medication is a very common and preventable trigger for seizures in epileptic patients."
+                },
+                {
+                    question: "What is the mnemonic used to remember the causes of unconsciousness?",
+                    options: ["ABCD", "SAMPLE", "SOAP", "FISH SHAPED"],
+                    correctAnswerIndex: 3,
+                    explanation: "FISH SHAPED is a mnemonic used to recall common causes of unconsciousness (Fainting, Imbalance of heat, Shock, Head injury, Stroke, Heart attack, Asphyxia, Poisoning, Epilepsy, Diabetes)."
+                },
+                {
+                    question: "When assessing an unconscious patient, what is the primary survey step immediately following 'Airway'?",
+                    options: ["Circulation", "Disability", "Breathing", "Exposure"],
+                    correctAnswerIndex: 2,
+                    explanation: "The primary survey follows DRABCDE: Danger, Response, Airway, Breathing, Circulation, Disability, Exposure."
+                },
+
+                // Respiratory Conditions (20 questions)
+                {
+                    question: "Asthma is characterized as what type of chronic disease affecting the airways of the lungs?",
+                    options: ["Infectious", "Degenerative", "Inflammatory", "Obstructive"],
+                    correctAnswerIndex: 2,
+                    explanation: "Asthma is a chronic inflammatory disease of the airways that causes reversible airflow obstruction and bronchial hyperresponsiveness."
+                },
+                {
+                    question: "Which of these is a significant risk factor for developing asthma?",
+                    options: ["Daily vigorous exercise", "Family history of asthma or allergies", "Eating spicy food regularly", "Exposure to direct sunlight"],
+                    correctAnswerIndex: 1,
+                    explanation: "A strong family history of asthma or other atopic conditions (allergies, eczema) significantly increases an individual's risk of developing asthma."
+                },
+                {
+                    question: "What are the three common symptoms of an acute asthma attack?",
+                    options: ["Diarrhea, vomiting, and abdominal pain", "Wheezing, coughing, and chest tightness", "Headache, fever, and rash", "Joint pain, stiffness, and swelling"],
+                    correctAnswerIndex: 1,
+                    explanation: "The classic symptoms of an asthma attack include wheezing (a high-pitched whistling sound during breathing), persistent coughing, and a sensation of chest tightness."
+                },
+                {
+                    question: "What is the medical term for difficulty breathing or shortness of breath?",
+                    options: ["Apnea", "Bradypnea", "Dyspnea", "Tachypnea"],
+                    correctAnswerIndex: 2,
+                    explanation: "Dyspnea is the subjective sensation of shortness of breath or difficulty breathing."
+                },
+                {
+                    question: "Chronic Obstructive Pulmonary Disease (COPD) is an umbrella term that primarily includes which two lung conditions?",
+                    options: ["Asthma and Pneumonia", "Chronic Bronchitis and Emphysema", "Cystic Fibrosis and Tuberculosis", "Pleurisy and Pneumothorax"],
+                    correctAnswerIndex: 1,
+                    explanation: "COPD is a progressive lung disease encompassing both chronic bronchitis (inflammation of the bronchial tubes) and emphysema (damage to the alveoli)."
+                },
+                {
+                    question: "What is the most significant preventable risk factor for developing COPD?",
+                    options: ["Regular exercise", "Active or passive smoking", "Eating a high-fiber diet", "Living in a rural environment"],
+                    correctAnswerIndex: 1,
+                    explanation: "Smoking, both active and passive, is by far the leading cause of COPD globally."
+                },
+                {
+                    question: "What is the medical term for a collapsed lung, where air leaks into the space between the lung and chest wall?",
+                    options: ["Bronchitis", "Pneumonia", "Pneumothorax", "Pleurisy"],
+                    correctAnswerIndex: 2,
+                    explanation: "A pneumothorax occurs when air enters the pleural space, causing the lung to collapse."
+                },
+                {
+                    question: "Pneumonia is an infection that primarily inflames which part of the lungs?",
+                    options: ["Bronchi", "Trachea", "Alveoli (air sacs)", "Diaphragm"],
+                    correctAnswerIndex: 2,
+                    explanation: "Pneumonia is an infection that inflames the air sacs (alveoli) in one or both lungs, which may fill with fluid or pus."
+                },
+                {
+                    question: "A pulmonary embolism (PE) is a sudden blockage in a lung artery, most commonly caused by what?",
+                    options: ["An airway spasm", "A blood clot (thrombus) that travels from elsewhere in the body", "A bacterial infection in the lungs", "An allergic reaction in the airways"],
+                    correctAnswerIndex: 1,
+                    explanation: "Pulmonary embolisms are most frequently caused by deep vein thromboses (DVT) – blood clots that form in the legs and then travel to the lungs."
+                },
+                {
+                    question: "What is the definition of Apnea?",
+                    options: ["Rapid and deep breathing", "Shallow and painful breathing", "Temporary cessation of breathing", "Increased respiratory rate"],
+                    correctAnswerIndex: 2,
+                    explanation: "Apnea refers to a temporary pause in breathing, which can occur during sleep (sleep apnea) or due to other medical conditions."
+                },
+                {
+                    question: "Hyperventilation is characterized by breathing that is:",
+                    options: ["Too slow and shallow", "Too fast and deep, often leading to a decrease in CO2", "Normal and steady", "Absent or irregular"],
+                    correctAnswerIndex: 1,
+                    explanation: "Hyperventilation involves breathing excessively fast and/or deeply, which can lead to a reduction in blood carbon dioxide levels (hypocapnia)."
+                },
+                {
+                    question: "What assessment finding in a patient with a respiratory condition is considered a 'red flag' indicating significant respiratory distress?",
+                    options: ["Normal skin color", "Oxygen saturation (SpO2) of 98%", "Use of accessory muscles for breathing (e.g., neck and shoulder muscles)", "Calm and relaxed demeanor"],
+                    correctAnswerIndex: 2,
+                    explanation: "The use of accessory muscles of respiration indicates that the patient is working hard to breathe and is in significant respiratory distress."
+                },
+                {
+                    question: "In the immediate management of acute respiratory distress, what is a primary intervention to improve oxygenation?",
+                    options: ["Administering oral antibiotics", "Providing supplemental oxygen", "Encouraging strenuous physical activity", "Applying ice packs to the chest"],
+                    correctAnswerIndex: 1,
+                    explanation: "Providing supplemental oxygen is a critical first step to improve oxygenation and alleviate hypoxia in patients experiencing respiratory distress."
+                },
+                {
+                    question: "Which of the following is a common symptom of chronic bronchitis?",
+                    options: ["Sudden onset fever", "Persistent cough with mucus production", "Sharp, stabbing chest pain", "Sudden shortness of breath with no cough"],
+                    correctAnswerIndex: 1,
+                    explanation: "Chronic bronchitis is characterized by a persistent cough that produces sputum (mucus), lasting for at least three months in two consecutive years."
+                },
+                {
+                    question: "Emphysema primarily affects which structures in the lungs?",
+                    options: ["Bronchioles", "Trachea", "Alveoli (air sacs)", "Pulmonary arteries"],
+                    correctAnswerIndex: 2,
+                    explanation: "Emphysema involves damage to the alveoli, leading to their destruction and the formation of larger, less efficient air sacs."
+                },
+                {
+                    question: "What is the term for a bluish discoloration of the skin and mucous membranes due to inadequate oxygenation?",
+                    options: ["Pallor", "Erythema", "Jaundice", "Cyanosis"],
+                    correctAnswerIndex: 3,
+                    explanation: "Cyanosis is a sign of hypoxemia and indicates that the blood is not carrying enough oxygen."
+                },
+                {
+                    question: "Which respiratory condition is characterized by inflammation of the pleura, the membranes lining the lungs and chest cavity, causing sharp chest pain?",
+                    options: ["Pneumonia", "Bronchitis", "Pleurisy", "Emphysema"],
+                    correctAnswerIndex: 2,
+                    explanation: "Pleurisy (or pleuritis) is an inflammation of the pleura, typically causing sharp chest pain that worsens with breathing."
+                },
+                {
+                    question: "What is the primary risk factor for developing lung cancer, often mentioned in conjunction with respiratory diseases?",
+                    options: ["Exposure to secondhand smoke", "Genetic predisposition", "Air pollution", "Smoking"],
+                    correctAnswerIndex: 3,
+                    explanation: "Smoking is overwhelmingly the leading cause of lung cancer, responsible for about 85% of cases."
+                },
+                {
+                    question: "What is the medical term for a rapid respiratory rate?",
+                    options: ["Bradypnea", "Apnea", "Tachypnea", "Dyspnea"],
+                    correctAnswerIndex: 2,
+                    explanation: "Tachypnea refers to an abnormally rapid rate of breathing."
+                },
+                {
+                    question: "When assessing a patient with a respiratory complaint, what is a key question to ask about their history?",
+                    options: ["Their favorite color", "Any recent travel", "History of smoking or exposure to irritants", "Their last meal"],
+                    correctAnswerIndex: 2,
+                    explanation: "Smoking history and exposure to environmental irritants are crucial for understanding respiratory conditions."
+                },
+
+                // Endocrine Conditions (5 questions - as per content)
+                {
+                    question: "Which type of diabetes is characterized by the body's immune system attacking and destroying the insulin-producing cells in the pancreas?",
+                    options: ["Type 1 Diabetes", "Type 2 Diabetes", "Gestational Diabetes", "Insulin Resistance"],
+                    correctAnswerIndex: 0,
+                    explanation: "Type 1 diabetes is an autoimmune disease where the body fails to produce insulin because the immune system has destroyed the beta cells in the pancreas."
+                },
+                {
+                    question: "What is the medical term for dangerously low blood glucose levels?",
+                    options: ["Hyperglycemia", "Hypoglycemia", "Glycosuria", "Diabetic Ketoacidosis"],
+                    correctAnswerIndex: 1,
+                    explanation: "Hypoglycemia is a condition characterized by abnormally low blood glucose (blood sugar) levels."
+                },
+                {
+                    question: "What is the medical term for dangerously high blood glucose levels, often seen in uncontrolled diabetes?",
+                    options: ["Hypoglycemia", "Hypertension", "Hyperglycemia", "Hypovolemia"],
+                    correctAnswerIndex: 2,
+                    explanation: "Hyperglycemia refers to an excess of glucose in the bloodstream, often associated with diabetes mellitus."
+                },
+                {
+                    question: "Diabetic Ketoacidosis (DKA) is a severe complication of diabetes characterized by high blood glucose, acidosis, and the presence of what in the urine/blood?",
+                    options: ["Proteins", "Ketones", "Calcium", "White blood cells"],
+                    correctAnswerIndex: 1,
+                    explanation: "DKA is characterized by hyperglycemia, metabolic acidosis, and the presence of ketones in the blood and urine, resulting from the body breaking down fat for energy."
+                },
+                {
+                    question: "What is Addison's disease?",
+                    options: ["A condition where the thyroid gland is overactive", "A disorder where the adrenal glands produce too much cortisol", "A disorder where the adrenal glands produce insufficient amounts of certain hormones", "A type of diabetes insipidus"],
+                    correctAnswerIndex: 2,
+                    explanation: "Addison's disease is a rare disorder in which your body produces insufficient amounts of certain hormones produced by your adrenal glands."
+                },
+
+                // Environmentally Related Conditions (5 questions - as per content)
+                {
+                    question: "What temperature range defines Heat Exhaustion?",
+                    options: ["Below 35°C", "35°C-37°C", "37°C-40°C", "Above 40°C"],
+                    correctAnswerIndex: 2,
+                    explanation: "Heat exhaustion is a milder form of heat-related illness, characterized by a core body temperature between 37°C and 40°C."
+                },
+                {
+                    question: "Heat stroke, a life-threatening emergency, is defined by a core body temperature above what threshold?",
+                    options: ["35°C", "37°C", "38°C", "40°C"],
+                    correctAnswerIndex: 3,
+                    explanation: "Heat stroke is a severe form of hyperthermia defined by a core body temperature of 40°C or higher, accompanied by central nervous system dysfunction."
+                },
+                {
+                    question: "Non-exertional heat-related illness is typically associated with what kind of exposure?",
+                    options: ["Intense physical activity in heat", "Sudden exposure to extreme cold", "Prolonged environmental exposure to high temperatures", "High altitude climbing"],
+                    correctAnswerIndex: 2,
+                    explanation: "Non-exertional heat-related illness, also known as classic heat stroke, often affects vulnerable individuals during prolonged exposure to hot environments, such as during heatwaves."
+                },
+                {
+                    question: "What is the primary danger associated with prolonged immersion in cold water or exposure to cold temperatures leading to hypothermia?",
+                    options: ["Dehydration", "Organ dysfunction due to decreased metabolic rate and arrhythmias", "Increased blood pressure", "Hyperactivity and agitation"],
+                    correctAnswerIndex: 1,
+                    explanation: "Hypothermia causes a dangerous drop in core body temperature, leading to a slowing of metabolic processes, cardiac arrhythmias, and potential organ failure if not treated promptly."
+                },
+                {
+                    question: "What is a crucial first step in the management of a drowning victim after safe extrication from water?",
+                    options: ["Starting chest compressions immediately", "Providing 5 rescue breaths", "Checking for a pulse for 30 seconds", "Warming them rapidly with hot water"],
+                    correctAnswerIndex: 1,
+                    explanation: "For drowning victims, the initial intervention after ensuring scene safety is to provide 5 rescue breaths before starting chest compressions, as hypoxia is the primary issue."
+                },
+
+                // Shock (5 questions - as per content)
+                {
+                    question: "What is the fundamental physiological problem in all types of shock?",
+                    options: ["Too much fluid in the body", "Insufficient blood flow to meet the body's demands", "Excessive oxygen delivery to tissues", "Localized inflammation"],
+                    correctAnswerIndex: 1,
+                    explanation: "Shock is fundamentally a state of inadequate tissue perfusion, meaning the body's cells and organs are not receiving enough oxygen and nutrients."
+                },
+                {
+                    question: "Which of the following is a common cause of Hypovolemic shock?",
+                    options: ["Severe heart attack", "Spinal cord injury", "Massive hemorrhage", "Severe allergic reaction"],
+                    correctAnswerIndex: 2,
+                    explanation: "Hypovolemic shock is caused by a significant loss of circulating blood volume, with massive hemorrhage being a prime example."
+                },
+                {
+                    question: "What type of shock results from the heart's inability to pump enough blood effectively?",
+                    options: ["Hypovolemic shock", "Distributive shock", "Cardiogenic shock", "Obstructive shock"],
+                    correctAnswerIndex: 2,
+                    explanation: "Cardiogenic shock occurs when the heart's pumping ability is severely impaired, leading to insufficient blood flow to the body."
+                },
+                {
+                    question: "Which general management principle applies to most types of shock?",
+                    options: ["Restricting oxygen administration", "Promoting fluid restriction", "Maintaining airway, breathing, and circulation (ABC) and addressing the underlying cause", "Applying cold compresses to the extremities"],
+                    correctAnswerIndex: 2,
+                    explanation: "The fundamental management of shock involves supporting the ABCs (Airway, Breathing, Circulation) and identifying and treating the specific underlying cause."
+                },
+                {
+                    question: "What is a common sign or symptom of early shock?",
+                    options: ["Warm, flushed skin", "Bradycardia (slow heart rate)", "Tachycardia (fast heart rate)", "High blood pressure"],
+                    correctAnswerIndex: 2,
+                    explanation: "Tachycardia (an increased heart rate) is an early compensatory mechanism in shock as the body tries to maintain cardiac output."
+                }
+            ],
       },
       {
         title: "HART",
