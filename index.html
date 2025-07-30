@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exam Platform</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .exam-list, .exam-container {
+      display: none;
+    }
+    .exam-list.active, .exam-container.active {
+      display: block;
+    }
+    .exam-button {
+      display: block;
+      padding: 10px;
+      margin: 10px 0;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .exam-button:hover {
+      background: #0056b3;
+    }
+    .back-button {
+      background: #28a745;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    .back-button:hover {
+      background: #1e7e34;
+    }
+    .question-box {
+      margin-bottom: 20px;
+    }
+    .option-button {
+      display: block;
+      margin: 5px 0;
+      padding: 10px;
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .option-button:hover {
+      background: #e0e0e0;
+    }
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="examList" class="exam-list active">
+      <h2>Select an Exam</h2>
+      <div id="examButtons"></div>
+    </div>
+
+    <div id="examContainer" class="exam-container">
+      <button class="back-button" onclick="goBack()">Back to Exams</button>
+      <div id="questionContainer"></div>
+      <div class="navigation">
+        <button onclick="prevQuestion()">Previous</button>
+        <button onclick="nextQuestion()">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const exams = {
+      'Exam 1: General Knowledge': [
+        {
+          question: "What is the capital of France?",
+          options: ["Berlin", "Madrid", "Paris", "Lisbon"],
+          correctIndex: 2,
+          explanation: "Paris is the capital of France."
+        },
+        {
+          question: "Which planet is known as the Red Planet?",
+          options: ["Earth", "Mars", "Jupiter", "Venus"],
+          correctIndex: 1,
+          explanation: "Mars is called the Red Planet due to iron oxide on its surface."
+        },
+        {
+          question: "What is 5 + 7?",
+          options: ["10", "11", "12", "13"],
+          correctIndex: 2,
+          explanation: "5 + 7 equals 12."
+        },
+        {
+          question: "Which gas do plants absorb from the atmosphere?",
+          options: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+          correctIndex: 1,
+          explanation: "Plants absorb carbon dioxide for photosynthesis."
+        },
+        {
+          question: "What is the boiling point of water?",
+          options: ["90°C", "100°C", "110°C", "120°C"],
+          correctIndex: 1,
+          explanation: "Water boils at 100°C at standard atmospheric pressure."
+        }
+        // Add 15 more real questions here for Exam 1
+      ]
+    };
+
+    // Placeholder Exams (Exam 2–8)
+    for (let i = 2; i <= 8; i++) {
+      exams[`Exam ${i}`] = Array.from({ length: 20 }, (_, q) => ({
+        question: `Question ${q + 1} of Exam ${i}`,
+        options: ["Option A", "Option B", "Option C", "Option D"],
+        correctIndex: Math.floor(Math.random() * 4),
+        explanation: `Explanation for question ${q + 1} of Exam ${i}`
+      }));
+    }
+
+    let currentExam = [];
+    let currentQuestionIndex = 0;
+
+    function loadExams() {
+      const container = document.getElementById("examButtons");
+      Object.keys(exams).forEach(examName => {
+        const btn = document.createElement("button");
+        btn.className = "exam-button";
+        btn.innerText = examName;
+        btn.onclick = () => startExam(examName);
+        container.appendChild(btn);
+      });
+    }
+
+    function startExam(name) {
+      currentExam = shuffle([...exams[name]]);
+      currentQuestionIndex = 0;
+      document.getElementById("examList").classList.remove("active");
+      document.getElementById("examContainer").classList.add("active");
+      renderQuestion();
+    }
+
+    function goBack() {
+      currentExam = [];
+      currentQuestionIndex = 0;
+      document.getElementById("examList").classList.add("active");
+      document.getElementById("examContainer").classList.remove("active");
+    }
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    function renderQuestion() {
+      const container = document.getElementById("questionContainer");
+      const q = currentExam[currentQuestionIndex];
+      container.innerHTML = `
+        <div class="question-box">
+          <h3>Question ${currentQuestionIndex + 1}:</h3>
+          <p>${q.question}</p>
+          ${q.options.map((opt, i) => `
+            <button class="option-button" onclick="checkAnswer(${i})">${opt}</button>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function checkAnswer(selectedIndex) {
+      const q = currentExam[currentQuestionIndex];
+      const isCorrect = selectedIndex === q.correctIndex;
+      alert((isCorrect ? "✅ Correct!" : "❌ Wrong!") + "\\n" + q.explanation);
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIndex < currentExam.length - 1) {
+        currentQuestionIndex++;
+        renderQuestion();
+      } else {
+        alert("🎉 You have completed the exam.");
+        goBack();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        renderQuestion();
+      }
+    }
+
+    loadExams();
+  </script>
+</body>
+</html>
