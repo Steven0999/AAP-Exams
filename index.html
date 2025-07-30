@@ -6,18 +6,36 @@
   <title>Exam Platform</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      padding: 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #4CAF50, #2196F3); /* Kahoot-like gradient */
+            color: white;
+            overflow-y: auto; /* Allow scrolling for smaller screens */
+        }
+    .quiz-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            width: 90%;
+            max-width: 700px;
+            position: relative; /* For positioning navigation buttons */
+            margin: 20px auto; /* Add some margin for better spacing on all screens */
+        }
+    .screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .screen.hidden {
+            display: none;
+        }
     .exam-list, .exam-container {
       display: none;
     }
@@ -104,6 +122,145 @@
     .modal button:hover {
       background: #0056b3;
     }
+
+    .answer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns */
+            grid-gap: 15px;
+            width: 100%;
+        }
+
+        .answer-btn {
+            min-height: 80px; /* Make buttons larger for touch */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            word-wrap: break-word; /* Allow long text to wrap */
+            white-space: normal; /* Ensure text wraps */
+        }
+
+    /* Specific colors for Kahoot-like answer buttons */
+        .answer-btn:nth-child(1) { background-color: orange; color: white; } /* Orange */
+        .answer-btn:nth-child(2) { background-color: purple; color: white; } /* Purple */
+        .answer-btn:nth-child(3) { background-color: #2196F3; color: white; } /* Blue */
+        .answer-btn:nth-child(4) { background-color: #FFEB3B; color: #333; } /* Yellow */
+
+        .answer-btn.correct {
+            background-color: #8BC34A !important; /* Lighter green */
+            border: 3px solid white;
+        }
+
+        .answer-btn.incorrect {
+            background-color: #EF5350 !important; /* Lighter red */
+            border: 3px solid white;
+        }
+
+        #feedback-message {
+            margin-top: 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+            min-height: 30px; /* Reserve space */
+        }
+
+        /* --- Custom Pop-up Styles --- */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Ensure it's on top */
+        }
+
+    .popup-overlay.hidden {
+            display: none;
+        }
+
+        .popup-content {
+            background-color: #333; /* Dark background for pop-up */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            transform: scale(0.8); /* Start smaller */
+            opacity: 0; /* Start invisible */
+            transition: all 0.3s ease-out; /* Smooth transition for appearance */
+        }
+
+        /* Animation for when the popup becomes visible */
+        .popup-overlay:not(.hidden) .popup-content {
+            transform: scale(1); /* Scale up when visible */
+            opacity: 1; /* Fade in when visible */
+        }
+
+        #popup-feedback {
+            color: #FFEB3B; /* Yellow color for feedback */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+    #popup-explanation {
+            color: #e0e0e0; /* Light grey for explanation text */
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            text-align: left; /* Align explanation text to the left */
+        }
+
+        #popup-next-btn {
+            margin-top: 10px;
+            max-width: 200px; /* Make the button a bit smaller than general .btn */
+        }
+        /* --- End Custom Pop-up Styles --- */
+
+
+        #final-score {
+            color: #FFEB3B;
+            font-size: 1.5em;
+        }
+
+        #total-questions {
+            color: #FFEB3B;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .navigation-buttons button {
+            flex: 1;
+            margin: 0 5px;
+        }
+    @media (max-width: 600px) {
+            .answer-grid {
+                grid-template-columns: 1fr; /* Stack buttons on small screens */
+            }
+            .quiz-container {
+                padding: 20px;
+                margin: 10px;
+            }
+            .btn {
+                padding: 12px 20px;
+                font-size: 1em;
+            }
+            .popup-content {
+                padding: 20px;
+            }
+            #popup-feedback {
+                font-size: 1.5em;
+            }
+            #popup-explanation {
+                font-size: 0.95em;
+            }
+        }
   </style>
 </head>
 <body>
