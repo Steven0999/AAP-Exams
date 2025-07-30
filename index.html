@@ -7,296 +7,375 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: black;
-      color: orange;
+      background-color: #f4f4f4;
       margin: 0;
       padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
     .hidden {
-      display: none;
+      display: none !important; /* Use !important to ensure override */
     }
     .container {
       max-width: 800px;
-      margin: 0 auto;
+      width: 90%; /* Make it more responsive */
+      margin: 20px auto; /* Add some vertical margin */
       padding: 20px;
       background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+      border-radius: 10px; /* Rounded corners for the container */
     }
     h1, h2, h3 {
       text-align: center;
+      color: #333;
     }
     .exam-list {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 15px; /* Increased gap */
+      margin-top: 20px;
     }
     .exam-btn, .btn {
-      padding: 10px;
-      font-size: 16px;
+      padding: 12px 20px; /* More padding */
+      font-size: 18px; /* Larger font */
       cursor: pointer;
-      background-color: orange;
-      color: grey;
+      background-color: #007bff;
+      color: white;
       border: none;
-      border-radius: 4px;
+      border-radius: 8px; /* More rounded */
+      transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
     }
     .btn:hover, .exam-btn:hover {
-      background-color: orange;
+      background-color: #0056b3;
+      transform: translateY(-2px); /* Slight lift on hover */
+    }
+    .btn:active, .exam-btn:active {
+      transform: translateY(0); /* Press effect */
     }
     .back-btn {
-      margin-bottom: 10px;
+      margin-bottom: 20px; /* More space below back button */
       display: inline-block;
+      align-self: flex-start; /* Align to start in flex container */
     }
-    .question {
+    .question-container {
       margin: 20px 0;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    .question-text {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #333;
     }
     .options button {
       display: block;
       margin: 10px 0;
       width: 100%;
+      text-align: left; /* Align text to left for options */
     }
-    .feedback {
-      font-weight: bold;
-      margin-top: 10px;
+    .progress-bar {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #555;
+    }
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 30px; /* More padding */
+      border-radius: 12px; /* More rounded */
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+      z-index: 1000;
+      display: none;
+      text-align: center;
+      max-width: 90%;
+      width: 400px;
+    }
+    .popup h3 {
+      margin: 0 0 15px;
+      font-size: 24px;
+    }
+    .popup p {
+      margin: 0 0 25px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #666;
+    }
+    .popup button {
+      background-color: #28a745; /* Green for continue */
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+    .popup button:hover {
+      background-color: #218838;
+    }
+    .results-summary {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .results-summary h2 {
+      font-size: 28px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+    .results-summary p {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    .results-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .results-actions button {
+      width: 100%;
+    }
+    /* Specific styles for correct/incorrect popup titles */
+    #popup-title.correct {
+      color: #28a745; /* Green */
+    }
+    #popup-title.incorrect {
+      color: #dc3545; /* Red */
     }
   </style>
 </head>
 <body>
+  <!-- Contents Page -->
   <div id="contents-page" class="container">
-    <h1>Contents Page</h1>
-    <div class="exam-list">
-      <button class="exam-btn" onclick="startExam(0)">1. HART Quiz</button>
-      <button class="exam-btn" onclick="startExam(1)">2. Fire Safety</button>
-      <button class="exam-btn" onclick="startExam(2)">3. Manual Handling</button>
-      <button class="exam-btn" onclick="startExam(3)">4. Infection Control</button>
-      <button class="exam-btn" onclick="startExam(4)">5. Safeguarding Adults</button>
-      <button class="exam-btn" onclick="startExam(5)">6. Safeguarding Children</button>
-      <button class="exam-btn" onclick="startExam(6)">7. Equality and Diversity</button>
-      <button class="exam-btn" onclick="startExam(7)">8. GDPR Awareness</button>
-      <button class="exam-btn" onclick="startExam(8)">9. Conflict Resolution</button>
-      <button class="exam-btn" onclick="startExam(9)">10. Basic Life Support</button>
+    <h1>Quiz Platform</h1>
+    <h2>Select an Exam</h2>
+    <div class="exam-list" id="exam-buttons"></div>
+  </div>
+
+  <!-- Quiz Application Page -->
+  <div id="quiz-app" class="container hidden">
+    <button class="btn back-btn" onclick="goToContentsPage()">&larr; Back to Contents</button>
+    <div class="progress-bar" id="progress-bar"></div>
+    <div id="quiz">
+      <div class="question-container">
+        <p class="question-text" id="question"></p>
+      </div>
+      <div class="options" id="options"></div>
     </div>
   </div>
 
-  <div id="quiz-app" class="container hidden">
-    <button class="btn back-btn" onclick="goToContentsPage()">&larr; Back to Contents</button>
-    <div id="quiz">
-      <div class="question" id="question"></div>
-      <div class="options" id="options"></div>
-      <div class="feedback" id="feedback"></div>
-      <button class="btn" onclick="nextQuestion()">Next</button>
+  <!-- Results Page -->
+  <div id="results-page" class="container hidden">
+    <div class="results-summary">
+      <h2>Quiz Complete!</h2>
+      <p id="final-score"></p>
     </div>
+    <div class="results-actions">
+      <button class="btn" onclick="retakeQuiz()">Retake Quiz</button>
+      <button class="btn" onclick="goToContentsPageFromResults()">Back to Contents</button>
+    </div>
+  </div>
+
+  <!-- Pop-up for Answer Explanation -->
+  <div id="popup" class="popup">
+    <h3 id="popup-title"></h3>
+    <p id="popup-message"></p>
+    <button onclick="closePopupAndContinue()">Continue</button>
   </div>
 
   <script>
+    // Get DOM elements
     const contentsPage = document.getElementById('contents-page');
     const quizApp = document.getElementById('quiz-app');
+    const resultsPage = document.getElementById('results-page');
     const questionElement = document.getElementById('question');
     const optionsElement = document.getElementById('options');
-    const feedbackElement = document.getElementById('feedback');
+    const popup = document.getElementById('popup');
+    const popupTitle = document.getElementById('popup-title');
+    const popupMessage = document.getElementById('popup-message');
+    const examButtonsContainer = document.getElementById('exam-buttons');
+    const progressBar = document.getElementById('progress-bar');
+    const finalScoreElement = document.getElementById('final-score');
 
+    // Quiz state variables
     let currentQuestionIndex = 0;
     let questions = [];
     let score = 0;
+    let currentExamIndex = -1; // To keep track of the currently selected exam
 
+    // --- Quiz Data ---
+    // This is where you define your exams and their questions.
+    // Each exam object has a 'title' and an array of 'questions'.
+    // Each question object has 'question' text, an array of 'options',
+    // the 'correctAnswerIndex' (0-based), and an 'explanation'.
     const exams = [
       {
-        title: 'HART Quiz',
+        title: "General Knowledge Quiz",
         questions: [
           {
-            question: "What does HART stand for?",
-            options: ["Hazardous Area Response Team", "Hospital Ambulance Response Team", "High Alert Rescue Team", "Health and Rescue Taskforce"],
-            correctAnswerIndex: 0,
-            explanation: "HART stands for Hazardous Area Response Team."
-          },
-          {
-            question: "Which organization manages HART teams in the UK?",
-            options: ["Fire and Rescue Service", "NHS Ambulance Services", "British Red Cross", "RNLI"],
-            correctAnswerIndex: 1,
-            explanation: "They are managed by NHS Ambulance Services."
-          }
-        ]
-      },
-      {
-        title: 'Fire Safety',
-        questions: [
-          {
-            question: "What does PASS stand for in fire extinguisher use?",
-            options: ["Pull, Aim, Squeeze, Sweep", "Push, Aim, Spray, Sweep", "Pull, Activate, Spray, Stop", "Press, Aim, Squeeze, Stop"],
-            correctAnswerIndex: 0,
-            explanation: "PASS = Pull, Aim, Squeeze, Sweep."
-          },
-          {
-            question: "What's the first thing to do when discovering a fire?",
-            options: ["Attempt to put it out", "Run away", "Raise the alarm", "Open all windows"],
+            question: "What is the capital of France?",
+            options: ["London", "Berlin", "Paris", "Rome"],
             correctAnswerIndex: 2,
-            explanation: "Always raise the alarm first."
-          }
-        ]
-      },
-      {
-        title: 'Manual Handling',
-        questions: [
-          {
-            question: "What is the safest position for your back during lifting?",
-            options: ["Bent", "Twisted", "Straight", "Arched"],
-            correctAnswerIndex: 2,
-            explanation: "A straight back prevents injury."
+            explanation: "Paris is the capital and most populous city of France, known for its art, fashion, gastronomy, and culture."
           },
           {
-            question: "Before lifting, what should you assess?",
-            options: ["Your strength", "The risk", "The clock", "The color"],
+            question: "Which planet is known as the Red Planet?",
+            options: ["Earth", "Mars", "Jupiter", "Venus"],
             correctAnswerIndex: 1,
-            explanation: "Always assess risk before lifting."
-          }
-        ]
-      },
-      {
-        title: 'Infection Control',
-        questions: [
-          {
-            question: "What is the most effective way to prevent infection spread?",
-            options: ["Face masks", "Vaccines", "Handwashing", "Steroids"],
-            correctAnswerIndex: 2,
-            explanation: "Handwashing is most effective."
+            explanation: "Mars is called the Red Planet because of the iron oxide prevalent on its surface, which gives it a reddish appearance."
           },
           {
-            question: "What does PPE stand for?",
-            options: ["Personal Protective Equipment", "Public Protection Equipment", "Private Protective Equipment", "Personal Prevention Essentials"],
-            correctAnswerIndex: 0,
-            explanation: "PPE = Personal Protective Equipment."
-          }
-        ]
-      },
-      {
-        title: 'Safeguarding Adults',
-        questions: [
-          {
-            question: "What is safeguarding?",
-            options: ["Making laws", "Protecting vulnerable people", "Educating staff", "Filing reports"],
-            correctAnswerIndex: 1,
-            explanation: "Safeguarding is protecting vulnerable adults."
-          },
-          {
-            question: "Which is a sign of adult abuse?",
-            options: ["Well-kept appearance", "Injuries with no explanation", "Asking questions", "Talking to staff"],
-            correctAnswerIndex: 1,
-            explanation: "Unexplained injuries may be abuse signs."
-          }
-        ]
-      },
-      {
-        title: 'Safeguarding Children',
-        questions: [
-          {
-            question: "Who is responsible for safeguarding children?",
-            options: ["Parents only", "Teachers only", "Everyone", "Police only"],
-            correctAnswerIndex: 2,
-            explanation: "Everyone is responsible."
-          },
-          {
-            question: "Which is a type of child abuse?",
-            options: ["Emotional", "Physical", "Neglect", "All of the above"],
+            question: "What is the largest ocean on Earth?",
+            options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
             correctAnswerIndex: 3,
-            explanation: "All are forms of abuse."
-          }
-        ]
-      },
-      {
-        title: 'Equality and Diversity',
-        questions: [
-          {
-            question: "What is equality?",
-            options: ["Treating people the same", "Respecting beliefs", "Ensuring fair access", "Hiring only women"],
-            correctAnswerIndex: 2,
-            explanation: "Equality is about fair access."
+            explanation: "The Pacific Ocean is the largest and deepest of Earth's five oceans, covering about one-third of the surface."
           },
           {
-            question: "Diversity means?",
-            options: ["Ignoring differences", "Celebrating differences", "Avoiding conflict", "Uniform thinking"],
-            correctAnswerIndex: 1,
-            explanation: "Diversity celebrates difference."
-          }
-        ]
-      },
-      {
-        title: 'GDPR Awareness',
-        questions: [
+            question: "Who painted the Mona Lisa?",
+            options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+            correctAnswerIndex: 2,
+            explanation: "Leonardo da Vinci, a true Renaissance polymath, painted the iconic Mona Lisa."
+          },
           {
-            question: "What does GDPR stand for?",
-            options: ["General Data Protection Regulation", "Global Data Processing Rules", "Great Data Protection Rights", "Government Digital Policy Regulation"],
+            question: "What is the chemical symbol for gold?",
+            options: ["Au", "Ag", "Fe", "Cu"],
             correctAnswerIndex: 0,
-            explanation: "GDPR = General Data Protection Regulation."
-          },
-          {
-            question: "What should you do if data is lost?",
-            options: ["Ignore it", "Tell your manager", "Delete more data", "Print it"],
-            correctAnswerIndex: 1,
-            explanation: "Report data loss immediately."
+            explanation: "The chemical symbol for gold is Au, derived from its Latin name 'aurum'."
           }
         ]
       },
       {
-        title: 'Conflict Resolution',
+        title: "Science Basics",
         questions: [
           {
-            question: "First step in resolving conflict?",
-            options: ["Blame someone", "Stay silent", "Listen actively", "Walk away"],
-            correctAnswerIndex: 2,
-            explanation: "Listening helps understand the issue."
+            question: "What is the chemical symbol for water?",
+            options: ["O2", "H2O", "CO2", "N2"],
+            correctAnswerIndex: 1,
+            explanation: "H2O is the chemical formula for water, indicating two hydrogen atoms and one oxygen atom."
           },
           {
-            question: "What skill is vital in conflict?",
-            options: ["Shouting", "Negotiation", "Blaming", "Avoidance"],
-            correctAnswerIndex: 1,
-            explanation: "Negotiation is key to resolution."
+            question: "What force keeps us on the ground?",
+            options: ["Magnetism", "Friction", "Gravity", "Tension"],
+            correctAnswerIndex: 2,
+            explanation: "Gravity is the fundamental force of attraction between any two objects with mass."
+          },
+          {
+            question: "What is the process by which plants make their own food?",
+            options: ["Respiration", "Transpiration", "Photosynthesis", "Germination"],
+            correctAnswerIndex: 2,
+            explanation: "Photosynthesis is the process used by plants, algae, and cyanobacteria to convert light energy into chemical energy."
+          },
+          {
+            question: "What is the powerhouse of the cell?",
+            options: ["Nucleus", "Ribosome", "Mitochondria", "Endoplasmic Reticulum"],
+            correctAnswerIndex: 2,
+            explanation: "Mitochondria are often called the 'powerhouses' of the cell because they generate most of the cell's supply of ATP (adenosine triphosphate), used as a source of chemical energy."
           }
         ]
       },
       {
-        title: 'Basic Life Support',
+        title: "History Highlights",
         questions: [
           {
-            question: "What does CPR stand for?",
-            options: ["Cardiopulmonary Resuscitation", "Cardiac Pulse Reaction", "Critical Pressure Revival", "Central Pulse Recovery"],
-            correctAnswerIndex: 0,
-            explanation: "CPR = Cardiopulmonary Resuscitation."
+            question: "In what year did the Titanic sink?",
+            options: ["1905", "1912", "1918", "1923"],
+            correctAnswerIndex: 1,
+            explanation: "The RMS Titanic sank on April 15, 1912, after striking an iceberg during its maiden voyage."
           },
           {
-            question: "What is the ratio of chest compressions to breaths in CPR?",
-            options: ["10:1", "15:2", "30:2", "50:5"],
+            question: "Who was the first President of the United States?",
+            options: ["Thomas Jefferson", "Abraham Lincoln", "George Washington", "John Adams"],
             correctAnswerIndex: 2,
-            explanation: "CPR ratio is 30 compressions to 2 breaths."
+            explanation: "George Washington served as the first President of the United States from 1789 to 1797."
+          },
+          {
+            question: "When did World War II end?",
+            options: ["1939", "1941", "1945", "1950"],
+            correctAnswerIndex: 2,
+            explanation: "World War II officially ended on September 2, 1945, with the formal surrender of Japan."
           }
         ]
       }
     ];
 
+    // --- Initial setup: Populate exam buttons on the contents page ---
+    function initializeExamButtons() {
+      examButtonsContainer.innerHTML = ''; // Clear existing buttons
+      exams.forEach((exam, index) => {
+        const button = document.createElement('button');
+        button.className = 'exam-btn';
+        button.textContent = `${index + 1}. ${exam.title}`;
+        button.onclick = () => startExam(index);
+        examButtonsContainer.appendChild(button);
+      });
+    }
+
+    // Call this function when the page loads
+    document.addEventListener('DOMContentLoaded', initializeExamButtons);
+
+    // --- Navigation Functions ---
+
+    // Shows the contents page and hides others
     function goToContentsPage() {
       quizApp.classList.add('hidden');
+      resultsPage.classList.add('hidden');
       contentsPage.classList.remove('hidden');
     }
 
+    // Starts a selected exam
     function startExam(index) {
-      contentsPage.classList.add('hidden');
-      quizApp.classList.remove('hidden');
+      currentExamIndex = index; // Store the index of the current exam
       questions = exams[index].questions;
       currentQuestionIndex = 0;
       score = 0;
+
+      contentsPage.classList.add('hidden');
+      resultsPage.classList.add('hidden');
+      quizApp.classList.remove('hidden');
+
       displayQuestion();
     }
 
+    // Retakes the current quiz from the results page
+    function retakeQuiz() {
+      if (currentExamIndex !== -1) {
+        startExam(currentExamIndex); // Restart the same exam
+      } else {
+        goToContentsPage(); // Fallback if for some reason exam index is lost
+      }
+    }
+
+    // Goes to contents page from the results page
+    function goToContentsPageFromResults() {
+      goToContentsPage();
+    }
+
+    // --- Quiz Logic Functions ---
+
+    // Displays the current question and its options
     function displayQuestion() {
+      // Update progress bar
+      progressBar.innerText = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+
       const current = questions[currentQuestionIndex];
+
+      // If all questions are answered, show results
       if (!current) {
-        questionElement.innerText = `Quiz complete! Your score: ${score}/${questions.length}`;
-        optionsElement.innerHTML = '';
-        feedbackElement.innerText = '';
+        showResultsPage();
         return;
       }
 
       questionElement.innerText = current.question;
-      optionsElement.innerHTML = '';
-      feedbackElement.innerText = '';
+      optionsElement.innerHTML = ''; // Clear previous options
 
       current.options.forEach((option, index) => {
         const button = document.createElement('button');
@@ -307,19 +386,43 @@
       });
     }
 
+    // Checks the selected answer against the correct one
     function checkAnswer(selectedIndex) {
       const current = questions[currentQuestionIndex];
-      if (selectedIndex === current.correctAnswerIndex) {
-        feedbackElement.innerText = "Correct! " + current.explanation;
+      const isCorrect = selectedIndex === current.correctAnswerIndex;
+
+      // Set popup title and message
+      popupTitle.innerText = isCorrect ? "Correct!" : "Incorrect.";
+      // Add class for styling the popup title based on correctness
+      popupTitle.classList.remove('correct', 'incorrect');
+      popupTitle.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+      popupMessage.innerText = current.explanation;
+
+      if (isCorrect) {
         score++;
-      } else {
-        feedbackElement.innerText = `Incorrect. ${current.explanation}`;
       }
+      showPopup();
     }
 
-    function nextQuestion() {
+    // Shows the explanation pop-up
+    function showPopup() {
+      popup.style.display = 'block';
+    }
+
+    // Closes the pop-up and moves to the next question or results
+    function closePopupAndContinue() {
+      popup.style.display = 'none';
       currentQuestionIndex++;
-      displayQuestion();
+      displayQuestion(); // This will either display the next question or show results
+    }
+
+    // Shows the results page
+    function showResultsPage() {
+      quizApp.classList.add('hidden');
+      contentsPage.classList.add('hidden');
+      resultsPage.classList.remove('hidden');
+      finalScoreElement.innerText = `You scored ${score} out of ${questions.length} questions correctly!`;
     }
   </script>
 </body>
