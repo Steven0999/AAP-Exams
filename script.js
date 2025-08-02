@@ -10,6 +10,7 @@
     const examButtonsContainer = document.getElementById('exam-buttons');
     const progressBar = document.getElementById('progress-bar');
     const finalScoreElement = document.getElementById('final-score');
+    const disclaimerPopup = document.getElementById('disclaimer-popup');
 
     // Quiz state variables
     let currentQuestionIndex = 0;
