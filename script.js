@@ -1,16 +1,16 @@
     // Get DOM elements
     const contentsPage = document.getElementById('contents-page');
-    const quizApp = document.getElementById('quiz-app');
-    const resultsPage = document.getElementById('results-page');
-    const questionElement = document.getElementById('question');
-    const optionsElement = document.getElementById('options');
-    const popup = document.getElementById('popup');
-    const popupTitle = document.getElementById('popup-title');
-    const popupMessage = document.getElementById('popup-message');
-    const examButtonsContainer = document.getElementById('exam-buttons');
-    const progressBar = document.getElementById('progress-bar');
-    const finalScoreElement = document.getElementById('final-score');
-    const disclaimerPopup = document.getElementById('disclaimer-popup');
+const quizApp = document.getElementById('quiz-app');
+const resultsPage = document.getElementById('results-page');
+const questionElement = document.getElementById('question');
+const optionsElement = document.getElementById('options');
+const popup = document.getElementById('popup');
+const popupTitle = document.getElementById('popup-title');
+const popupMessage = document.getElementById('popup-message');
+const examButtonsContainer = document.getElementById('exam-buttons');
+const progressBar = document.getElementById('progress-bar');
+const finalScoreElement = document.getElementById('final-score');
+const disclaimerPopup = document.getElementById('disclaimer-popup');
 
     // Quiz state variables
     let currentQuestionIndex = 0;
