@@ -1,5 +1,3 @@
-
-
     // Get DOM elements
     const contentsPage = document.getElementById('contents-page');
     const quizApp = document.getElementById('quiz-app');
