@@ -1,169 +1,183 @@
-i<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AAP Quiz</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: black;
-      color:ornage;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAP Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color:orange;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .hidden {
+      display: none !important; /* Use !important to ensure override */
+    }
+    .container {
+      max-width: 800px;
+      width: 90%; /* Make it more responsive */
+      margin: 20px auto; /* Add some vertical margin */
+      padding: 20px;
+      background-color: grey;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+      border-radius: 10px; /* Rounded corners for the container */
+    }
+    h1, h2, h3 {
+      text-align: center;
+      color: orange;
+    }
+    .exam-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px; /* Increased gap */
+      margin-top: 20px;
+    }
+    .exam-btn, .btn {
+      padding: 12px 20px; /* More padding */
+      font-size: 18px; /* Larger font */
+      cursor: pointer;
+      background-color: orange;
+      color: white;
+      border: none;
+      border-radius: 8px; /* More rounded */
+      transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
+    }
+    .btn:hover, .exam-btn:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px); /* Slight lift on hover */
+    }
+    .btn:active, .exam-btn:active {
+      transform: translateY(0); /* Press effect */
+    }
+    .disclaimer-btn {
+        background-color: grey;
+        margin-top: 20px;
     }
-    .hidden {
-      display: none !important; /* Use !important to ensure override */
+    .back-btn {
+      margin-bottom: 20px; /* More space below back button */
+      display: inline-block;
+      align-self: flex-start; /* Align to start in flex container */
+      background-color:orange;
+    }
+    .question-container {
+      margin: 20px 0;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: orange;
+    }
+    .question-text {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: black;
+    }
+    .options button {
+      display: block;
+      margin: 10px 0;
+      width: 100%;
+      text-align: left; /* Align text to left for options */
+    }
+    .progress-bar {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: orange;
+    }
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: orange;
+      padding: 30px; /* More padding */
+      border-radius: 12px; /* More rounded */
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+      z-index: 1000;
+      display: none;
+      text-align: center;
+      max-width: 90%;
+      width: 400px;
+    }
+    .disclaimer-popup {
+        background-color: orange;
     }
-    .container {
-      max-width: 800px;
-      width: 90%; /* Make it more responsive */
-      margin: 20px auto; /* Add some vertical margin */
-      padding: 20px;
-      background-color: grey;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); /* Stronger shadow */
-      border-radius: 10px; /* Rounded corners for the container */
+    .disclaimer-popup h3 {
+        color: black;
     }
-    h1, h2, h3 {
-      text-align: center;
-      color: orange;
+    .disclaimer-popup p {
+        color: grey;
     }
-    .exam-list {
-      display: flex;
-      flex-direction: column;
-      gap: 15px; /* Increased gap */
-      margin-top: 20px;
-    }
-    .exam-btn, .btn {
-      padding: 12px 20px; /* More padding */
-      font-size: 18px; /* Larger font */
-      cursor: pointer;
-      background-color: orange;
-      color: white;
-      border: none;
-      border-radius: 8px; /* More rounded */
-      transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
-    }
-    .btn:hover, .exam-btn:hover {
-      background-color: #0056b3;
-      transform: translateY(-2px); /* Slight lift on hover */
-    }
-    .btn:active, .exam-btn:active {
-      transform: translateY(0); /* Press effect */
-    }
-    .back-btn {
-      margin-bottom: 20px; /* More space below back button */
-      display: inline-block;
-      align-self: flex-start; /* Align to start in flex container */
-      background-color:orange;
-    }
-    .question-container {
-      margin: 20px 0;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background-color: orange;
-    }
-    .question-text {
-      font-size: 20px;
-      margin-bottom: 15px;
-      color: black;
-    }
-    .options button {
-      display: block;
-      margin: 10px 0;
-      width: 100%;
-      text-align: left; /* Align text to left for options */
-    }
-    .progress-bar {
-      text-align: center;
-      font-size: 16px;
-      margin-bottom: 15px;
-      color: orange;
-    }
-    .popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: orange;
-      padding: 30px; /* More padding */
-      border-radius: 12px; /* More rounded */
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
-      z-index: 1000;
-      display: none;
-      text-align: center;
-      max-width: 90%;
-      width: 400px;
-    }
-    .popup h3 {
-      margin: 0 0 15px;
-      font-size: 24px;
-      color: grey;
-    }
-    .popup p {
-      margin: 0 0 25px;
-      font-size: 16px;
-      line-height: 1.5;
-      color: black;
-    }
-    .popup button {
-      background-color: grey; /* Green for continue */
-      color: black;
-      border: none;
-      padding: 12px 25px;
-      cursor: pointer;
-      border-radius: 8px;
-      font-size: 18px;
-      transition: background-color 0.3s ease;
-    }
-    .popup button:hover {
-      background-color: #218838;
-    }
-    .results-summary {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .results-summary h2 {
-      font-size: 28px;
-      color: #007bff;
-      margin-bottom: 10px;
-    }
-    .results-summary p {
-      font-size: 22px;
-      color: #333;
-      margin-bottom: 30px;
-    }
-    .results-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .results-actions button {
-      width: 100%;
-    }
-    /* Specific styles for correct/incorrect popup titles */
-    #popup-title.correct {
-      color: #28a745; /* Green */
-    }
-    #popup-title.incorrect {
-      color: #dc3545; /* Red */
-    }
-  </style>
+    .popup h3 {
+      margin: 0 0 15px;
+      font-size: 24px;
+      color: grey;
+    }
+    .popup p {
+      margin: 0 0 25px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: black;
+    }
+    .popup button {
+      background-color: grey; /* Green for continue */
+      color: black;
+      border: none;
+      padding: 12px 25px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+    .popup button:hover {
+      background-color: #218838;
+    }
+    .results-summary {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .results-summary h2 {
+      font-size: 28px;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+    .results-summary p {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    .results-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .results-actions button {
+      width: 100%;
+    }
+    /* Specific styles for correct/incorrect popup titles */
+    #popup-title.correct {
+      color: #28a745; /* Green */
+    }
+    #popup-title.incorrect {
+      color: #dc3545; /* Red */
+    }
+  </style>
 </head>
 <body>
     <div id="contents-page" class="container">
     <h1>AAP Quiz Exam List</h1>
     <h2>Select an Exam</h2>
     <div class="exam-list" id="exam-buttons"></div>
-    </div>
-<!--  <h5><i><b>The Exams are questions related to the slides provided by Crawley College in the Year 2024/2025 specifically for exams taken place at Crawley College by SECAmb students (External & Internal). <br />These are potential questions and information that could be of assistance as well as information helpful within the role of an AAP. <br /> It has been created and designed (by students) for students to use it as assistance to prepare for their exams in the above topics. Use this along side studying wuth the slides and information from tutors to gain full preparation. Good Luck.</b></i></h5>
--->    <div id="quiz-app" class="container hidden">
+    <button class="btn disclaimer-btn" onclick="showDisclaimerPopup()">Disclaimer</button>
+  </div>
+
+    <div id="quiz-app" class="container hidden">
     <button class="btn back-btn" onclick="goToContentsPage()">&larr; Back to Contents</button>
     <div class="progress-bar" id="progress-bar"></div>
     <div id="quiz">
@@ -172,7 +186,7 @@ i<!DOCTYPE html>
       </div>
       <div class="options" id="options"></div>
     </div>
-       </div>
+  </div>
 
     <div id="results-page" class="container hidden">
     <div class="results-summary">
@@ -191,6 +205,12 @@ i<!DOCTYPE html>
     <button onclick="closePopupAndContinue()">Continue</button>
   </div>
 
+    <div id="disclaimer-popup" class="popup disclaimer-popup hidden">
+    <h3>Disclaimer</h3>
+    <p>This quiz is for educational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. This material is for review and practice and does not guarantee success on any professional exam. All information is provided without warranty of any kind.</p>
+    <button onclick="closeDisclaimerPopup()">Close</button>
+  </div>
+
   <script>
     // Get DOM elements
     const contentsPage = document.getElementById('contents-page');
@@ -204,6 +224,7 @@ i<!DOCTYPE html>
     const examButtonsContainer = document.getElementById('exam-buttons');
     const progressBar = document.getElementById('progress-bar');
     const finalScoreElement = document.getElementById('final-score');
+    const disclaimerPopup = document.getElementById('disclaimer-popup');
 
     // Quiz state variables
     let currentQuestionIndex = 0;
@@ -6555,6 +6576,14 @@ i<!DOCTYPE html>
       resultsPage.classList.remove('hidden');
       finalScoreElement.innerText = `You scored ${score} out of ${questions.length} questions correctly!`;
     }
+     // --- Disclaimer Popup Functions ---
+    function showDisclaimerPopup() {
+        disclaimerPopup.classList.remove('hidden');
+    }
+
+    function closeDisclaimerPopup() {
+        disclaimerPopup.classList.add('hidden');
+    }
   </script>
 </body>
 </html>
