@@ -155,7 +155,9 @@ h1, h2, h3 {
 }
 #popup-title.correct {
     color: #28a745;
+    background-color: orange;
 }
 #popup-title.incorrect {
     color: #dc3545;
+    background-color: orange;
   }
