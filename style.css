@@ -96,27 +96,22 @@ h1, h2, h3 {
     text-align: center;
     max-width: 90%;
     width: 400px;
+}
+#popup, #disclaimer-popup {
     background-color: orange;
 }
-.disclaimer-popup {
-    background-color: orange;
-}
-.disclaimer-popup h3 {
+.popup h3, .popup p {
     color: black;
 }
-.disclaimer-popup p {
-    color: grey;
-}
-.popup h3 {
-    margin: 0 0 15px;
-    font-size: 24px;
-    color: grey;
-}
-.popup p {
-    margin: 0 0 25px;
-    font-size: 16px;
-    line-height: 1.5;
+#disclaimer-popup .btn {
+    background-color: grey;
     color: black;
+}
+#popup-title.correct {
+    color: #28a745;
+}
+#popup-title.incorrect {
+    color: #dc3545;
 }
 .popup button {
     background-color: grey;
@@ -153,11 +148,4 @@ h1, h2, h3 {
 .results-actions button {
     width: 100%;
 }
-#popup-title.correct {
-    color: #28a745;
-    background-color: orange;
-}
-#popup-title.incorrect {
-    color: #dc3545;
-    background-color: orange;
-  }
+
