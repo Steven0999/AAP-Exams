@@ -115,7 +115,7 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
               "An injury that only affects soft tissues without breaking the skin."
             ],
             correctAnswerIndex: 2,
-            explanation: "Blunt trauma is a usually serious injury caused by a blunt object or collision with a blunt surface, such as in Road Traffic Collisions (RTCs) or falls from height."
+            explanation: "Blunt trauma is a usually serious injury caused by a blunt object or collision with a blunt surface, such as in Road Traffic Collisions (RTCs) or falls from height.",
           },
           {
             question: "Which of the following is an example of 'Penetrating Trauma'?",
@@ -5116,7 +5116,8 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
             "Always goes unrecognized initially."
         ],
         correctAnswerIndex: 2,
-        explanation: "Sudden Onset events are 'More likely with chemical' and 'Includes bombs within CBRN', often leading to rapid unconsciousness."
+        explanation: "Sudden Onset events are 'More likely with chemical' and 'Includes bombs within CBRN', often leading to rapid unconsciousness.",
+          imageUrl: "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcR61F6V5GfV4x809YkX9iO-uB4V1B0l8b8U8Y4L4U7v1o2c8hR9"
     },
     {
         question: "Which of the following is an example of an 'environmental factor' affecting scene safety?",
@@ -5127,7 +5128,8 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
             "The type of communication equipment used."
         ],
         correctAnswerIndex: 2,
-        explanation: "Environmental factors include weather conditions which can significantly impact scene safety."
+        explanation: "Environmental factors include weather conditions which can significantly impact scene safety.",
+          imageUrl: "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcR61F6V5GfV4x809YkX9iO-uB4V1B0l8b8U8Y4L4U7v1o2c8hR9"
     },
     {
         question: "What is a 'Catastrophic Incident' defined as?",
@@ -5138,7 +5140,8 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
             "An incident with only minor injuries."
         ],
         correctAnswerIndex: 2,
-        explanation: "A Catastrophic Incident involves 'thousands of patients'."
+        explanation: "A Catastrophic Incident involves 'thousands of patients'.",
+          imageUrl: "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcR61F6V5GfV4x809YkX9iO-uB4V1B0l8b8U8Y4L4U7v1o2c8hR9"
     },
     {
         question: "What is the significance of the term 'Hazardous Material pictograms'?",
