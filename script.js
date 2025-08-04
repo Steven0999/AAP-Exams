@@ -36,7 +36,8 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
               "A psychological response to a distressing event."
             ],
             correctAnswerIndex: 1,
-            explanation: "Trauma is defined as the acute physiological and structural change that occurs in a patient’s body when an external source of energy transfers to the body faster than the body’s ability to sustain and dissipate it."
+            explanation: "Trauma is defined as the acute physiological and structural change that occurs in a patient’s body when an external source of energy transfers to the body faster than the body’s ability to sustain and dissipate it.",
+                imageUrl: "https://via.placeholder.com/600x400/90EE90/000000?text=Penetrating+Trauma+Example" // Placeholder image for penetrating trauma
           },
           {
             question: "How is 'Major Trauma' defined?",
@@ -47,7 +48,8 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
               "Any injury sustained in a road traffic collision."
             ],
             correctAnswerIndex: 2,
-            explanation: "Major trauma is defined as an injury or combination of injuries that are life-threatening and could be life changing because it may result in long-term disability."
+            explanation: "Major trauma is defined as an injury or combination of injuries that are life-threatening and could be life changing because it may result in long-term disability.",
+                imageUrl: "https://via.placeholder.com/600x400/90EE90/000000?text=Penetrating+Trauma+Example" // Placeholder image for penetrating trauma
           },
           {
             question: "Which of the following is NOT listed as a leading cause of trauma in the provided documents?",
