@@ -6321,6 +6321,7 @@ let currentExamIndex = -1; // To keep track of the currently selected exam
                 },
                 {
                     question: "What does This sign stand for?",
+                      imageSrc: "https://m.media-amazon.com/images/I/51hqV-OwCLL._AC_SL1000_.jpg" ,
                 options: [
                     "Fire Inside",
                     "Burning Truck",
@@ -6328,8 +6329,19 @@ let currentExamIndex = -1; // To keep track of the currently selected exam
                     "Fire Starter"
                 ],
                 correctAnswerIndex: 2,
-                explination: "Flammable",
-                imageUrl: https://m.media-amazon.com/images/I/51hqV-OwCLL._AC_SL1000_.jpg 
+                explination: "Flammable"
+                },
+                 {
+                    question: "What does This sign stand for?",
+                      imageSrc: "https://www.pvcsafetysigns.co.uk/cdn/shop/products/Oxidising_COSHH_Sign.png?v=1613413544" ,
+                options: [
+                    "Fire Inside",
+                    "Burning Truck",
+                    "Flammable",
+                    "Oxidising"
+                ],
+                correctAnswerIndex: 3,
+                explination: "Oxidising"
                 },
       },
       ];
