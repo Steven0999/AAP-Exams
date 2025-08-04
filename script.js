@@ -1,32 +1,32 @@
-    // Get DOM elements
+// Get DOM elements
 const contentsPage = document.getElementById('contents-page');
 const quizApp = document.getElementById('quiz-app');
 const resultsPage = document.getElementById('results-page');
+const questionImageElement = document.getElementById('question-image');
 const questionNumberElement = document.getElementById('question-number');
 const questionElement = document.getElementById('question');
-const questionImageElement = document.getElementById('question-image');
-const imageContainer = document.getElementById('image-container');
 const optionsElement = document.getElementById('options');
 const popup = document.getElementById('popup');
 const popupTitle = document.getElementById('popup-title');
 const popupMessage = document.getElementById('popup-message');
 const examButtonsContainer = document.getElementById('exam-buttons');
-const progressBar = document.getElementById('progress-bar');
 const finalScoreElement = document.getElementById('final-score');
 const disclaimerPopup = document.getElementById('disclaimer-popup');
+
+// Buttons
 const nextButton = document.getElementById('next-button');
-const contentsButton = document.getElementById('contents-button');
+const backButton = document.getElementById('back-btn');
 const restartButton = document.getElementById('restart-button');
 const returnToContentsButton = document.getElementById('return-to-contents');
 const popupCloseButton = document.getElementById('popup-close');
+const disclaimerButton = document.getElementById('disclaimer-btn');
 const acceptDisclaimerButton = document.getElementById('accept-disclaimer-btn');
 
-
-    // Quiz state variables
-    let currentQuestionIndex = 0;
-    let questions = []; // This will hold the 55 random questions for the current session
-    let score = 0;
-    let currentExamIndex = -1; // To keep track of the currently selected exam
+// Quiz state variables
+let currentQuestionIndex = 0;
+let questions = []; // This will hold the 55 random questions for the current session
+let score = 0;
+let currentExamIndex = -1; // To keep track of the currently selected exam
 
     // --- Quiz Data ---
     // This is where you define your exams and their questions.
@@ -6335,6 +6335,8 @@ const acceptDisclaimerButton = document.getElementById('accept-disclaimer-btn');
       ];
 
 
+// --- Core Quiz Logic ---
+
 // Function to shuffle an array (Fisher-Yates algorithm)
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -6346,36 +6348,43 @@ function shuffleArray(array) {
 // --- Initial setup: Populate exam buttons on the contents page ---
 function initializeExamButtons() {
     examButtonsContainer.innerHTML = '';
+    // For each exam in our data, create a button
     exams.forEach((exam, index) => {
         const button = document.createElement('button');
-        button.className = 'exam-btn';
-        button.textContent = `${index + 1}. ${exam.title}`;
+        button.className = 'btn';
+        button.textContent = exam.title;
         button.onclick = () => startExam(index);
         examButtonsContainer.appendChild(button);
     });
 }
 
-document.addEventListener('DOMContentLoaded', initializeExamButtons);
+// This event listener ensures the buttons are created after the page loads.
+document.addEventListener('DOMContentLoaded', () => {
+    initializeExamButtons();
+    showDisclaimerPopup();
+});
 
 // --- Navigation Functions ---
-
+// Navigates back to the main contents page
 function goToContentsPage() {
     quizApp.classList.add('hidden');
     resultsPage.classList.add('hidden');
     contentsPage.classList.remove('hidden');
 }
 
+// Starts a new exam with a specific index
 function startExam(index) {
     currentExamIndex = index;
-
     let allExamQuestions = [...exams[index].questions];
     shuffleArray(allExamQuestions);
+    // Select up to 55 questions, or all available if fewer than 55
+    questions = allExamQuestions.slice(0, Math.min(55, allExamQuestions.length));
 
-    questions = allExamQuestions.slice(0, 55);
-
+    // Reset quiz state
     currentQuestionIndex = 0;
     score = 0;
 
+    // Show the quiz app and hide other pages
     contentsPage.classList.add('hidden');
     resultsPage.classList.add('hidden');
     quizApp.classList.remove('hidden');
@@ -6383,6 +6392,7 @@ function startExam(index) {
     displayQuestion();
 }
 
+// Restarts the current quiz
 function retakeQuiz() {
     if (currentExamIndex !== -1) {
         startExam(currentExamIndex);
@@ -6391,50 +6401,85 @@ function retakeQuiz() {
     }
 }
 
+// Navigation from the results page back to the contents page
 function goToContentsPageFromResults() {
     goToContentsPage();
 }
 
 // --- Quiz Logic Functions ---
 
+// Displays the current question and its options
 function displayQuestion() {
-    progressBar.innerText = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+    // Update progress bar
+    const progress = (currentQuestionIndex / questions.length) * 100;
+    questionNumberElement.style.setProperty('background-color', `linear-gradient(to right, orange ${progress}%, #e9ecef ${progress}%)`);
+    questionNumberElement.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+    questionNumberElement.classList.add('progress-bar');
 
     const current = questions[currentQuestionIndex];
 
+    // If we've run out of questions, show the results page
     if (!current) {
         showResultsPage();
         return;
     }
 
+    // Update the image source for the current question
+    questionImageElement.src = current.imageSrc;
+
     questionElement.innerText = current.question;
     optionsElement.innerHTML = '';
 
-    const shuffledOptions = [...current.options];
+    // Shuffle the options for the current question
+    const originalOptions = current.options;
+    const shuffledOptions = [...originalOptions];
     shuffleArray(shuffledOptions);
 
-    shuffledOptions.forEach((option) => {
+    // Create a button for each shuffled option
+    shuffledOptions.forEach((optionText) => {
         const button = document.createElement('button');
-        button.classList.add('btn');
-        button.innerText = option;
-        button.onclick = () => checkAnswer(current.options.indexOf(option));
+        button.classList.add('option-button');
+        button.innerText = optionText;
+        button.onclick = () => checkAnswer(originalOptions.indexOf(optionText), button);
         optionsElement.appendChild(button);
     });
+
+    // Hide the next button
+    nextButton.classList.add('hidden');
 }
 
-function checkAnswer(selectedIndex) {
+// Checks if the selected answer is correct, updates score, and shows popup
+function checkAnswer(selectedIndex, selectedButton) {
     const current = questions[currentQuestionIndex];
     const isCorrect = selectedIndex === current.correctAnswerIndex;
 
-    popupTitle.innerText = isCorrect ? "Correct!" : "Incorrect.";
-    popupTitle.classList.remove('correct', 'incorrect');
-    popupTitle.classList.add(isCorrect ? 'correct' : 'incorrect');
-
-    popupMessage.innerText = current.explanation;
+    // Disable all option buttons after an answer is selected
+    Array.from(optionsElement.children).forEach(button => {
+        button.disabled = true;
+        if (button === selectedButton) {
+            if (isCorrect) {
+                button.classList.add('correct');
+            } else {
+                button.classList.add('wrong');
+            }
+        } else if (current.options.indexOf(button.innerText) === current.correctAnswerIndex) {
+            // Highlight the correct answer
+            button.classList.add('correct');
+        }
+    });
 
     if (isCorrect) {
         score++;
+        popupTitle.innerText = "Correct!";
+        popupTitle.classList.remove('incorrect');
+        popupTitle.classList.add('correct');
+    } else {
+        popupTitle.innerText = "Incorrect.";
+        popupTitle.classList.remove('correct');
+        popupTitle.classList.add('incorrect');
     }
+
+    popupMessage.innerText = current.explanation;
     showPopup(popup);
 }
 
@@ -6443,20 +6488,22 @@ function showPopup(popupElement) {
     popupElement.classList.remove('hidden');
 }
 
-// Closes the answer explanation popup and continues
+// Closes the answer explanation popup and continues to the next question
 function closePopupAndContinue() {
     popup.classList.add('hidden');
     currentQuestionIndex++;
     displayQuestion();
 }
 
+// Shows the final results page
 function showResultsPage() {
     quizApp.classList.add('hidden');
     contentsPage.classList.add('hidden');
     resultsPage.classList.remove('hidden');
-    finalScoreElement.innerText = `You scored ${score} out of ${questions.length} questions correctly!`;
+    finalScoreElement.innerText = `${score} / ${questions.length}`;
 }
 
+// Functions for the Disclaimer Popup
 function showDisclaimerPopup() {
     disclaimerPopup.classList.remove('hidden');
 }
@@ -6464,3 +6511,12 @@ function showDisclaimerPopup() {
 function closeDisclaimerPopup() {
     disclaimerPopup.classList.add('hidden');
 }
+
+// --- Event Listeners ---
+backButton.addEventListener('click', goToContentsPage);
+restartButton.addEventListener('click', retakeQuiz);
+returnToContentsButton.addEventListener('click', goToContentsPageFromResults);
+popupCloseButton.addEventListener('click', closePopupAndContinue);
+disclaimerButton.addEventListener('click', showDisclaimerPopup);
+acceptDisclaimerButton.addEventListener('click', closeDisclaimerPopup);
+
