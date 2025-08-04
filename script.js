@@ -1521,6 +1521,13 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
                     correctAnswerIndex: 2,
                     explanation: "Osteoblasts are bone-forming cells that synthesize and deposit new bone matrix."
                 },
+             
+                {
+                    question: "Which type of bone cell is primarily responsible for forming breaking down bone tissue?",
+                    options: ["Osteogenic cells", "Osteoclasts", "Osteoblasts", "Osteocytes"],
+                    correctAnswerIndex: 1,
+                    explanation: "Osteoclasts are breaking down bone cells that remove calcium from the bone and helps with bone remodeling."
+                }, 
                 {
                     question: "Which of these is NOT part of the appendicular skeleton?",
                     options: ["Vertebral column", "Upper limb bones", "Pelvic girdle", "Lower limb bones"],
