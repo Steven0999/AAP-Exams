@@ -6319,7 +6319,18 @@ const acceptDisclaimerButton = document.getElementById('accept-disclaimer-btn');
                 correctAnswerIndex: 2,
                 explination: "NARU (National Ambulance Resilience Unit, supports specialist training to NHS staff focusing on Major Incidence and Hazardous Environments"
                 },
-    ],
+                {
+                    question: "What does This sign stand for?",
+                options: [
+                    "Fire Inside",
+                    "Burning Truck",
+                    "Flammable",
+                    "Fire Starter"
+                ],
+                correctAnswerIndex: 2,
+                explination: "Flammable",
+                imageUrl: https://m.media-amazon.com/images/I/51hqV-OwCLL._AC_SL1000_.jpg 
+                },
       },
       ];
 
