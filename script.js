@@ -46,8 +46,8 @@ let score = 0;
             explanation: "Trauma is defined as the acute physiological and structural change that occurs in a patient’s body when an external source of energy transfers to the body faster than the body’s ability to sustain and dissipate it."
           },
           {
-            question: "How is 'Major Trauma' defined?",
-            options: [
+            question: "How is 'Major Trauma' defined?", 
+           imageSrc: "https://placehold.co/600x400/C70039/FFFFFF?text=Chest+Pain+Symptoms", options: [
               "An injury requiring only basic first aid.",
               "An injury that is life-threatening but not life-changing.",
               "An injury or combination of injuries that are life-threatening and could be life changing because it may result in long-term disability.",
@@ -58,7 +58,7 @@ let score = 0;
           },
           {
             question: "Which of the following is NOT listed as a leading cause of trauma in the provided documents?",
-            options: [
+            imageSrc: "https://placehold.co/600x400/C70039/FFFFFF?text=Chest+Pain+Symptoms",options: [
               "Road Traffic Collisions (RTC)",
               "Falls in people over the age of 75",
               "Work-related accidents",
@@ -80,7 +80,7 @@ let score = 0;
           },
           {
             question: "Which term is defined as 'the study of the relationship between motion and its forces'?",
-            options: [
+           imageSrc: "https://placehold.co/600x400/C70039/FFFFFF?text=Chest+Pain+Symptoms", options: [
               "Thermodynamics",
               "Kinetics",
               "Statics",
@@ -91,7 +91,7 @@ let score = 0;
           },
           {
             question: "What is 'Energy Transfer' in the context of trauma?",
-            options: [
+          imageSrc: "https://placehold.co/600x400/C70039/FFFFFF?text=Chest+Pain+Symptoms",  options: [
               "The conversion of potential energy to kinetic energy.",
               "The process by which energy is relocated from one system to another, for example, through the transfer of heat, work or mass transfer.",
               "The amount of energy an object possesses due to its motion.",
@@ -102,7 +102,7 @@ let score = 0;
           },
           {
             question: "Why is considering the Mechanism of Injury (MOI) important in trauma patients?",
-            options: [
+          imageSrc: "https://placehold.co/600x400/C70039/FFFFFF?text=Chest+Pain+Symptoms",  options: [
               "It helps determine the patient's insurance coverage.",
               "It provides an idea of the extent of injury, may indicate internal injuries, assists in determining appropriate destination, and allows for immobilisation decisions.",
               "It is only relevant for penetrating trauma.",
@@ -113,7 +113,7 @@ let score = 0;
           },
           {
             question: "What is 'Blunt Trauma'?",
-            options: [
+          imageSrc: "https://placehold.co/600x400/C70039/FFFFFF?text=Chest+Pain+Symptoms",  options: [
               "An injury caused by a sharp object piercing the skin.",
               "An injury resulting from a fall from a low height.",
               "A usually serious injury caused by a blunt object or collision with a blunt surface.",
@@ -124,7 +124,7 @@ let score = 0;
           },
           {
             question: "Which of the following is an example of 'Penetrating Trauma'?",
-            options: [
+          imageSrc: "https://placehold.co/600x400/C70039/FFFFFF?text=Chest+Pain+Symptoms",  options: [
               "A concussion from a fall.",
               "A broken arm from a sports injury.",
               "A gunshot wound.",
@@ -146,7 +146,7 @@ let score = 0;
           },*/
           {
             question: "What is the primary purpose of an inclusive trauma system?",
-            options: [
+        imageSrc: "https://placehold.co/600x400/C70039/FFFFFF?text=Chest+Pain+Symptoms",    options: [
               "To reduce the cost of trauma care.",
               "To ensure patients are taken to the most suitable hospital to appropriately manage their injuries.",
               "To centralize all trauma care in one location.",
@@ -157,7 +157,7 @@ let score = 0;
           },
           {
             question: "Which of the following is a category of hospital within a trauma network?",
-            options: [
+        imageSrc: "https://placehold.co/600x400/C70039/FFFFFF?text=Chest+Pain+Symptoms",    options: [
               "Local Emergency Hospitals",
               "Community Clinics",
               "General Practitioner Surgeries",
