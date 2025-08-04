@@ -1,6 +1,5 @@
-/* General body and container styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: black;
     color: orange;
     margin: 0;
@@ -10,11 +9,9 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-
 .hidden {
     display: none !important;
 }
-
 .container {
     max-width: 800px;
     width: 90%;
@@ -23,32 +20,18 @@ body {
     background-color: grey;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-
 h1, h2, h3 {
     text-align: center;
     color: orange;
 }
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin-top: 0;
-}
-
 .exam-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-top: 20px;
 }
-
-.btn {
+.exam-btn, .btn {
     padding: 12px 20px;
     font-size: 18px;
     cursor: pointer;
@@ -59,57 +42,24 @@ h2 {
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-.btn:hover {
+.btn:hover, .exam-btn:hover {
     background-color: #d17a00;
     transform: translateY(-2px);
 }
-
-.btn:active {
+.btn:active, .exam-btn:active {
     transform: translateY(0);
 }
-
 .disclaimer-btn {
     background-color: grey;
     color: black;
     margin-top: 20px;
 }
-
-.disclaimer-btn:hover {
-    background-color: #5a5a5a;
-}
-
 .back-btn {
     margin-bottom: 20px;
     display: inline-block;
     align-self: flex-start;
-    background-color: orange;
-    color: white;
+    background-color:orange;
 }
-
-.back-btn:hover {
-    background-color: #d17a00;
-}
-
-.progress-bar {
-    width: 100%;
-    height: 10px;
-    background-color: #e9ecef;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 25px;
-    position: relative;
-}
-
-.progress-bar::before {
-    content: '';
-    display: block;
-    height: 100%;
-    background-color: orange;
-    width: 0;
-    transition: width 0.4s ease;
-}
-
 .question-container {
     margin: 20px 0;
     padding: 15px;
@@ -117,74 +67,23 @@ h2 {
     border-radius: 8px;
     background-color: orange;
 }
-
-.question-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .question-text {
     font-size: 20px;
     margin-bottom: 15px;
     color: black;
-    text-align: center;
 }
-
-.options {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.option-button {
+.options button {
+    display: block;
+    margin: 10px 0;
     width: 100%;
-    padding: 15px;
-    font-size: 1em;
-    border: 2px solid orange;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
     text-align: left;
 }
-
-.option-button:hover:not([disabled]) {
-    background-color: #d17a00;
-    border-color: #c0c0c0;
+.progress-bar {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: orange;
 }
-
-.option-button.correct {
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-    color: #155724;
-}
-
-.option-button.wrong {
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-    color: #721c24;
-}
-
-#next-button {
-    padding: 12px 30px;
-    font-size: 1em;
-    font-weight: bold;
-    color: white;
-    background-color: orange;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#next-button:hover {
-    background-color: #d17a00;
-}
-
 .popup {
     position: fixed;
     top: 50%;
@@ -197,36 +96,29 @@ h2 {
     text-align: center;
     max-width: 90%;
     width: 400px;
-    background-color: grey;
 }
-
 .disclaimer-popup {
     background-color: orange;
 }
-
 .disclaimer-popup h3 {
     color: black;
 }
-
 .disclaimer-popup p {
-    color: black;
+    color: grey;
 }
-
 .popup h3 {
     margin: 0 0 15px;
     font-size: 24px;
-    color: orange;
+    color: grey;
 }
-
 .popup p {
     margin: 0 0 25px;
     font-size: 16px;
     line-height: 1.5;
     color: black;
 }
-
 .popup button {
-    background-color: orange;
+    background-color: grey;
     color: black;
     border: none;
     padding: 12px 25px;
@@ -235,42 +127,34 @@ h2 {
     font-size: 18px;
     transition: background-color 0.3s ease;
 }
-
 .popup button:hover {
-    background-color: #d17a00;
+    background-color: #218838;
 }
-
 .results-summary {
     text-align: center;
     margin-top: 20px;
 }
-
 .results-summary h2 {
     font-size: 28px;
-    color: orange;
+    color: #007bff;
     margin-bottom: 10px;
 }
-
 .results-summary p {
     font-size: 22px;
-    color: black;
+    color: #333;
     margin-bottom: 30px;
 }
-
 .results-actions {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-
 .results-actions button {
     width: 100%;
 }
-
 #popup-title.correct {
     color: #28a745;
 }
-
 #popup-title.incorrect {
     color: #dc3545;
 }
