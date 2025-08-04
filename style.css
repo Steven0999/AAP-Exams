@@ -148,4 +148,17 @@ h1, h2, h3 {
 .results-actions button {
     width: 100%;
 }
+/* Image styles */
+#image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+#question-image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none; /* Initially hidden */
+}
