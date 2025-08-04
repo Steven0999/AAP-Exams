@@ -1,8 +1,11 @@
     // Get DOM elements
-    const contentsPage = document.getElementById('contents-page');
+const contentsPage = document.getElementById('contents-page');
 const quizApp = document.getElementById('quiz-app');
 const resultsPage = document.getElementById('results-page');
+const questionNumberElement = document.getElementById('question-number');
 const questionElement = document.getElementById('question');
+const questionImageElement = document.getElementById('question-image');
+const imageContainer = document.getElementById('image-container');
 const optionsElement = document.getElementById('options');
 const popup = document.getElementById('popup');
 const popupTitle = document.getElementById('popup-title');
@@ -11,6 +14,13 @@ const examButtonsContainer = document.getElementById('exam-buttons');
 const progressBar = document.getElementById('progress-bar');
 const finalScoreElement = document.getElementById('final-score');
 const disclaimerPopup = document.getElementById('disclaimer-popup');
+const nextButton = document.getElementById('next-button');
+const contentsButton = document.getElementById('contents-button');
+const restartButton = document.getElementById('restart-button');
+const returnToContentsButton = document.getElementById('return-to-contents');
+const popupCloseButton = document.getElementById('popup-close');
+const acceptDisclaimerButton = document.getElementById('accept-disclaimer-btn');
+
 
     // Quiz state variables
     let currentQuestionIndex = 0;
@@ -6400,6 +6410,13 @@ function displayQuestion() {
         optionsElement.appendChild(button);
     });
 }
+    // Display or hide image based on imageUrl property
+    if (questionData.imageUrl) {
+        questionImageElement.src = questionData.imageUrl;
+        questionImageElement.style.display = 'block';
+    } else {
+        questionImageElement.style.display = 'none';
+    }
 
 function checkAnswer(selectedIndex) {
     const current = questions[currentQuestionIndex];
