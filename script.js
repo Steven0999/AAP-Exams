@@ -6353,4 +6353,4 @@ function showDisclaimerPopup() {
 
 function closeDisclaimerPopup() {
     disclaimerPopup.classList.add('hidden');
-}
+              }
