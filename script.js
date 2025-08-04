@@ -6421,13 +6421,6 @@ function displayQuestion() {
         optionsElement.appendChild(button);
     });
 }
-    // Display or hide image based on imageUrl property
-    if (questionData.imageUrl) {
-        questionImageElement.src = questionData.imageUrl;
-        questionImageElement.style.display = 'block';
-    } else {
-        questionImageElement.style.display = 'none';
-    }
 
 function checkAnswer(selectedIndex) {
     const current = questions[currentQuestionIndex];
@@ -6470,4 +6463,4 @@ function showDisclaimerPopup() {
 
 function closeDisclaimerPopup() {
     disclaimerPopup.classList.add('hidden');
-              }
+}
