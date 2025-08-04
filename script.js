@@ -29,7 +29,8 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
         questions: [
           {
             question: "What is the definition of 'Trauma' according to the provided materials?",
-            options: [
+              imageSrc: "https://placehold.co/600x400/C70039/FFFFFF?text=Chest+Pain+Symptoms",
+                options: [
               "Any injury caused by a fall from height.",
               "The acute physiological and structural change that occurs in a patient’s body when an external source of energy transfers to the body faster than the body’s ability to sustain and dissipate it.",
               "A minor injury that does not require hospital admission.",
@@ -40,7 +41,8 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
           },
           {
             question: "How is 'Major Trauma' defined?",
-            options: [
+            imageSrc: "https://placehold.co/600x400/C70039/FFFFFF?text=Chest+Pain+Symptoms",
+                options: [
               "An injury requiring only basic first aid.",
               "An injury that is life-threatening but not life-changing.",
               "An injury or combination of injuries that are life-threatening and could be life changing because it may result in long-term disability.",
@@ -51,7 +53,8 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
           },
           {
             question: "Which of the following is NOT listed as a leading cause of trauma in the provided documents?",
-            options: [
+            imageSrc: "https://placehold.co/600x400/C70039/FFFFFF?text=Chest+Pain+Symptoms",
+                options: [
               "Road Traffic Collisions (RTC)",
               "Falls in people over the age of 75",
               "Work-related accidents",
@@ -62,7 +65,8 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
           },
           {
             question: "What is the primary concern of 'Mechanism of Injury (MOI)'?",
-            options: [
+           imageSrc: "https://placehold.co/600x400/C70039/FFFFFF?text=Chest+Pain+Symptoms",
+                options: [
               "The patient's medical history.",
               "The sum of all physical forces that result in the patient's injury, primarily concerned with the transfer of energy.",
               "The time elapsed since the injury occurred.",
@@ -73,7 +77,8 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
           },
           {
             question: "Which term is defined as 'the study of the relationship between motion and its forces'?",
-            options: [
+            imageSrc: "https://placehold.co/600x400/C70039/FFFFFF?text=Chest+Pain+Symptoms",
+                options: [
               "Thermodynamics",
               "Kinetics",
               "Statics",
@@ -84,7 +89,8 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
           },
           {
             question: "What is 'Energy Transfer' in the context of trauma?",
-            options: [
+            imageSrc: "https://placehold.co/600x400/C70039/FFFFFF?text=Chest+Pain+Symptoms",
+                options: [
               "The conversion of potential energy to kinetic energy.",
               "The process by which energy is relocated from one system to another, for example, through the transfer of heat, work or mass transfer.",
               "The amount of energy an object possesses due to its motion.",
