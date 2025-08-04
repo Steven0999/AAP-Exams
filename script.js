@@ -1,32 +1,22 @@
-// Get DOM elements
-const contentsPage = document.getElementById('contents-page');
+    // Get DOM elements
+    const contentsPage = document.getElementById('contents-page');
 const quizApp = document.getElementById('quiz-app');
 const resultsPage = document.getElementById('results-page');
-const questionImageElement = document.getElementById('question-image');
-const questionNumberElement = document.getElementById('question-number');
 const questionElement = document.getElementById('question');
 const optionsElement = document.getElementById('options');
 const popup = document.getElementById('popup');
 const popupTitle = document.getElementById('popup-title');
 const popupMessage = document.getElementById('popup-message');
 const examButtonsContainer = document.getElementById('exam-buttons');
+const progressBar = document.getElementById('progress-bar');
 const finalScoreElement = document.getElementById('final-score');
 const disclaimerPopup = document.getElementById('disclaimer-popup');
 
-// Buttons
-const nextButton = document.getElementById('next-button');
-const backButton = document.getElementById('back-btn');
-const restartButton = document.getElementById('restart-button');
-const returnToContentsButton = document.getElementById('return-to-contents');
-const popupCloseButton = document.getElementById('popup-close');
-const disclaimerButton = document.getElementById('disclaimer-btn');
-const acceptDisclaimerButton = document.getElementById('accept-disclaimer-btn');
-
-// Quiz state variables
-let currentQuestionIndex = 0;
-let questions = []; // This will hold the 55 random questions for the current session
-let score = 0;
-let currentExamIndex = -1; // To keep track of the currently selected exam
+    // Quiz state variables
+    let currentQuestionIndex = 0;
+    let questions = []; // This will hold the 55 random questions for the current session
+    let score = 0;
+    let currentExamIndex = -1; // To keep track of the currently selected exam
 
     // --- Quiz Data ---
     // This is where you define your exams and their questions.
@@ -46,8 +36,7 @@ let currentExamIndex = -1; // To keep track of the currently selected exam
               "A psychological response to a distressing event."
             ],
             correctAnswerIndex: 1,
-            explanation: "Trauma is defined as the acute physiological and structural change that occurs in a patient’s body when an external source of energy transfers to the body faster than the body’s ability to sustain and dissipate it.",
-                imageUrl: "https://via.placeholder.com/600x400/90EE90/000000?text=Penetrating+Trauma+Example" // Placeholder image for penetrating trauma
+            explanation: "Trauma is defined as the acute physiological and structural change that occurs in a patient’s body when an external source of energy transfers to the body faster than the body’s ability to sustain and dissipate it."
           },
           {
             question: "How is 'Major Trauma' defined?",
@@ -58,8 +47,7 @@ let currentExamIndex = -1; // To keep track of the currently selected exam
               "Any injury sustained in a road traffic collision."
             ],
             correctAnswerIndex: 2,
-            explanation: "Major trauma is defined as an injury or combination of injuries that are life-threatening and could be life changing because it may result in long-term disability.",
-                imageUrl: "https://via.placeholder.com/600x400/90EE90/000000?text=Penetrating+Trauma+Example" // Placeholder image for penetrating trauma
+            explanation: "Major trauma is defined as an injury or combination of injuries that are life-threatening and could be life changing because it may result in long-term disability."
           },
           {
             question: "Which of the following is NOT listed as a leading cause of trauma in the provided documents?",
@@ -125,7 +113,7 @@ let currentExamIndex = -1; // To keep track of the currently selected exam
               "An injury that only affects soft tissues without breaking the skin."
             ],
             correctAnswerIndex: 2,
-            explanation: "Blunt trauma is a usually serious injury caused by a blunt object or collision with a blunt surface, such as in Road Traffic Collisions (RTCs) or falls from height.",
+            explanation: "Blunt trauma is a usually serious injury caused by a blunt object or collision with a blunt surface, such as in Road Traffic Collisions (RTCs) or falls from height."
           },
           {
             question: "Which of the following is an example of 'Penetrating Trauma'?",
@@ -1533,13 +1521,6 @@ let currentExamIndex = -1; // To keep track of the currently selected exam
                     correctAnswerIndex: 2,
                     explanation: "Osteoblasts are bone-forming cells that synthesize and deposit new bone matrix."
                 },
-             
-                {
-                    question: "Which type of bone cell is primarily responsible for forming breaking down bone tissue?",
-                    options: ["Osteogenic cells", "Osteoclasts", "Osteoblasts", "Osteocytes"],
-                    correctAnswerIndex: 1,
-                    explanation: "Osteoclasts are breaking down bone cells that remove calcium from the bone and helps with bone remodeling."
-                }, 
                 {
                     question: "Which of these is NOT part of the appendicular skeleton?",
                     options: ["Vertebral column", "Upper limb bones", "Pelvic girdle", "Lower limb bones"],
@@ -3511,83 +3492,6 @@ let currentExamIndex = -1; // To keep track of the currently selected exam
                     correctAnswerIndex: 1,
                     explanation: "The METHANE report includes 'How many patients and what would you expect their injuries and priorities to be?'."
                 },
-                {
-                    question: "What does the 'M' in METHANE stand for?",
-                    options: [
-                        "Momentum",
-                        "Mass Casualty Declared/Standby",
-                        "Mechanism of Injury",
-                        "Major Incidence Declared/Standby"
-                    ],
-                    correctAnswerIndex: 3,
-                    explanation: "The 'M' in METHANE stands for 'Major Incidence Declared/Standby'?"
-                },
-                {
-                    question: "What does the FIRST 'E' in METHANE stand for?",
-                    options: [
-                        "Exact Time of Incident",
-                        "Entry or Egress point",
-                        "Exact Location",
-                        "Enroute any concerns"
-                    ],
-                    correctAnswerIndex: 2,
-                    explanation: "The FIRST 'E' in METHANE stands for 'Exact Location'?"
-                },
-                {
-                    question: "What does the 'T' in METHANE stand for?",
-                    options: [
-                        "Total amount of patients",
-                        "Time/Duration",
-                        "Type of Incident",
-                        "Type of Vehicles Needed"
-                    ],
-                    correctAnswerIndex: 1,
-                    explanation: "The 'T' in METHANE stands for 'Type of Incident'?"
-                },
-                {
-                    question: "What does the 'H' in METHANE stand for?",
-                    options: [
-                        "Hazards",
-                        "HART Required (Yes or No)",
-                        "HALO Location",
-                        "Help Enroute"
-                    ],
-                    correctAnswerIndex: 0,
-                    explanation: "The 'H' in METHANE stands for 'Hazards'?"
-                },
-                {
-                    question: "What does the 'A' in METHANE stand for?",
-                    options: [
-                        "Approximate Numbers",
-                        "Access",
-                        "Accidental Incident?",
-                        "Anything Else to Add"
-                    ],
-                    correctAnswerIndex: 1,
-                    explanation: "The 'A' in METHANE stands for 'Access'?"
-                },
-                {
-                    question: "What does the 'N' in METHANE stand for?",
-                    options: [
-                        "Number of Cat 1s",
-                        "Nerve agaents concerns",
-                        "Number and Type of Casualties",
-                        "National Incident"
-                    ],
-                    correctAnswerIndex: 1,
-                    explanation: "The 'N' in METHANE stands for 'Number and Type of Casualties'?"
-                },
-                {
-                    question: "What does the SECOND 'E' in METHANE stand for?",
-                    options: [
-                        "Environmental Concerns",
-                        "Entry and Exit Route",
-                        "Emergency Services",
-                        "Exposure Concerns"
-                    ],
-                    correctAnswerIndex: 2,
-                    explanation: "The SECOND 'E' in METHANE stands for 'Emergency Services'?"
-                },
                 //Q14
                 {
                     question: "In the context of the METHANE report, what question relates to inter-agency communication?",
@@ -5126,8 +5030,7 @@ let currentExamIndex = -1; // To keep track of the currently selected exam
             "Always goes unrecognized initially."
         ],
         correctAnswerIndex: 2,
-        explanation: "Sudden Onset events are 'More likely with chemical' and 'Includes bombs within CBRN', often leading to rapid unconsciousness.",
-          imageUrl: "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcR61F6V5GfV4x809YkX9iO-uB4V1B0l8b8U8Y4L4U7v1o2c8hR9"
+        explanation: "Sudden Onset events are 'More likely with chemical' and 'Includes bombs within CBRN', often leading to rapid unconsciousness."
     },
     {
         question: "Which of the following is an example of an 'environmental factor' affecting scene safety?",
@@ -5138,8 +5041,7 @@ let currentExamIndex = -1; // To keep track of the currently selected exam
             "The type of communication equipment used."
         ],
         correctAnswerIndex: 2,
-        explanation: "Environmental factors include weather conditions which can significantly impact scene safety.",
-          imageUrl: "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcR61F6V5GfV4x809YkX9iO-uB4V1B0l8b8U8Y4L4U7v1o2c8hR9"
+        explanation: "Environmental factors include weather conditions which can significantly impact scene safety."
     },
     {
         question: "What is a 'Catastrophic Incident' defined as?",
@@ -5150,8 +5052,7 @@ let currentExamIndex = -1; // To keep track of the currently selected exam
             "An incident with only minor injuries."
         ],
         correctAnswerIndex: 2,
-        explanation: "A Catastrophic Incident involves 'thousands of patients'.",
-          imageUrl: "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcR61F6V5GfV4x809YkX9iO-uB4V1B0l8b8U8Y4L4U7v1o2c8hR9"
+        explanation: "A Catastrophic Incident involves 'thousands of patients'."
     },
     {
         question: "What is the significance of the term 'Hazardous Material pictograms'?",
@@ -6319,36 +6220,10 @@ let currentExamIndex = -1; // To keep track of the currently selected exam
                 correctAnswerIndex: 2,
                 explination: "NARU (National Ambulance Resilience Unit, supports specialist training to NHS staff focusing on Major Incidence and Hazardous Environments"
                 },
-                {
-                    question: "What does This sign stand for?",
-                      imageSrc: "https://m.media-amazon.com/images/I/51hqV-OwCLL._AC_SL1000_.jpg" ,
-                options: [
-                    "Fire Inside",
-                    "Burning Truck",
-                    "Flammable",
-                    "Fire Starter"
-                ],
-                correctAnswerIndex: 2,
-                explination: "Flammable"
-                },
-                 {
-                    question: "What does This sign stand for?",
-                      imageSrc: "https://www.pvcsafetysigns.co.uk/cdn/shop/products/Oxidising_COSHH_Sign.png?v=1613413544" ,
-                options: [
-                    "Fire Inside",
-                    "Burning Truck",
-                    "Flammable",
-                    "Oxidising"
-                ],
-                correctAnswerIndex: 3,
-                explination: "Oxidising"
-                },
+    ],
       },
       ];
 
-
-
-// --- Core Quiz Logic ---
 
 // Function to shuffle an array (Fisher-Yates algorithm)
 function shuffleArray(array) {
@@ -6361,42 +6236,36 @@ function shuffleArray(array) {
 // --- Initial setup: Populate exam buttons on the contents page ---
 function initializeExamButtons() {
     examButtonsContainer.innerHTML = '';
-    // For each exam in our data, create a button
     exams.forEach((exam, index) => {
         const button = document.createElement('button');
-        button.className = 'btn';
-        button.textContent = exam.title;
+        button.className = 'exam-btn';
+        button.textContent = `${index + 1}. ${exam.title}`;
         button.onclick = () => startExam(index);
         examButtonsContainer.appendChild(button);
     });
 }
 
-// This event listener ensures the buttons are created after the page loads.
-document.addEventListener('DOMContentLoaded', () => {
-    initializeExamButtons();
-});
+document.addEventListener('DOMContentLoaded', initializeExamButtons);
 
 // --- Navigation Functions ---
-// Navigates back to the main contents page
+
 function goToContentsPage() {
     quizApp.classList.add('hidden');
     resultsPage.classList.add('hidden');
     contentsPage.classList.remove('hidden');
 }
 
-// Starts a new exam with a specific index
 function startExam(index) {
     currentExamIndex = index;
+
     let allExamQuestions = [...exams[index].questions];
     shuffleArray(allExamQuestions);
-    // Select up to 55 questions, or all available if fewer than 55
-    questions = allExamQuestions.slice(0, Math.min(55, allExamQuestions.length));
 
-    // Reset quiz state
+    questions = allExamQuestions.slice(0, 55);
+
     currentQuestionIndex = 0;
     score = 0;
 
-    // Show the quiz app and hide other pages
     contentsPage.classList.add('hidden');
     resultsPage.classList.add('hidden');
     quizApp.classList.remove('hidden');
@@ -6404,7 +6273,6 @@ function startExam(index) {
     displayQuestion();
 }
 
-// Restarts the current quiz
 function retakeQuiz() {
     if (currentExamIndex !== -1) {
         startExam(currentExamIndex);
@@ -6413,85 +6281,50 @@ function retakeQuiz() {
     }
 }
 
-// Navigation from the results page back to the contents page
 function goToContentsPageFromResults() {
     goToContentsPage();
 }
 
 // --- Quiz Logic Functions ---
 
-// Displays the current question and its options
 function displayQuestion() {
-    // Update progress bar
-    const progress = (currentQuestionIndex / questions.length) * 100;
-    questionNumberElement.style.setProperty('background-color', `linear-gradient(to right, orange ${progress}%, #e9ecef ${progress}%)`);
-    questionNumberElement.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
-    questionNumberElement.classList.add('progress-bar');
+    progressBar.innerText = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
 
     const current = questions[currentQuestionIndex];
 
-    // If we've run out of questions, show the results page
     if (!current) {
         showResultsPage();
         return;
     }
 
-    // Update the image source for the current question
-    questionImageElement.src = current.imageSrc;
-
     questionElement.innerText = current.question;
     optionsElement.innerHTML = '';
 
-    // Shuffle the options for the current question
-    const originalOptions = current.options;
-    const shuffledOptions = [...originalOptions];
+    const shuffledOptions = [...current.options];
     shuffleArray(shuffledOptions);
 
-    // Create a button for each shuffled option
-    shuffledOptions.forEach((optionText) => {
+    shuffledOptions.forEach((option) => {
         const button = document.createElement('button');
-        button.classList.add('option-button');
-        button.innerText = optionText;
-        button.onclick = () => checkAnswer(originalOptions.indexOf(optionText), button);
+        button.classList.add('btn');
+        button.innerText = option;
+        button.onclick = () => checkAnswer(current.options.indexOf(option));
         optionsElement.appendChild(button);
     });
-
-    // Hide the next button
-    nextButton.classList.add('hidden');
 }
 
-// Checks if the selected answer is correct, updates score, and shows popup
-function checkAnswer(selectedIndex, selectedButton) {
+function checkAnswer(selectedIndex) {
     const current = questions[currentQuestionIndex];
     const isCorrect = selectedIndex === current.correctAnswerIndex;
 
-    // Disable all option buttons after an answer is selected
-    Array.from(optionsElement.children).forEach(button => {
-        button.disabled = true;
-        if (button === selectedButton) {
-            if (isCorrect) {
-                button.classList.add('correct');
-            } else {
-                button.classList.add('wrong');
-            }
-        } else if (current.options.indexOf(button.innerText) === current.correctAnswerIndex) {
-            // Highlight the correct answer
-            button.classList.add('correct');
-        }
-    });
+    popupTitle.innerText = isCorrect ? "Correct!" : "Incorrect.";
+    popupTitle.classList.remove('correct', 'incorrect');
+    popupTitle.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+    popupMessage.innerText = current.explanation;
 
     if (isCorrect) {
         score++;
-        popupTitle.innerText = "Correct!";
-        popupTitle.classList.remove('incorrect');
-        popupTitle.classList.add('correct');
-    } else {
-        popupTitle.innerText = "Incorrect.";
-        popupTitle.classList.remove('correct');
-        popupTitle.classList.add('incorrect');
     }
-
-    popupMessage.innerText = current.explanation;
     showPopup(popup);
 }
 
@@ -6500,22 +6333,20 @@ function showPopup(popupElement) {
     popupElement.classList.remove('hidden');
 }
 
-// Closes the answer explanation popup and continues to the next question
+// Closes the answer explanation popup and continues
 function closePopupAndContinue() {
     popup.classList.add('hidden');
     currentQuestionIndex++;
     displayQuestion();
 }
 
-// Shows the final results page
 function showResultsPage() {
     quizApp.classList.add('hidden');
     contentsPage.classList.add('hidden');
     resultsPage.classList.remove('hidden');
-    finalScoreElement.innerText = `${score} / ${questions.length}`;
+    finalScoreElement.innerText = `You scored ${score} out of ${questions.length} questions correctly!`;
 }
 
-// Functions for the Disclaimer Popup
 function showDisclaimerPopup() {
     disclaimerPopup.classList.remove('hidden');
 }
@@ -6523,11 +6354,3 @@ function showDisclaimerPopup() {
 function closeDisclaimerPopup() {
     disclaimerPopup.classList.add('hidden');
 }
-
-// --- Event Listeners ---
-backButton.addEventListener('click', goToContentsPage);
-restartButton.addEventListener('click', retakeQuiz);
-returnToContentsButton.addEventListener('click', goToContentsPageFromResults);
-popupCloseButton.addEventListener('click', closePopupAndContinue);
-disclaimerButton.addEventListener('click', showDisclaimerPopup);
-acceptDisclaimerButton.addEventListener('click', closeDisclaimerPopup);
