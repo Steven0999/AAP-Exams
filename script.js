@@ -3499,6 +3499,83 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
                     correctAnswerIndex: 1,
                     explanation: "The METHANE report includes 'How many patients and what would you expect their injuries and priorities to be?'."
                 },
+                {
+                    question: "What does the 'M' in METHANE stand for?",
+                    options: [
+                        "Momentum",
+                        "Mass Casualty Declared/Standby",
+                        "Mechanism of Injury",
+                        "Major Incidence Declared/Standby"
+                    ],
+                    correctAnswerIndex: 3,
+                    explanation: "The 'M' in METHANE stands for 'Major Incidence Declared/Standby'?"
+                },
+                {
+                    question: "What does the FIRST 'E' in METHANE stand for?",
+                    options: [
+                        "Exact Time of Incident",
+                        "Entry or Egress point",
+                        "Exact Location",
+                        "Enroute any concerns"
+                    ],
+                    correctAnswerIndex: 2,
+                    explanation: "The FIRST 'E' in METHANE stands for 'Exact Location'?"
+                },
+                {
+                    question: "What does the 'T' in METHANE stand for?",
+                    options: [
+                        "Total amount of patients",
+                        "Time/Duration",
+                        "Type of Incident",
+                        "Type of Vehicles Needed"
+                    ],
+                    correctAnswerIndex: 1,
+                    explanation: "The 'T' in METHANE stands for 'Type of Incident'?"
+                },
+                {
+                    question: "What does the 'H' in METHANE stand for?",
+                    options: [
+                        "Hazards",
+                        "HART Required (Yes or No)",
+                        "HALO Location",
+                        "Help Enroute"
+                    ],
+                    correctAnswerIndex: 0,
+                    explanation: "The 'H' in METHANE stands for 'Hazards'?"
+                },
+                {
+                    question: "What does the 'A' in METHANE stand for?",
+                    options: [
+                        "Approximate Numbers",
+                        "Access",
+                        "Accidental Incident?",
+                        "Anything Else to Add"
+                    ],
+                    correctAnswerIndex: 1,
+                    explanation: "The 'A' in METHANE stands for 'Access'?"
+                },
+                {
+                    question: "What does the 'N' in METHANE stand for?",
+                    options: [
+                        "Number of Cat 1s",
+                        "Nerve agaents concerns",
+                        "Number and Type of Casualties",
+                        "National Incident"
+                    ],
+                    correctAnswerIndex: 1,
+                    explanation: "The 'N' in METHANE stands for 'Number and Type of Casualties'?"
+                },
+                {
+                    question: "What does the SECOND 'E' in METHANE stand for?",
+                    options: [
+                        "Environmental Concerns",
+                        "Entry and Exit Route",
+                        "Emergency Services",
+                        "Exposure Concerns"
+                    ],
+                    correctAnswerIndex: 2,
+                    explanation: "The SECOND 'E' in METHANE stands for 'Emergency Services'?"
+                },
                 //Q14
                 {
                     question: "In the context of the METHANE report, what question relates to inter-agency communication?",
