@@ -6347,6 +6347,7 @@ let currentExamIndex = -1; // To keep track of the currently selected exam
       ];
 
 
+
 // --- Core Quiz Logic ---
 
 // Function to shuffle an array (Fisher-Yates algorithm)
@@ -6373,7 +6374,6 @@ function initializeExamButtons() {
 // This event listener ensures the buttons are created after the page loads.
 document.addEventListener('DOMContentLoaded', () => {
     initializeExamButtons();
-    showDisclaimerPopup();
 });
 
 // --- Navigation Functions ---
@@ -6531,4 +6531,3 @@ returnToContentsButton.addEventListener('click', goToContentsPageFromResults);
 popupCloseButton.addEventListener('click', closePopupAndContinue);
 disclaimerButton.addEventListener('click', showDisclaimerPopup);
 acceptDisclaimerButton.addEventListener('click', closeDisclaimerPopup);
-
