@@ -6281,16 +6281,16 @@ let score = 0;
             explanation: "Hazardous to the Aquatic Environment."
           },
                 {
-            question: "What does this sign mean?", 
-           imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg", 
+            question: "What does the top left sign mean?", 
+           imageSrc: "https://www.labeline.com/wp-content/uploads/2018/05/tk700.jpg", 
                 options: [
-              "Oxidising.",
-              "Flammable.",
-              "Object on Fire.",
-              "Warm Up Your Engine."
+              "emergency code.",
+              "Truck Sign.",
+              "Call code.",
+              "Reg code."
             ],
             correctAnswerIndex: 0,
-            explanation: "Oxidising sign."
+            explanation: "Emergency Code."
           },
                 {
             question: "What does this sign mean?", 
