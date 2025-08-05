@@ -6253,12 +6253,12 @@ let score = 0;
               "Object on Fire.",
               "Warm Up Your Engine."
             ],
-            correctAnswerIndex: 0,
-            explanation: "Oxidising sign."
+            correctAnswerIndex: 1,
+            explanation: "Flammable Sign."
           },
                 {
             question: "What does this sign mean?", 
-           imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg", 
+           imageSrc: "https://www.pvcsafetysigns.co.uk/cdn/shop/products/Oxidising_COSHH_Sign.png?v=1613413544", 
                 options: [
               "Oxidising.",
               "Flammable.",
