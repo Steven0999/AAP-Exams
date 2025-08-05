@@ -6270,15 +6270,15 @@ let score = 0;
           },
                 {
             question: "What does this sign mean?", 
-           imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg", 
+           imageSrc: "https://d37iyw84027v1q.cloudfront.net/bradyemea/BradyEMEA_Large/PIC1806.jpg", 
                 options: [
-              "Oxidising.",
-              "Flammable.",
-              "Object on Fire.",
-              "Warm Up Your Engine."
+              "Aquatic Danger near Woodlands.",
+              "Poisonous Fishes.",
+              "Hazardous to the Aquatic Environment.",
+              "No Fishing."
             ],
-            correctAnswerIndex: 0,
-            explanation: "Oxidising sign."
+            correctAnswerIndex: 2,
+            explanation: "Hazardous to the Aquatic Environment."
           },
                 {
             question: "What does this sign mean?", 
