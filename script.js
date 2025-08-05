@@ -1,22 +1,29 @@
-    // Get DOM elements
-    const contentsPage = document.getElementById('contents-page');
+   // Get DOM elements
+const contentsPage = document.getElementById('contents-page');
 const quizApp = document.getElementById('quiz-app');
 const resultsPage = document.getElementById('results-page');
+const questionImageElement = document.getElementById('question-image');
 const questionElement = document.getElementById('question');
 const optionsElement = document.getElementById('options');
 const popup = document.getElementById('popup');
 const popupTitle = document.getElementById('popup-title');
 const popupMessage = document.getElementById('popup-message');
 const examButtonsContainer = document.getElementById('exam-buttons');
-const progressBar = document.getElementById('progress-bar');
 const finalScoreElement = document.getElementById('final-score');
 const disclaimerPopup = document.getElementById('disclaimer-popup');
 
-    // Quiz state variables
-    let currentQuestionIndex = 0;
-    let questions = []; // This will hold the 55 random questions for the current session
-    let score = 0;
-    let currentExamIndex = -1; // To keep track of the currently selected exam
+// Buttons
+const backButton = document.getElementById('back-btn');
+const retakeQuizButton = document.getElementById('retake-quiz-btn');
+const returnToContentsButton = document.getElementById('return-to-contents-btn');
+const popupCloseButton = document.getElementById('popup-close-btn');
+const disclaimerButton = document.getElementById('disclaimer-btn');
+const disclaimerCloseButton = document.getElementById('disclaimer-close-btn');
+
+// Quiz state variables
+let currentQuestionIndex = 0;
+let questions = []; // This will hold the questions for the current session
+let score = 0;
 
     // --- Quiz Data ---
     // This is where you define your exams and their questions.
@@ -29,7 +36,7 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
         questions: [
           {
             question: "What is the definition of 'Trauma' according to the provided materials?",
-           options: [
+            options: [
               "Any injury caused by a fall from height.",
               "The acute physiological and structural change that occurs in a patient’s body when an external source of energy transfers to the body faster than the body’s ability to sustain and dissipate it.",
               "A minor injury that does not require hospital admission.",
@@ -39,8 +46,8 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
             explanation: "Trauma is defined as the acute physiological and structural change that occurs in a patient’s body when an external source of energy transfers to the body faster than the body’s ability to sustain and dissipate it."
           },
           {
-            question: "How is 'Major Trauma' defined?",
-           options: [
+            question: "How is 'Major Trauma' defined?", 
+                options: [
               "An injury requiring only basic first aid.",
               "An injury that is life-threatening but not life-changing.",
               "An injury or combination of injuries that are life-threatening and could be life changing because it may result in long-term disability.",
@@ -51,7 +58,7 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
           },
           {
             question: "Which of the following is NOT listed as a leading cause of trauma in the provided documents?",
-              options: [
+                options: [
               "Road Traffic Collisions (RTC)",
               "Falls in people over the age of 75",
               "Work-related accidents",
@@ -62,7 +69,7 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
           },
           {
             question: "What is the primary concern of 'Mechanism of Injury (MOI)'?",
-              options: [
+            options: [
               "The patient's medical history.",
               "The sum of all physical forces that result in the patient's injury, primarily concerned with the transfer of energy.",
               "The time elapsed since the injury occurred.",
@@ -73,7 +80,7 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
           },
           {
             question: "Which term is defined as 'the study of the relationship between motion and its forces'?",
-               options: [
+                 options: [
               "Thermodynamics",
               "Kinetics",
               "Statics",
@@ -95,7 +102,7 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
           },
           {
             question: "Why is considering the Mechanism of Injury (MOI) important in trauma patients?",
-            options: [
+              options: [
               "It helps determine the patient's insurance coverage.",
               "It provides an idea of the extent of injury, may indicate internal injuries, assists in determining appropriate destination, and allows for immobilisation decisions.",
               "It is only relevant for penetrating trauma.",
@@ -106,7 +113,7 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
           },
           {
             question: "What is 'Blunt Trauma'?",
-            options: [
+                options: [
               "An injury caused by a sharp object piercing the skin.",
               "An injury resulting from a fall from a low height.",
               "A usually serious injury caused by a blunt object or collision with a blunt surface.",
@@ -117,7 +124,7 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
           },
           {
             question: "Which of the following is an example of 'Penetrating Trauma'?",
-            options: [
+              options: [
               "A concussion from a fall.",
               "A broken arm from a sports injury.",
               "A gunshot wound.",
@@ -139,7 +146,7 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
           },*/
           {
             question: "What is the primary purpose of an inclusive trauma system?",
-            options: [
+               options: [
               "To reduce the cost of trauma care.",
               "To ensure patients are taken to the most suitable hospital to appropriately manage their injuries.",
               "To centralize all trauma care in one location.",
@@ -150,7 +157,7 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
           },
           {
             question: "Which of the following is a category of hospital within a trauma network?",
-            options: [
+                options: [
               "Local Emergency Hospitals",
               "Community Clinics",
               "General Practitioner Surgeries",
@@ -6227,10 +6234,84 @@ const disclaimerPopup = document.getElementById('disclaimer-popup');
                 correctAnswerIndex: 2,
                 explination: "NARU (National Ambulance Resilience Unit, supports specialist training to NHS staff focusing on Major Incidence and Hazardous Environments"
                 },
+                {
+            question: "What does this sign mean?", 
+           imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg", 
+                options: [
+              "Oxidising.",
+              "Flammable.",
+              "Object on Fire.",
+              "Warm Up Your Engine."
+            ],
+            correctAnswerIndex: 1,
+            explanation: "Flammable Sign."
+          },
+                {
+            question: "What does this sign mean?", 
+           imageSrc: "https://www.pvcsafetysigns.co.uk/cdn/shop/products/Oxidising_COSHH_Sign.png?v=1613413544", 
+                options: [
+              "Oxidising.",
+              "Flammable.",
+              "Object on Fire.",
+              "Warm Up Your Engine."
+            ],
+            correctAnswerIndex: 0,
+            explanation: "Oxidising sign."
+          },
+                {
+            question: "What does this sign mean?", 
+           imageSrc: "https://d37iyw84027v1q.cloudfront.net/bradyemea/BradyEMEA_Large/PIC1806.jpg", 
+                options: [
+              "Aquatic Danger near Woodlands.",
+              "Poisonous Fishes.",
+              "Hazardous to the Aquatic Environment.",
+              "No Fishing."
+            ],
+            correctAnswerIndex: 2,
+            explanation: "Hazardous to the Aquatic Environment."
+          },
+                {
+            question: "What does the top left (3YE) sign mean?", 
+           imageSrc: "https://www.labeline.com/wp-content/uploads/2018/05/tk700.jpg", 
+                options: [
+              "Emergency Code.",
+              "Truck Sign.",
+              "Call Code.",
+              "Reg Code."
+            ],
+            correctAnswerIndex: 0,
+            explanation: "Emergency Code."
+          },
+                {
+            question: "What does the 1203 section mean?", 
+           imageSrc: "https://www.labeline.com/wp-content/uploads/2018/05/tk700.jpg", 
+                options: [
+              "Code Number.",
+              "Emergency Number.",
+              "UN Number.",
+              "UK Number."
+            ],
+            correctAnswerIndex: 2,
+            explanation: "UN Number."
+          },
+                {
+            question: "What does this sign mean?", 
+           imageSrc: "https://media.rcphotostock.com/static2/preview2/stock-photo-ghs-hazard-pictogram--acute-toxicity--hazard-warning-sign-acute-toxicity-on-checked-transparent-background-vector-illustration-eps-10-vector-file-10590.jpg", 
+                options: [
+              "Danger.",
+              "Toxic.",
+              "Warning.",
+              "Hazardous Mat."
+            ],
+            correctAnswerIndex: 1,
+            explanation: "Acute Toxicity."
+          },
     ],
       },
       ];
 
+
+// --- Core Quiz Logic ---
 
 // Function to shuffle an array (Fisher-Yates algorithm)
 function shuffleArray(array) {
@@ -6245,9 +6326,9 @@ function initializeExamButtons() {
     examButtonsContainer.innerHTML = '';
     exams.forEach((exam, index) => {
         const button = document.createElement('button');
-        button.className = 'exam-btn';
-        button.textContent = `${index + 1}. ${exam.title}`;
-        button.onclick = () => startExam(index);
+        button.className = 'btn';
+        button.textContent = exam.title;
+        button.addEventListener('click', () => startExam(index));
         examButtonsContainer.appendChild(button);
     });
 }
@@ -6255,7 +6336,6 @@ function initializeExamButtons() {
 document.addEventListener('DOMContentLoaded', initializeExamButtons);
 
 // --- Navigation Functions ---
-
 function goToContentsPage() {
     quizApp.classList.add('hidden');
     resultsPage.classList.add('hidden');
@@ -6263,24 +6343,21 @@ function goToContentsPage() {
 }
 
 function startExam(index) {
-    currentExamIndex = index;
-
-    let allExamQuestions = [...exams[index].questions];
+    const allExamQuestions = [...exams[index].questions];
     shuffleArray(allExamQuestions);
-
-    questions = allExamQuestions.slice(0, 55);
+    questions = allExamQuestions.slice(0, Math.min(55, allExamQuestions.length));
 
     currentQuestionIndex = 0;
     score = 0;
 
     contentsPage.classList.add('hidden');
-    resultsPage.classList.add('hidden');
     quizApp.classList.remove('hidden');
 
     displayQuestion();
 }
 
 function retakeQuiz() {
+    const currentExamIndex = exams.findIndex(exam => exam.questions.some(q => questions.includes(q)));
     if (currentExamIndex !== -1) {
         startExam(currentExamIndex);
     } else {
@@ -6293,9 +6370,10 @@ function goToContentsPageFromResults() {
 }
 
 // --- Quiz Logic Functions ---
-
 function displayQuestion() {
-    progressBar.innerText = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+    const progressBar = document.getElementById('progress-bar');
+    const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+    progressBar.style.width = `${progress}%`;
 
     const current = questions[currentQuestionIndex];
 
@@ -6304,43 +6382,62 @@ function displayQuestion() {
         return;
     }
 
+    // Set the image source, and hide it if there's no image
+    if (current.imageSrc) {
+        questionImageElement.src = current.imageSrc;
+        questionImageElement.classList.remove('hidden');
+    } else {
+        questionImageElement.classList.add('hidden');
+    }
+
     questionElement.innerText = current.question;
     optionsElement.innerHTML = '';
 
-    const shuffledOptions = [...current.options];
+    const originalOptions = current.options;
+    const shuffledOptions = [...originalOptions];
     shuffleArray(shuffledOptions);
 
-    shuffledOptions.forEach((option) => {
+    shuffledOptions.forEach((optionText) => {
         const button = document.createElement('button');
-        button.classList.add('btn');
-        button.innerText = option;
-        button.onclick = () => checkAnswer(current.options.indexOf(option));
+        button.classList.add('option-button');
+        button.innerText = optionText;
+        button.addEventListener('click', () => checkAnswer(originalOptions.indexOf(optionText), button));
         optionsElement.appendChild(button);
     });
 }
 
-function checkAnswer(selectedIndex) {
+function checkAnswer(selectedIndex, selectedButton) {
     const current = questions[currentQuestionIndex];
     const isCorrect = selectedIndex === current.correctAnswerIndex;
 
-    popupTitle.innerText = isCorrect ? "Correct!" : "Incorrect.";
-    popupTitle.classList.remove('correct', 'incorrect');
-    popupTitle.classList.add(isCorrect ? 'correct' : 'incorrect');
-
-    popupMessage.innerText = current.explanation;
+    Array.from(optionsElement.children).forEach(button => {
+        button.disabled = true;
+        if (current.options.indexOf(button.innerText) === current.correctAnswerIndex) {
+            button.classList.add('correct');
+        } else if (button === selectedButton) {
+            button.classList.add('wrong');
+        }
+    });
 
     if (isCorrect) {
         score++;
+        popupTitle.innerText = "Correct!";
+        popupTitle.classList.remove('incorrect');
+        popupTitle.classList.add('correct');
+    } else {
+        popupTitle.innerText = "Incorrect.";
+        popupTitle.classList.remove('correct');
+        popupTitle.classList.add('incorrect');
     }
+
+    popupMessage.innerText = current.explanation;
     showPopup(popup);
 }
 
-// Function to show any popup element
 function showPopup(popupElement) {
     popupElement.classList.remove('hidden');
 }
 
-// Closes the answer explanation popup and continues
 function closePopupAndContinue() {
     popup.classList.add('hidden');
     currentQuestionIndex++;
@@ -6349,9 +6446,8 @@ function closePopupAndContinue() {
 
 function showResultsPage() {
     quizApp.classList.add('hidden');
-    contentsPage.classList.add('hidden');
     resultsPage.classList.remove('hidden');
-    finalScoreElement.innerText = `You scored ${score} out of ${questions.length} questions correctly!`;
+    finalScoreElement.innerText = `${score} / ${questions.length}`;
 }
 
 function showDisclaimerPopup() {
@@ -6360,4 +6456,12 @@ function showDisclaimerPopup() {
 
 function closeDisclaimerPopup() {
     disclaimerPopup.classList.add('hidden');
-              }
+}
+
+// --- Event Listeners ---
+backButton.addEventListener('click', goToContentsPage);
+retakeQuizButton.addEventListener('click', retakeQuiz);
+returnToContentsButton.addEventListener('click', goToContentsPageFromResults);
+popupCloseButton.addEventListener('click', closePopupAndContinue);
+disclaimerButton.addEventListener('click', showDisclaimerPopup);
+disclaimerCloseButton.addEventListener('click', closeDisclaimerPopup);
