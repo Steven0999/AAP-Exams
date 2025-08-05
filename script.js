@@ -47,7 +47,6 @@ let score = 0;
           },
           {
             question: "How is 'Major Trauma' defined?", 
-           imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg", 
                 options: [
               "An injury requiring only basic first aid.",
               "An injury that is life-threatening but not life-changing.",
@@ -59,7 +58,6 @@ let score = 0;
           },
           {
             question: "Which of the following is NOT listed as a leading cause of trauma in the provided documents?",
-            imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg",
                 options: [
               "Road Traffic Collisions (RTC)",
               "Falls in people over the age of 75",
@@ -71,7 +69,6 @@ let score = 0;
           },
           {
             question: "What is the primary concern of 'Mechanism of Injury (MOI)'?",
-                imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg",
             options: [
               "The patient's medical history.",
               "The sum of all physical forces that result in the patient's injury, primarily concerned with the transfer of energy.",
@@ -83,7 +80,6 @@ let score = 0;
           },
           {
             question: "Which term is defined as 'the study of the relationship between motion and its forces'?",
-           imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg",
                  options: [
               "Thermodynamics",
               "Kinetics",
@@ -95,7 +91,6 @@ let score = 0;
           },
           {
             question: "What is 'Energy Transfer' in the context of trauma?",
-          imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg",
               options: [
               "The conversion of potential energy to kinetic energy.",
               "The process by which energy is relocated from one system to another, for example, through the transfer of heat, work or mass transfer.",
@@ -107,7 +102,6 @@ let score = 0;
           },
           {
             question: "Why is considering the Mechanism of Injury (MOI) important in trauma patients?",
-          imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg",
               options: [
               "It helps determine the patient's insurance coverage.",
               "It provides an idea of the extent of injury, may indicate internal injuries, assists in determining appropriate destination, and allows for immobilisation decisions.",
@@ -119,7 +113,6 @@ let score = 0;
           },
           {
             question: "What is 'Blunt Trauma'?",
-          imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg",
                 options: [
               "An injury caused by a sharp object piercing the skin.",
               "An injury resulting from a fall from a low height.",
@@ -131,7 +124,6 @@ let score = 0;
           },
           {
             question: "Which of the following is an example of 'Penetrating Trauma'?",
-          imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg",
               options: [
               "A concussion from a fall.",
               "A broken arm from a sports injury.",
@@ -154,7 +146,6 @@ let score = 0;
           },*/
           {
             question: "What is the primary purpose of an inclusive trauma system?",
-        imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg",
                options: [
               "To reduce the cost of trauma care.",
               "To ensure patients are taken to the most suitable hospital to appropriately manage their injuries.",
@@ -166,7 +157,6 @@ let score = 0;
           },
           {
             question: "Which of the following is a category of hospital within a trauma network?",
-        imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg",
                 options: [
               "Local Emergency Hospitals",
               "Community Clinics",
@@ -6281,40 +6271,40 @@ let score = 0;
             explanation: "Hazardous to the Aquatic Environment."
           },
                 {
-            question: "What does the top left sign mean?", 
+            question: "What does the top left (3YE) sign mean?", 
            imageSrc: "https://www.labeline.com/wp-content/uploads/2018/05/tk700.jpg", 
                 options: [
-              "emergency code.",
+              "Emergency Code.",
               "Truck Sign.",
-              "Call code.",
-              "Reg code."
+              "Call Code.",
+              "Reg Code."
             ],
             correctAnswerIndex: 0,
             explanation: "Emergency Code."
           },
                 {
-            question: "What does this sign mean?", 
-           imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg", 
+            question: "What does the 1203 section mean?", 
+           imageSrc: "https://www.labeline.com/wp-content/uploads/2018/05/tk700.jpg", 
                 options: [
-              "Oxidising.",
-              "Flammable.",
-              "Object on Fire.",
-              "Warm Up Your Engine."
+              "Code Number.",
+              "Emergency Number.",
+              "UN Number.",
+              "UK Number."
             ],
-            correctAnswerIndex: 0,
-            explanation: "Oxidising sign."
+            correctAnswerIndex: 2,
+            explanation: "UN Number."
           },
                 {
             question: "What does this sign mean?", 
-           imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg", 
+           imageSrc: "https://media.rcphotostock.com/static2/preview2/stock-photo-ghs-hazard-pictogram--acute-toxicity--hazard-warning-sign-acute-toxicity-on-checked-transparent-background-vector-illustration-eps-10-vector-file-10590.jpg", 
                 options: [
-              "Oxidising.",
-              "Flammable.",
-              "Object on Fire.",
-              "Warm Up Your Engine."
+              "Danger.",
+              "Toxic.",
+              "Warning.",
+              "Hazardous Mat."
             ],
-            correctAnswerIndex: 0,
-            explanation: "Oxidising sign."
+            correctAnswerIndex: 1,
+            explanation: "Acute Toxicity."
           },
     ],
       },
