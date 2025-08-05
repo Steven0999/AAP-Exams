@@ -3348,7 +3348,7 @@ let score = 0;
         questions:
           [
                 // Definitions
-               /* {
+                {
            //Q1
                     question: "According to the provided documents, what defines a 'Major Incident'?",
                     options: [
@@ -6233,7 +6233,7 @@ let score = 0;
                 ],
                 correctAnswerIndex: 2,
                 explination: "NARU (National Ambulance Resilience Unit, supports specialist training to NHS staff focusing on Major Incidence and Hazardous Environments"
-                },*/
+                },
                 {
             question: "What does this sign mean?", 
            imageSrc: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg", 
