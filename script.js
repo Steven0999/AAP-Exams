@@ -3924,17 +3924,6 @@ let score = 0;
                     explanation: "It is important to determine 'patient numbers early on in assessment'."
                 },
                 {
-                    question: "What does the 'E' in CBRN(e) specifically refer to as a deliberate release?",
-                    options: [
-                        "Environmental",
-                        "Explosive Material",
-                        "Epidemic",
-                        "Evacuation"
-                    ],
-                    correctAnswerIndex: 1,
-                    explanation: "The 'e' in CBRN(e) refers to '(e)xplosive Material' as a deliberate release."
-                },
-                {
                     question: "Which of the following is NOT a type of major incident listed in the 'Introduction to Major Incidents' document?",
                     options: [
                         "Big Bang",
@@ -3944,28 +3933,6 @@ let score = 0;
                     ],
                     correctAnswerIndex: 2,
                     explanation: "Types of Major Incidents listed include Big Bang, Rising Tide, Cloud on the Horizon, Headline News, Internal Incidents, CBRN, HAZMAT, Mass Casualties, and Operation Plato."
-                },
-                {
-                    question: "What is one of the key responsibilities of Police at a HazMat/CBRN(e) incident?",
-                    options: [
-                        "Mass decontamination - NHS Support",
-                        "Search and rescue",
-                        "Crime scene - perpetrators and Cordoning",
-                        "Clinical decontamination"
-                    ],
-                    correctAnswerIndex: 2,
-                    explanation: "Police responsibilities include 'Crime scene - perpetrators' and 'Cordoning'."
-                },
-                {
-                    question: "What is one of the key responsibilities of Fire & Rescue Service at a HazMat/CBRN(e) incident?",
-                    options: [
-                        "Providing nerve agent antidotes",
-                        "Search and rescue",
-                        "Setting up a cold zone only",
-                        "Lead on decontamination of non-ambulatory patients"
-                    ],
-                    correctAnswerIndex: 1,
-                    explanation: "Fire & Rescue Service responsibilities include 'Search and rescue' and 'Mass decontamination - NHS Support'."
                 },
                 {
                     question: "What kind of incidents are LGV/HVG, Coach/Bus, and Electric Vehicle RTC’s considered?",
@@ -4446,17 +4413,6 @@ let score = 0;
         ],
         correctAnswerIndex: 1,
         explanation: "HazMat Events include 'Large Fires', 'Accidental chemical exposures', and 'Chemical spills at industrial sites or from RTC’s'."
-    },
-    {
-        question: "What does the 'B' in CBRN(e) stand for?",
-        options: [
-            "Bomb",
-            "Biological",
-            "Burn",
-            "Blast"
-        ],
-        correctAnswerIndex: 1,
-        explanation: "CBRN(e) stands for Chemical, Biological, Radiological, Nuclear, and (e)xplosive Material."
     },
     {
         question: "What is a characteristic symptom of exposure to a Chemical Nerve Agent?",
@@ -4943,12 +4899,78 @@ let score = 0;
         question: "Who is responsible for 'strategic' decisions at a major incident?",
         options: [
             "Front-line responders",
-            "Tactical commanders",
+            "Tactical commanders (interpreting strategic direction. Also developing and co-ordinating the tactical plan)",
             "Strategic commanders (senior leadership setting overall objectives)",
-            "Volunteer staff"
+            "Operational commanders (work with other responder organisations and protect life by ensuring rapid and effective actions are implemented)"
         ],
         correctAnswerIndex: 2,
         explanation: "Strategic commanders are responsible for setting overall objectives and policy for the incident."
+    },
+                {
+        question: "Who is responsible for 'tactical' decisions at a major incident?",
+        options: [
+            "Front-line responders",
+            "Tactical commanders (interpreting strategic direction. Also developing and co-ordinating the tactical plan)",
+            "Strategic commanders (senior leadership setting overall objectives)",
+            "Operational commanders (work with other responder organisations and protect life by ensuring rapid and effective actions are implemented)"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Tactical commanders are responsible working between strategic and operational levels of command."
+    },
+                {
+        question: "Who is responsible for 'operational' decisions at a major incident?",
+        options: [
+            "Front-line responders",
+            "Tactical commanders (interpreting strategic direction. Also developing and co-ordinating the tactical plan)",
+            "Strategic commanders (senior leadership setting overall objectives)",
+            "Operational commanders (work with other responder organisations and protect life by ensuring rapid and effective actions are implemented)"
+        ],
+        correctAnswerIndex: 3,
+        explanation: "Operational commanders work with other responder organisations and make sure the effective actions are implemented to save lives and reduce harm."
+    },
+                {
+        question: "Who's responsiblity is it to set the overall objectives and identify and allocate resources?",
+        options: [
+            "Strategic",
+            "Operational",
+            "Front Line",
+            "Tactical"
+        ],
+        correctAnswerIndex: 0,
+        explanation: "Strategic commanders have overall authority on behalf of their orgaisation. Responsible for identifying and allocating resources and developing the strategy for their own organisation"
+    },
+                {
+        question: "Who's responsiblity is it to co-ordinate activities and assets?",
+        options: [
+            "Strategic",
+            "Operational",
+            "Front Line",
+            "Tactical"
+        ],
+        correctAnswerIndex: 3,
+        explanation: "Tactical commanders interpret strategic direction, Devlop tactical plan ad co-ordinate activities and assets"
+    },
+                {
+        question: "Who's responsiblity is it to command the single-organisation response and co-ordinate actions?",
+        options: [
+            "Strategic",
+            "Operational",
+            "Front Line",
+            "Tactical"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Operational commanders Implement the tactical plan, commands the single-organisation response and co-ordinates actions"
+    },
+                {
+        question: "Who implements the tactical plan?",
+        options: [
+            "Strategic",
+            "Operational",
+            "Front Line",
+            "Tactical"
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Operational commanders Implement the tactical plan, tactical develop the tactical plan."
     },
     {
         question: "What is the importance of 'briefings and debriefings' in major incident management?",
