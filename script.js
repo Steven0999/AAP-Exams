@@ -5392,7 +5392,7 @@ let score = 0;
             "Treat the first person you see."
         ],
         correctAnswerIndex: 1,
-        explanation: "The attendant's role via NARU Action card is to park as near scene as safety permits, provide intial windscreen report, assume role as OC, Don PPE, DO NOT ATTEMPT RESCUE OR TREATMENT OF CASUALTIES and provide a METHANE to control."
+        explanation: "The attendant's role via NARU Action card is to provide intial windscreen report, assume role as OC, Don PPE, DO NOT ATTEMPT RESCUE OR TREATMENT OF CASUALTIES and provide a METHANE to control."
     },
     {
         question: "What are 'standard communication methods' essential for in major incidents?",
@@ -5642,10 +5642,10 @@ let score = 0;
             "To immediately drive to the nearest hospital.",
             "To conduct an initial scene assessment and provide a METHANE report.",
             "To direct all other emergency services.",
-            "To solely focus on treating the most injured patient."
+            "To park at nearest adjacent scene and act as a communication link between scene and Control"
         ],
         correctAnswerIndex: 1,
-        explanation: "The driver's role often includes conducting the initial scene assessment and providing key information like a METHANE report."
+        explanation: "The driver's role often includes driving in adjacent with other emergency services and acting as a communication link between scene and control."
     },
     {
         question: "What does 'Catastrophic Incident: Involving thousands of patients' highlight about this incident type?",
