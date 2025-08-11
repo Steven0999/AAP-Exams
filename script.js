@@ -6390,7 +6390,7 @@ let score = 0;
             correctAnswerIndex: 1,
             explanation: "Acute Toxicity."
           },
-    ],
+         ],
       },
       ];
 
