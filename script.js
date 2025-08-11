@@ -5644,7 +5644,7 @@ let score = 0;
             "To direct all other emergency services.",
             "To park at nearest adjacent scene and act as a communication link between scene and Control"
         ],
-        correctAnswerIndex: 1,
+        correctAnswerIndex: 3,
         explanation: "The driver's role often includes driving in adjacent with other emergency services and acting as a communication link between scene and control."
     },
     {
