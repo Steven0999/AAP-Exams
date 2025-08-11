@@ -6412,6 +6412,17 @@ let score = 0;
             correctAnswerIndex: 1,
             explanation: "Acute Toxicity."
           },
+                {
+            question: "What does JESIP stand for?", 
+            options: [
+              "Just Enjoy Seeing Operation Panic.",
+              "Joint Emergency Service Operability Programme.",
+              "Joined Emergency Service Operation Programme.",
+              "Joint Emergency Service Operating Programme."
+            ],
+            correctAnswerIndex: 1,
+            explanation: "Joint Emergency Service Operability Programme."
+          },
          ],
       },
       ];
