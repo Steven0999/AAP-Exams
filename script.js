@@ -2347,12 +2347,12 @@ let score = 0;
                     correctAnswerIndex: 1,
                     explanation: "The high permeability of lymphatic capillaries allows them to collect large molecules like proteins and excess fluid that cannot easily enter blood capillaries."
                 },
-                {
+              /*  {
                     question: "How many lymph nodes do humans typically have throughout the body?",
                     options: ["Around 50-100", "Around 200-300", "Around 500-600", "Over 1000"],
                     correctAnswerIndex: 2,
                     explanation: "Humans have hundreds of lymph nodes strategically located throughout the body."
-                },
+                },*/
                 {
                     question: "What is the function of lymph nodes?",
                     options: ["To produce hormones", "To filter lymph, destroying bacteria and cellular debris", "To pump lymph throughout the body", "To store red blood cells"],
@@ -2437,12 +2437,12 @@ let score = 0;
                     correctAnswerIndex: 1,
                     explanation: "The splenic pulp is rich in immune cells like lymphocytes and macrophages, which are involved in filtering blood and immune surveillance."
                 },
-                {
+               /* {
                     question: "At what age does the thymus typically start depleting?",
                     options: ["Birth", "Childhood", "Puberty", "Old age"],
                     correctAnswerIndex: 2,
                     explanation: "The thymus is most active during childhood and adolescence, after which it gradually atrophies and is replaced by fat."
-                },
+                },*/
                 {
                     question: "Which lymphoid tissue is strategically placed in mucosal linings and helps detect invaders, but does NOT filter lymph?",
                     options: ["Lymph nodes", "Spleen", "Thymus", "MALT (Mucosa-Associated Lymphoid Tissue)"],
@@ -2485,7 +2485,7 @@ let score = 0;
                     question: "Which hormone triggers ovulation (the release of the egg) during the menstrual cycle?",
                     options: ["FSH", "Oestrogen", "Progesterone", "Luteinising Hormone (LH)"],
                     correctAnswerIndex: 3,
-                    explanation: "A surge in LH triggers ovulation."
+                    explanation: "A surge in Lutenising Hormone (LH) triggers ovulation."
                 },
                 {
                     question: "Where does fertilization usually take place in the female reproductive system?",
@@ -2541,12 +2541,12 @@ let score = 0;
                     correctAnswerIndex: 2,
                     explanation: "The male urethra serves as a conduit for both urine and semen."
                 },
-                {
+               /* {
                     question: "Which part of the penis expands into a triangular structure called the glans penis?",
                     options: ["Root", "Shaft", "Corpus cavernosum", "Corpus spongiosum"],
                     correctAnswerIndex: 1, // The shaft's distal end forms the glans.
                     explanation: "The shaft (body) of the penis terminates in the glans penis, which is the sensitive tip."
-                },
+                },*/
                 {
                     question: "What is the main function of the uterus?",
                     options: ["To produce eggs", "To receive and nourish a fertilized ovum and support fetal development", "To produce seminal fluid", "To transport sperm"],
@@ -2578,7 +2578,7 @@ let score = 0;
                     explanation: "Fimbriae are finger-like projections that sweep the ovum into the fallopian tube after ovulation."
                 },
                 {
-                    question: "The two layers of the ovary are the medulla and the:",
+                    question: "The two layers of the ovary are the medulla and the...:",
                     options: ["Cortex", "Hilum", "Stroma", "Follicle"],
                     correctAnswerIndex: 0,
                     explanation: "The ovary consists of an inner medulla and an outer cortex, where ovarian follicles are located."
@@ -2595,12 +2595,12 @@ let score = 0;
                     correctAnswerIndex: 3,
                     explanation: "The epididymis is a coiled tube where sperm mature and are stored."
                 },
-                {
+               /* {
                     question: "The two 2cm tubes formed by the union of the seminal vesicle and deferent duct, which carry sperm and seminal fluid to the urethra, are called the:",
                     options: ["Ureters", "Ejaculatory ducts", "Urethra", "Spermatic cords"],
                     correctAnswerIndex: 1,
                     explanation: "The ejaculatory ducts are formed by the convergence of the vas deferens and seminal vesicles."
-                },
+                },*/
                 {
                     question: "What is the term for the process of childbirth?",
                     options: ["Fertilization", "Ovulation", "Menstruation", "Parturition"],
