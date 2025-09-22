@@ -2141,12 +2141,12 @@ let score = 0;
                     correctAnswerIndex: 1,
                     explanation: "The collecting ducts play a crucial role in water reabsorption, concentrating the urine."
                 },
-                {
+               /* {
                     question: "What is the approximate percentage of water in the composition of urine?",
                     options: ["50%", "75%", "95%", "100%"],
                     correctAnswerIndex: 2,
                     explanation: "Urine is primarily composed of water, typically around 95%."
-                },
+                },*/
                 {
                     question: "The mechanism that protects renal blood flow and glomerular filtration from significant fluctuations in blood pressure is called:",
                     options: ["Homeostasis", "Renin-angiotensin-aldosterone system", "Autoregulation", "Tubular secretion"],
@@ -2165,12 +2165,12 @@ let score = 0;
                     correctAnswerIndex: 2,
                     explanation: "Ureters are the tubes that carry urine from the kidneys to the bladder."
                 },
-                {
+                /*{
                     question: "The bladder is a pear-shaped organ that becomes more balloon-shaped as it fills with urine. What is the muscle layer of the bladder called?",
                     options: ["Myometrium", "Detrusor muscle", "Sphincter muscle", "Perimetrium"],
                     correctAnswerIndex: 1,
                     explanation: "The detrusor muscle is the smooth muscle that forms the wall of the bladder and contracts to expel urine."
-                },
+                },*/
                 {
                     question: "Which part of the urinary system is longer in males than in females and provides a common pathway for urine and semen?",
                     options: ["Ureters", "Bladder", "Urethra", "Kidney"],
@@ -2231,7 +2231,7 @@ let score = 0;
                     correctAnswerIndex: 2,
                     explanation: "The kidneys play a crucial role in regulating the body's fluid and electrolyte balance, directly impacting blood volume."
                 },
-                {
+             /*   {
                     question: "Which part of the male urethra passes through the prostate gland?",
                     options: ["Membranous urethra", "Penile urethra", "Prostatic urethra", "External sphincter"],
                     correctAnswerIndex: 2,
@@ -2242,7 +2242,7 @@ let score = 0;
                     options: ["5-10 cm", "10-15 cm", "20-30 cm", "40-50 cm"],
                     correctAnswerIndex: 2,
                     explanation: "Ureters are typically 20-30 cm long, connecting the kidneys to the bladder."
-                },
+                },*/
                 {
                     question: "Which structure is guarded by the external urethral sphincter?",
                     options: ["Kidney", "Ureter", "Bladder", "External urethral orifice"],
