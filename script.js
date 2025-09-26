@@ -1542,6 +1542,12 @@ let score = 0;
                     explanation: "The vertebral column is part of the axial skeleton, which forms the central axis of the body."
                 },
                 {
+                    question: "Which of these describes long bones?",
+                    options: ["Long bone, with a central shaft and expanding ends ", "Long circular bones that stays one length throughout your life", "Sternum, ribs & long smooth and flat", "It is the middle part of the bone and doesn't include the epiphysis"],
+                    correctAnswerIndex: 0,
+                    explanation: "Long bone with a diaphysis (central shaft) and epiphysis (expanding ends) which causes our limbs to grow as we get older."
+                },
+                {
                     question: "Which of these describes irregular bones?",
                     options: ["Short, flat and irregular bones that have no shaft", "Vertebrae and some bones of the skull", "Sternum, ribs & most of the bones of the skull", "Develop deep within a sheath of cartilage and include the patella & hyoid bone"],
                     correctAnswerIndex: 1,
@@ -1564,6 +1570,12 @@ let score = 0;
                     options: ["Attach muscle to bone.", "Made up of a number of parallel tube-shaped units called Osteons", "Attaches bone to bone.", "Looks like honeycomb and contains osteocytes & few lamellae"],
                     correctAnswerIndex: 0,
                     explanation: "Tendons are strong, fibrous connective tissues that connect muscle to bone, enabling movement."
+                },
+              {
+                    question: "What do ligaments do?",
+                    options: ["Attach muscle to bone.", "Made up of a number of parallel tube-shaped units called Osteons", "Attaches bone to bone.", "Looks like honeycomb and contains osteocytes & few lamellae"],
+                    correctAnswerIndex: 2,
+                    explanation: "Ligaments are strong, fibrous connective tissues that connect bone to bone, crucial to stabilise joints, suppotrt body structuresand limit excessive movements."
                 },
                 {
                     question: "Which of these is an example of a gliding joint?",
@@ -1713,7 +1725,7 @@ let score = 0;
                     question: "How many vertabraes in the spine",
                     options: ["24","33","35","28"],
                     correctAnswerIndex: 1,
-                    explanation: "24 Moveable (Cervical=7, Thoracic=12, Lumbar=5), 9 Fused (Sacral=5, Coccyx=4"
+                    explanation: "24 Moveable (Cervical=7, Thoracic=12, Lumbar=5), 9 Fused (Sacral=5, Coccyx=4)"
                 },
                 /*{
                     question: "What i",
@@ -1721,6 +1733,25 @@ let score = 0;
                     correctAnswerIndex: 0,
                     explanation: "Anatomically Neutral is facing forwards looking straight ahead, palms facing forward with arms by your side and body standing up straight (erect)."
                 },*/
+                {
+                    question: "What is Bone marrow made up of in children, adolescents and adults",
+                    options: ["only blood","red and white bone marrow","red and yellow bone marrow","white and yellow bone marrow"],
+                    correctAnswerIndex: 2,
+                    explanation: "As a Infant it is only red bone marrow but the other ages red bone marow starts converting to yellow bone marrow"
+                },
+               {
+                    question: "What is the bone at the back of your head",
+                    options: ["Temporal bone ","Occipital bone","Posterior bone","Rear bone"],
+                    correctAnswerIndex: 1,
+                    explanation: "It is known as the Occipital bone with occiput being latin for back of the skull"
+                },
+              {
+                    question: "Which of these is a function of the compact bone?",
+                    options: ["Stores and releases calcium to the body when needed","spongey and soft area of the body","provides flexibility in the body","support weight bearing activities"],
+                    correctAnswerIndex: 1,
+                    explanation: "It is known as the Occipital bone with occiput being latin for back of the skull"
+                },
+
 
                 // Nervous System (30 questions)
                 {
