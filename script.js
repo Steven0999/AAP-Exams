@@ -1758,7 +1758,7 @@ let score = 0;
                     question: "What is the primary function of the nervous system?",
                     options: ["Digestion of food", "Detecting and interpreting stimuli, and coordinating responses", "Pumping blood", "Filtering waste from blood"],
                     correctAnswerIndex: 1,
-                    explanation: "The nervous system is the body's control and communication system, responsible for detecting stimuli, processing information, and coordinating responses."
+                    explanation: "The nervous system is the body's control and communication system, responsible for detecting stimuli, processing information, and coordinating responses, it also enables homeostasis to be maintained."
                 },
                 {
                     question: "The central nervous system (CNS) consists of the:",
@@ -1778,12 +1778,18 @@ let score = 0;
                     correctAnswerIndex: 2,
                     explanation: "The cerebral cortex, or grey matter, is the highly folded outer layer of the cerebrum where most neural processing occurs."
                 },*/
-                /*{
+                {
                     question: "Which part of the diencephalon controls appetite, thirst, body temperature, and emotional reactions?",
                     options: ["Thalamus", "Hypothalamus", "Hippocampus", "Pituitary gland"],
                     correctAnswerIndex: 1,
                     explanation: "The hypothalamus is a vital control center for many homeostatic functions and emotional responses."
-                },*/
+                },
+                {
+                    question: "Which part of the diencephalon controls sensory information about touch, pain and temperature?",
+                    options: ["Thalamus", "Hypothalamus", "Hippocampus", "Pituitary gland"],
+                    correctAnswerIndex: 0,
+                    explanation: "The Thalamus relays information to many impulses from the brain to the cerebral cortex."
+                },
                 {
                     question: "The brainstem includes which three main parts?",
                     options: ["Cerebrum, cerebellum, diencephalon", "Midbrain, pons, medulla oblongata", "Thalamus, hypothalamus, hippocampus", "Frontal lobe, parietal lobe, temporal lobe"],
@@ -1799,6 +1805,12 @@ let score = 0;
                 {
                     question: "What is the primary function of the cerebellum?",
                     options: ["Processing sensory information", "Coordinating voluntary movements, balance, and posture", "Controlling emotions", "Regulating body temperature"],
+                    correctAnswerIndex: 1,
+                    explanation: "The cerebellum is crucial for fine-tuning motor movements, maintaining balance, and coordinating muscle activity."
+                },
+                {
+                    question: "What part of the Brain coordinates involuntary movement?",
+                    options: ["Cerebrum", "Cerebellum", "Pons and Medulla", "Corpus callosum"],
                     correctAnswerIndex: 1,
                     explanation: "The cerebellum is crucial for fine-tuning motor movements, maintaining balance, and coordinating muscle activity."
                 },
