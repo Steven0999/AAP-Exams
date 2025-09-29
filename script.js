@@ -2673,6 +2673,60 @@ let score = 0;
                     options: ["Testis", "Epididymis", "Prostate gland", "Penis"],
                     correctAnswerIndex: 3,
                     explanation: "The penis is composed of erectile tissues (corpora cavernosa and corpus spongiosum) that fill with blood during erection."
+                },
+                {
+                    question: "What hormone in the mentrual cycle maintains uterus lining?",
+                    options: ["Oestrogen", "Follical Stimulating Hormone (FSH)", "Progesterone", "Lutenising Stimulating Hormone (LH)"],
+                    correctAnswerIndex: 2,
+                    explanation: "Progesterone function in the menstrual cycle is to maintain the uterus lining."
+                },
+                {
+                    question: "What hormone in the mentrual cycle makes sure only one egg is fertilised?",
+                    options: ["Oestrogen", "Follical Stimulating Hormone(FSH)", "Progesterone", "Lutenising Stimulating Hormone(LH)"],
+                    correctAnswerIndex: 0,
+                    explanation: "Oestrogen stops FSH production making sure only one egg is fertilised and repairs and thickens the uterus lining, stimulating the release of LH."
+                },
+                {
+                    question: "What is the function of the fallopian tubes?",
+                    options: ["The tube where the baby is delievered from", "Stores female gametes", "Where the egg grows into a foetus", "Allows fertilisation to happen"],
+                    correctAnswerIndex: 0,
+                    explanation: "It Propels the ovum from the ovary to the uterus and the secretions nourish the ovum and spermatoza."
+                },
+                {
+                    question: "What is the function of the ovaries?",
+                    options: ["The tube where the baby is delievered from", "Stores female gametes", "Where the egg grows into a foetus", "Allows fertilisation to happen"],
+                    correctAnswerIndex: 1,
+                    explanation: "It releases the gametes hormone as part of the reproductive cycle."
+                },
+                {
+                    question: "What of these is NOT a function of the FEMALE reproductive system?",
+                    options: ["Formation of ovum", "Menstration", "Lactation", "Urination"],
+                    correctAnswerIndex: 3,
+                    explanation: "Other areas of the Female reproductive system include Childbirth, Providing an environment for fertilisationa and foetal development and receiving the sperm."
+                },
+                {
+                    question: "What of these is NOT a function of the MALE reproductive system?",
+                    options: ["Sperm", "Urethra", "Ureters", "Seminal Vesicles"],
+                    correctAnswerIndex: 2,
+                    explanation: "Other areas of the Male reproductive system include Scrotum, Testes, Spermatic cords, Ejaculatory ducts, Prostate glands and Penis."
+                },
+                {
+                    question: "Where is spem produced, matured and stored?",
+                    options: ["Penis", "Testes", "Seminal vesicles", "Urethra"],
+                    correctAnswerIndex: 1,
+                    explanation: "Testses & Scrotum is where spem is produced, matured and stored."
+                },
+                {
+                    question: "Whate area of the REPRODUCTIVE SYSTEM progressively enlarges throughout ADULTHOOD?",
+                    options: ["Prostate", "Penis", "Urethra", "Urether"],
+                    correctAnswerIndex: 1,
+                    explanation: "Prostate Enlarges with ages with common effects being Prostate hyperplasia in older men."
+                },
+                {
+                    question: "What is the dome shaped part that connects to the Fallopian tubes?",
+                    options: ["Cervix/neck", "Fundus", "Body", "Labia"],
+                    correctAnswerIndex: 1,
+                    explanation: "The Fundus is the dome shaped part of the uterus that connects to the fallopian tubes."
                 }
             ],
       },
